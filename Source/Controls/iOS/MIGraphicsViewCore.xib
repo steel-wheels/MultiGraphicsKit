@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOs-Ae-wnC" customClass="MIGraphicsViewCore" customModule="MultiGraphicsKit">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOs-Ae-wnC" customClass="MIMetalViewCore" customModule="MultiGraphicsKit" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
