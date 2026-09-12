@@ -14,6 +14,8 @@
 		0576E17A3055862F00D12FAE /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0576E17B3055862F00D12FAE /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
 		0576E17C3055862F00D12FAE /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
+		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 051332943055848B00C902D2;
 			remoteInfo = MultiGraphicsKit_macOS;
+		};
+		053DBB6E30560B6F00795D65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0513328C3055848B00C902D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053DBB53305588BB00795D65;
+			remoteInfo = Install;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,16 +59,23 @@
 
 /* Begin PBXFileReference section */
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0576E15F305584B400D12FAE /* MultiGraphicsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGraphicsKit.swift; sourceTree = "<group>"; };
 		0576E163305584E400D12FAE /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
 		0576E164305584E400D12FAE /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		051332973055848B00C902D2 /* MultiGraphicsKit_macOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MultiGraphicsKit_macOS;
+			sourceTree = "<group>";
+		};
+		053DBB6130560B5900795D65 /* DrawTriangle */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DrawTriangle;
 			sourceTree = "<group>";
 		};
 		0576E171305585BA00D12FAE /* MultiGraphicsKit_iOS */ = {
@@ -79,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		053DBB5D30560B5900795D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0576E16D305585BA00D12FAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0576E16A3055850700D12FAE /* Source */,
+				053DBB5B30560AF800795D65 /* Test */,
 				051332973055848B00C902D2 /* MultiGraphicsKit_macOS */,
 				0576E171305585BA00D12FAE /* MultiGraphicsKit_iOS */,
 				0576E162305584E400D12FAE /* Frameworks */,
@@ -107,8 +131,26 @@
 			children = (
 				051332953055848B00C902D2 /* MultiGraphicsKit.framework */,
 				0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */,
+				053DBB6030560B5900795D65 /* DrawTriangle.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		053DBB5B30560AF800795D65 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				053DBB6130560B5900795D65 /* DrawTriangle */,
+			);
+			name = Test;
+			path = ../Test;
+			sourceTree = "<group>";
+		};
+		053DBB8D30560C5000795D65 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		0576E162305584E400D12FAE /* Frameworks */ = {
@@ -123,6 +165,7 @@
 		0576E16A3055850700D12FAE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				053DBB8D30560C5000795D65 /* Base */,
 				0576E15F305584B400D12FAE /* MultiGraphicsKit.swift */,
 			);
 			name = Source;
@@ -193,6 +236,29 @@
 			productReference = 051332953055848B00C902D2 /* MultiGraphicsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		053DBB5F30560B5900795D65 /* DrawTriangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053DBB6B30560B5B00795D65 /* Build configuration list for PBXNativeTarget "DrawTriangle" */;
+			buildPhases = (
+				053DBB5C30560B5900795D65 /* Sources */,
+				053DBB5D30560B5900795D65 /* Frameworks */,
+				053DBB5E30560B5900795D65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				053DBB6F30560B6F00795D65 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				053DBB6130560B5900795D65 /* DrawTriangle */,
+			);
+			name = DrawTriangle;
+			packageProductDependencies = (
+			);
+			productName = DrawTriangle;
+			productReference = 053DBB6030560B5900795D65 /* DrawTriangle.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0576E16F305585BA00D12FAE /* MultiGraphicsKit_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0576E176305585BA00D12FAE /* Build configuration list for PBXNativeTarget "MultiGraphicsKit_iOS" */;
@@ -233,6 +299,9 @@
 					053DBB53305588BB00795D65 = {
 						CreatedOnToolsVersion = 26.6;
 					};
+					053DBB5F30560B5900795D65 = {
+						CreatedOnToolsVersion = 26.6;
+					};
 					0576E16F305585BA00D12FAE = {
 						CreatedOnToolsVersion = 26.6;
 					};
@@ -255,12 +324,20 @@
 				051332943055848B00C902D2 /* MultiGraphicsKit_macOS */,
 				0576E16F305585BA00D12FAE /* MultiGraphicsKit_iOS */,
 				053DBB53305588BB00795D65 /* Install */,
+				053DBB5F30560B5900795D65 /* DrawTriangle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		051332933055848B00C902D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053DBB5E30560B5900795D65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +358,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 				0576E161305584B400D12FAE /* MultiGraphicsKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053DBB5C30560B5900795D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +390,11 @@
 			isa = PBXTargetDependency;
 			target = 051332943055848B00C902D2 /* MultiGraphicsKit_macOS */;
 			targetProxy = 053DBB59305588C500795D65 /* PBXContainerItemProxy */;
+		};
+		053DBB6F30560B6F00795D65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053DBB53305588BB00795D65 /* Install */;
+			targetProxy = 053DBB6E30560B6F00795D65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,6 +624,72 @@
 			};
 			name = Release;
 		};
+		053DBB6C30560B5B00795D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle.DrawTriangle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		053DBB6D30560B5B00795D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle.DrawTriangle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		0576E177305585BA00D12FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -644,6 +801,15 @@
 			buildConfigurations = (
 				053DBB55305588BB00795D65 /* Debug */,
 				053DBB56305588BB00795D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		053DBB6B30560B5B00795D65 /* Build configuration list for PBXNativeTarget "DrawTriangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053DBB6C30560B5B00795D65 /* Debug */,
+				053DBB6D30560B5B00795D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

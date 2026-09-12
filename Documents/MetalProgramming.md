@@ -1,7 +1,10 @@
 # How to import SwiftTerm framework
 
 # References
-* [Metal Essentials](https://developer.apple.com/metal/essentials/)
-* [Using Metal to Draw a View’s Contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view-s-contents)
-* [Metal Sample Code Library](https://developer.apple.com/metal/sample-code/)
+## Metal overview
+* [Apple Developer: Metal](https://developer.apple.com/documentation/metal)
+
+## Metak sample code
+* [Using Metal to draw a view’s contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view's-contents)
+* [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 
