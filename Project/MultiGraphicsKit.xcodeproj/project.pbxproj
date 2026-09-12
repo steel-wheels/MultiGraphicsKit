@@ -17,6 +17,8 @@
 		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE3833056120100E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */; };
 		05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */; };
+		05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
+		05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
 		05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
 		05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
+		05CEE3883056156300E42808 /* MIGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -179,6 +182,7 @@
 			children = (
 				05CEE3803056111A00E42808 /* macOS */,
 				05CEE3813056112500E42808 /* iOS */,
+				05CEE3883056156300E42808 /* MIGraphicsView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -387,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */,
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */,
 				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
