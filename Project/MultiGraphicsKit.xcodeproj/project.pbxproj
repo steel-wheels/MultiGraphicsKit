@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0576E161305584B400D12FAE /* MultiGraphicsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0576E15F305584B400D12FAE /* MultiGraphicsKit.swift */; };
 		0576E165305584E400D12FAE /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
 		0576E167305584E400D12FAE /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
 		0576E1793055862F00D12FAE /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
@@ -16,6 +15,8 @@
 		0576E17C3055862F00D12FAE /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
+		05CEE3833056120100E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */; };
+		05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +61,12 @@
 /* Begin PBXFileReference section */
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0576E15F305584B400D12FAE /* MultiGraphicsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGraphicsKit.swift; sourceTree = "<group>"; };
 		0576E163305584E400D12FAE /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
 		0576E164305584E400D12FAE /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
+		05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
+		05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -166,10 +168,35 @@
 			isa = PBXGroup;
 			children = (
 				053DBB8D30560C5000795D65 /* Base */,
-				0576E15F305584B400D12FAE /* MultiGraphicsKit.swift */,
+				05CEE37F3056110300E42808 /* Controls */,
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		05CEE37F3056110300E42808 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				05CEE3803056111A00E42808 /* macOS */,
+				05CEE3813056112500E42808 /* iOS */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		05CEE3803056111A00E42808 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		05CEE3813056112500E42808 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE3833056120100E42808 /* MIGraphicsViewCore.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +388,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
-				0576E161305584B400D12FAE /* MultiGraphicsKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
