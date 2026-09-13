@@ -705,9 +705,20 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DrawTriangle" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="DrawTriangleView" customModule="DrawTriangle" customModuleProvider="target">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="P8j-0j-ayJ" customClass="DrawTriangleView" customModule="DrawTriangle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P8j-0j-ayJ" secondAttribute="trailing" id="3Cl-Cv-hxt"/>
+                            <constraint firstItem="P8j-0j-ayJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6g0-hr-esA"/>
+                            <constraint firstAttribute="bottom" secondItem="P8j-0j-ayJ" secondAttribute="bottom" id="CxH-tV-wE8"/>
+                            <constraint firstItem="P8j-0j-ayJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="lrb-qR-Ces"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

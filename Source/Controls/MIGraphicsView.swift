@@ -15,14 +15,20 @@ import  UIKit
 
 open class MIGraphicsView: MIInterfaceView, MTKViewDelegate
 {
-        public typealias ButtonPressedCallback = MIButtonCore.ButtonPressedCallback
+        private var mShaderLibrary: MIMetalShader?      = nil
 
-        public override func setup(frame frm: CGRect) {
+        open override func setup(frame frm: CGRect) {
                 super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIGraphicsView.self)
 
                 let coreview = metalCoreView()
                 coreview.setDelegate(delegate: self)
-                coreview.setNeedsDisplay(true)
+
+                let device = coreview.device
+                guard let lib = device.makeDefaultLibrary() else {
+                        NSLog("[Error] Failed to allocate library")
+                        return
+                }
+                mShaderLibrary = MIMetalShader(library: lib)
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -33,15 +39,20 @@ open class MIGraphicsView: MIInterfaceView, MTKViewDelegate
                 }
         }
 
-        public func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-                NSLog("*** drawableSizeWillChange")
+        public func setNeedsDisplay(_ needs: Bool) {
+                let coreview = metalCoreView()
+                coreview.setNeedsDisplay(needs)
         }
 
+        /* Delegate function */
+        open func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+                NSLog("\(#file) drawableSizeWillChange")
+        }
+
+        /* Delegate function */
         public func draw(in view: MTKView) {
-                NSLog("*** draw")
+                let device   = metalCoreView().device
+                let commandq = device.makeCommandQueue()
         }
 }
-
-
-
 

@@ -11,8 +11,8 @@ import Foundation
 
 open class MIMetalCoreView: MICoreView
 {
-        private var mMetalView: MTKView    = MTKView()
-        private var mDevice:    MTLDevice? = nil
+        private var mMetalView:         MTKView                 = MTKView()
+        private var mDevice:            MTLDevice?              = nil
 
         public var device: MTLDevice { get {
                 if let dev = mDevice {
