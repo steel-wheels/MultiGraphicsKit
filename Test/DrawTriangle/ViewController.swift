@@ -5,6 +5,7 @@
 //  Created by Tomoo Hamada on 2026/09/13.
 //
 
+import MultiGraphicsKit
 import Cocoa
 
 class ViewController: NSViewController {

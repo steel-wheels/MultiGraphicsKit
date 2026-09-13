@@ -7,24 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0576E165305584E400D12FAE /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
-		0576E167305584E400D12FAE /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
-		0576E1793055862F00D12FAE /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
-		0576E17A3055862F00D12FAE /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0576E17B3055862F00D12FAE /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
-		0576E17C3055862F00D12FAE /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
-		05CEE3833056120100E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */; };
-		05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */; };
+		05CEE3833056120100E42808 /* MIMetalCoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIMetalCoreView.xib */; };
+		05CEE3873056130500E42808 /* MIMetalCoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIMetalCoreView.xib */; };
 		05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
 		05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
-		05CEE38B30561A9A00E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
-		05CEE38C30561A9A00E42808 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CEE38D30561A9A00E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
-		05CEE38E30561A9A00E42808 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CEE39130561A9B00E42808 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */; };
-		05CEE39230561A9B00E42808 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CEE3B1305631E600E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
+		05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
+		05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
+		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,45 +43,17 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		0576E17D3055862F00D12FAE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0576E17C3055862F00D12FAE /* MultiUIKit.xcframework in Embed Frameworks */,
-				0576E17A3055862F00D12FAE /* MultiDataKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		05CEE38F30561A9B00E42808 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				05CEE38E30561A9A00E42808 /* MultiUIKit.xcframework in Embed Frameworks */,
-				05CEE39230561A9B00E42808 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
-				05CEE38C30561A9A00E42808 /* MultiDataKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0576E163305584E400D12FAE /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = ../../../Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<group>"; };
-		0576E164305584E400D12FAE /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = ../../../Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
-		05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
-		05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
+		05CEE3823056120100E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
+		05CEE3853056130500E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
 		05CEE3883056156300E42808 /* MIGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsView.swift; sourceTree = "<group>"; };
-		05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = ../../../Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<group>"; };
+		05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<absolute>"; };
+		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
+		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -115,18 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0576E167305584E400D12FAE /* MultiUIKit.xcframework in Frameworks */,
-				0576E165305584E400D12FAE /* MultiDataKit.xcframework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		053DBB5D30560B5900795D65 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05CEE38D30561A9A00E42808 /* MultiUIKit.xcframework in Frameworks */,
-				05CEE39130561A9B00E42808 /* MultiGraphicsKit.xcframework in Frameworks */,
-				05CEE38B30561A9A00E42808 /* MultiDataKit.xcframework in Frameworks */,
+				05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */,
+				05CEE3B1305631E600E42808 /* MultiUIKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +88,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0576E17B3055862F00D12FAE /* MultiUIKit.xcframework in Frameworks */,
-				0576E1793055862F00D12FAE /* MultiDataKit.xcframework in Frameworks */,
+				05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */,
+				05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CEE3AD3056317100E42808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,9 +145,9 @@
 		0576E162305584E400D12FAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */,
-				0576E163305584E400D12FAE /* MultiDataKit.xcframework */,
-				0576E164305584E400D12FAE /* MultiUIKit.xcframework */,
+				05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */,
+				05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */,
+				05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,7 +175,7 @@
 		05CEE3803056111A00E42808 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */,
+				05CEE3823056120100E42808 /* MIMetalCoreView.xib */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -222,7 +183,7 @@
 		05CEE3813056112500E42808 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */,
+				05CEE3853056130500E42808 /* MIMetalCoreView.xib */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -296,9 +257,8 @@
 			buildConfigurationList = 053DBB6B30560B5B00795D65 /* Build configuration list for PBXNativeTarget "DrawTriangle" */;
 			buildPhases = (
 				053DBB5C30560B5900795D65 /* Sources */,
-				053DBB5D30560B5900795D65 /* Frameworks */,
 				053DBB5E30560B5900795D65 /* Resources */,
-				05CEE38F30561A9B00E42808 /* Embed Frameworks */,
+				05CEE3AD3056317100E42808 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,7 +283,6 @@
 				0576E16C305585BA00D12FAE /* Sources */,
 				0576E16D305585BA00D12FAE /* Frameworks */,
 				0576E16E305585BA00D12FAE /* Resources */,
-				0576E17D3055862F00D12FAE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,7 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CEE3833056120100E42808 /* MIGraphicsViewCore.xib in Resources */,
+				05CEE3833056120100E42808 /* MIMetalCoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */,
+				05CEE3873056130500E42808 /* MIMetalCoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -607,8 +567,9 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.MultiGraphicsKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.macOS";
 				PRODUCT_NAME = MultiGraphicsKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -624,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,8 +605,9 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.MultiGraphicsKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.macOS";
 				PRODUCT_NAME = MultiGraphicsKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -704,7 +667,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle.DrawTriangle";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -737,7 +700,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle.DrawTriangle";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawTriangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -753,6 +716,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
@@ -772,8 +736,9 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.iOS.MultiGraphicsKit-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.iOS";
 				PRODUCT_NAME = MultiGraphicsKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -795,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
@@ -814,8 +780,9 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.iOS.MultiGraphicsKit-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.iOS";
 				PRODUCT_NAME = MultiGraphicsKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;

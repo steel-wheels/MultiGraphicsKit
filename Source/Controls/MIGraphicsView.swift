@@ -17,11 +17,11 @@ open class MIGraphicsView: MIInterfaceView
         public typealias ButtonPressedCallback = MIButtonCore.ButtonPressedCallback
 
         public override func setup(frame frm: CGRect) {
-                super.setup(nibName: "MIMetalViewCore", frameSize: frm.size)
+                super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIGraphicsView.self)
         }
 
-        private func coreMetalView() -> MIMetalViewCore {
-                if let core: MIMetalViewCore = super.coreView() {
+        private func metalCoreView() -> MIMetalCoreView {
+                if let core: MIMetalCoreView = super.coreView() {
                         return core
                 } else {
                         fatalError("Failed to get core view")

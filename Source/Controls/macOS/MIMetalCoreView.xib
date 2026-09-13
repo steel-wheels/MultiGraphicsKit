@@ -8,20 +8,9 @@
         <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe">
+        <customView id="c22-O7-iKe" customClass="MIMetalCoreView" customModule="MultiGraphicsKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="eWF-X2-KP9" customClass="MIMetalViewCore" customModule="MultiGraphicsKit" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                </customView>
-            </subviews>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="eWF-X2-KP9" secondAttribute="bottom" id="BzI-iK-qmI"/>
-                <constraint firstAttribute="trailing" secondItem="eWF-X2-KP9" secondAttribute="trailing" id="Ivg-7n-mI9"/>
-                <constraint firstItem="eWF-X2-KP9" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="lPw-HY-dUH"/>
-                <constraint firstItem="eWF-X2-KP9" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="qr6-Jw-Dtl"/>
-            </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </customView>
     </objects>
