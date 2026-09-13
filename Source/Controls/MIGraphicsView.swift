@@ -20,7 +20,7 @@ open class MIGraphicsView: MIInterfaceView
                 super.setup(nibName: "MIMetalViewCore", frameSize: frm.size)
         }
 
-        private func coreGraphicsView() -> MIMetalViewCore {
+        private func coreMetalView() -> MIMetalViewCore {
                 if let core: MIMetalViewCore = super.coreView() {
                         return core
                 } else {

@@ -19,6 +19,12 @@
 		05CEE3873056130500E42808 /* MIGraphicsViewCore.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */; };
 		05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
 		05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
+		05CEE38B30561A9A00E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; };
+		05CEE38C30561A9A00E42808 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E163305584E400D12FAE /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CEE38D30561A9A00E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; };
+		05CEE38E30561A9A00E42808 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0576E164305584E400D12FAE /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CEE39130561A9B00E42808 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */; };
+		05CEE39230561A9B00E42808 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05CEE38F30561A9B00E42808 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				05CEE38E30561A9A00E42808 /* MultiUIKit.xcframework in Embed Frameworks */,
+				05CEE39230561A9B00E42808 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
+				05CEE38C30561A9A00E42808 /* MultiDataKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +89,7 @@
 		05CEE3823056120100E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
 		05CEE3853056130500E42808 /* MIGraphicsViewCore.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIGraphicsViewCore.xib; sourceTree = "<group>"; };
 		05CEE3883056156300E42808 /* MIGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsView.swift; sourceTree = "<group>"; };
+		05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = ../../../Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -104,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CEE38D30561A9A00E42808 /* MultiUIKit.xcframework in Frameworks */,
+				05CEE39130561A9B00E42808 /* MultiGraphicsKit.xcframework in Frameworks */,
+				05CEE38B30561A9A00E42808 /* MultiDataKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +184,7 @@
 		0576E162305584E400D12FAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05CEE39030561A9B00E42808 /* MultiGraphicsKit.xcframework */,
 				0576E163305584E400D12FAE /* MultiDataKit.xcframework */,
 				0576E164305584E400D12FAE /* MultiUIKit.xcframework */,
 			);
@@ -274,6 +298,7 @@
 				053DBB5C30560B5900795D65 /* Sources */,
 				053DBB5D30560B5900795D65 /* Frameworks */,
 				053DBB5E30560B5900795D65 /* Resources */,
+				05CEE38F30561A9B00E42808 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
