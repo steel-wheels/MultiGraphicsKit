@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="mMetalView" destination="Nt6-cf-4AP" id="K5p-Zk-aYc"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MIMetalCoreView" customModule="MultiGraphicsKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="Nt6-cf-4AP">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
+                </mtkView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Nt6-cf-4AP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Hy-i1-cZd"/>
+                <constraint firstAttribute="trailing" secondItem="Nt6-cf-4AP" secondAttribute="trailing" id="1mD-QC-bA7"/>
+                <constraint firstItem="Nt6-cf-4AP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JVg-2S-pV6"/>
+                <constraint firstAttribute="bottom" secondItem="Nt6-cf-4AP" secondAttribute="bottom" id="lQr-dR-cTb"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-69.465648854961827" y="-57.394366197183103"/>
         </view>

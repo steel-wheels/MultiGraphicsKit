@@ -15,9 +15,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "051332943055848B00C902D2"
-               BuildableName = "MultiGraphicsKit.framework"
-               BlueprintName = "MultiGraphicsKit_macOS"
+               BlueprintIdentifier = "053DBB5F30560B5900795D65"
+               BuildableName = "DrawTriangle.app"
                ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,7 +39,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      queueDebuggingEnableBacktraceRecording = "Yes">
+      queueDebuggingEnabled = "No">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "053DBB5F30560B5900795D65"
+            BuildableName = "DrawTriangle.app"
+            ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -48,15 +56,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "051332943055848B00C902D2"
-            BuildableName = "MultiGraphicsKit.framework"
-            BlueprintName = "MultiGraphicsKit_macOS"
+            BlueprintIdentifier = "053DBB5F30560B5900795D65"
+            BuildableName = "DrawTriangle.app"
             ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

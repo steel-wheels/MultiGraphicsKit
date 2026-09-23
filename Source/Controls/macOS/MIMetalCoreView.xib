@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24765" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="25098" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24765"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="25098"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,6 +11,20 @@
         <customView id="c22-O7-iKe" customClass="MIMetalCoreView" customModule="MultiGraphicsKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="dQE-nd-2tk" customClass="MTKView">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dQE-nd-2tk" secondAttribute="bottom" id="DrU-Ih-OJL"/>
+                <constraint firstItem="dQE-nd-2tk" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="ReR-iZ-h03"/>
+                <constraint firstItem="dQE-nd-2tk" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="XyG-le-e6E"/>
+                <constraint firstAttribute="trailing" secondItem="dQE-nd-2tk" secondAttribute="trailing" id="Yj4-at-6f8"/>
+            </constraints>
+            <connections>
+                <outlet property="mMetalView" destination="dQE-nd-2tk" id="mbP-vz-qvF"/>
+            </connections>
             <point key="canvasLocation" x="139" y="154"/>
         </customView>
     </objects>

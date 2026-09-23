@@ -15,9 +15,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "051332943055848B00C902D2"
-               BuildableName = "MultiGraphicsKit.framework"
-               BlueprintName = "MultiGraphicsKit_macOS"
+               BlueprintIdentifier = "053DBB53305588BB00795D65"
+               BuildableName = "Install"
                ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,7 +39,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      queueDebuggingEnableBacktraceRecording = "Yes">
+      queueDebuggingEnabled = "No">
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -51,9 +50,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "051332943055848B00C902D2"
-            BuildableName = "MultiGraphicsKit.framework"
-            BlueprintName = "MultiGraphicsKit_macOS"
+            BlueprintIdentifier = "053DBB53305588BB00795D65"
+            BuildableName = "Install"
             ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

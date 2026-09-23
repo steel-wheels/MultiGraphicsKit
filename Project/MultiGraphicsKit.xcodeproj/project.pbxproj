@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056D6448305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
+		056D6449305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
+		056D646A305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */; };
+		056D646B305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */; };
 		05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE3833056120100E42808 /* MIMetalCoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIMetalCoreView.xib */; };
 		05CEE3873056130500E42808 /* MIMetalCoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3853056130500E42808 /* MIMetalCoreView.xib */; };
-		05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
-		05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIGraphicsView.swift */; };
+		05CEE3893056156300E42808 /* MIMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIMetalView.swift */; };
+		05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3883056156300E42808 /* MIMetalView.swift */; };
 		05CEE3B1305631E600E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
 		05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
-		05CEE3EB3056D85C00E42808 /* MIMetalShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3EA3056D85C00E42808 /* MIMetalShader.swift */; };
-		05CEE3EC3056D85C00E42808 /* MIMetalShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE3EA3056D85C00E42808 /* MIMetalShader.swift */; };
+		05E0433C3061365400184745 /* MIVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVertex.swift */; };
+		05E0433D3061365400184745 /* MIVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVertex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,15 +52,17 @@
 /* Begin PBXFileReference section */
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		056D6447305D86A400FF3C12 /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalDevice.swift; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
 		05CEE3823056120100E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
 		05CEE3853056130500E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
-		05CEE3883056156300E42808 /* MIGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsView.swift; sourceTree = "<group>"; };
+		05CEE3883056156300E42808 /* MIMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalView.swift; sourceTree = "<group>"; };
 		05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
-		05CEE3EA3056D85C00E42808 /* MIMetalShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalShader.swift; sourceTree = "<group>"; };
+		05E0433B3061365400184745 /* MIVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVertex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -110,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0576E16A3055850700D12FAE /* Source */,
+				056D6445305D7AF500FF3C12 /* Resource */,
 				053DBB5B30560AF800795D65 /* Test */,
 				051332973055848B00C902D2 /* MultiGraphicsKit_macOS */,
 				0576E171305585BA00D12FAE /* MultiGraphicsKit_iOS */,
@@ -140,9 +147,29 @@
 		053DBB8D30560C5000795D65 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				05CEE3803056111A00E42808 /* macOS */,
+				05CEE3813056112500E42808 /* iOS */,
 				05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */,
+				056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		056D6445305D7AF500FF3C12 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				056D6446305D868600FF3C12 /* Metal */,
+			);
+			name = Resource;
+			path = ../Resource;
+			sourceTree = "<group>";
+		};
+		056D6446305D868600FF3C12 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				056D6447305D86A400FF3C12 /* shader.metal */,
+			);
+			path = Metal;
 			sourceTree = "<group>";
 		};
 		0576E162305584E400D12FAE /* Frameworks */ = {
@@ -159,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				053DBB8D30560C5000795D65 /* Base */,
-				05CEE3E93056D25100E42808 /* Data */,
+				05E0433A3061363A00184745 /* Data */,
 				05CEE37F3056110300E42808 /* Controls */,
 			);
 			name = Source;
@@ -169,9 +196,7 @@
 		05CEE37F3056110300E42808 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				05CEE3803056111A00E42808 /* macOS */,
-				05CEE3813056112500E42808 /* iOS */,
-				05CEE3883056156300E42808 /* MIGraphicsView.swift */,
+				05CEE3883056156300E42808 /* MIMetalView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -181,7 +206,8 @@
 			children = (
 				05CEE3823056120100E42808 /* MIMetalCoreView.xib */,
 			);
-			path = macOS;
+			name = macOS;
+			path = ../Controls/macOS;
 			sourceTree = "<group>";
 		};
 		05CEE3813056112500E42808 /* iOS */ = {
@@ -189,13 +215,14 @@
 			children = (
 				05CEE3853056130500E42808 /* MIMetalCoreView.xib */,
 			);
-			path = iOS;
+			name = iOS;
+			path = ../Controls/iOS;
 			sourceTree = "<group>";
 		};
-		05CEE3E93056D25100E42808 /* Data */ = {
+		05E0433A3061363A00184745 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				05CEE3EA3056D85C00E42808 /* MIMetalShader.swift */,
+				05E0433B3061365400184745 /* MIVertex.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -318,7 +345,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2660;
-				LastUpgradeCheck = 2660;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					051332943055848B00C902D2 = {
 						CreatedOnToolsVersion = 26.6;
@@ -387,9 +414,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CEE38A3056156300E42808 /* MIGraphicsView.swift in Sources */,
+				056D6448305D86A400FF3C12 /* shader.metal in Sources */,
+				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
+				056D646A305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
+				05E0433C3061365400184745 /* MIVertex.swift in Sources */,
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
-				05CEE3EB3056D85C00E42808 /* MIMetalShader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +433,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CEE3893056156300E42808 /* MIGraphicsView.swift in Sources */,
-				05CEE3EC3056D85C00E42808 /* MIMetalShader.swift in Sources */,
+				056D6449305D86A400FF3C12 /* shader.metal in Sources */,
+				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
+				05E0433D3061365400184745 /* MIVertex.swift in Sources */,
+				056D646B305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
 				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +497,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -491,6 +523,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -533,6 +566,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -551,6 +585,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -565,12 +600,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MetalCaptureEnabled = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,12 +640,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MetalCaptureEnabled = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUGGING_SYMBOLS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
@@ -652,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				OTHER_CFLAGS = "";
@@ -668,6 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -701,6 +743,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TR2DNF3P93;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -739,6 +782,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MetalCaptureEnabled = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -783,6 +827,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_MetalCaptureEnabled = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;

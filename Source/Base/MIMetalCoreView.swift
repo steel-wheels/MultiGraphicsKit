@@ -11,43 +11,36 @@ import Foundation
 
 open class MIMetalCoreView: MICoreView
 {
-        private var mMetalView:         MTKView                 = MTKView()
-        private var mDevice:            MTLDevice?              = nil
-
-        public var device: MTLDevice { get {
-                if let dev = mDevice {
-                        return dev
-                } else {
-                        fatalError("No metal device")
-                }
-        }}
+        #if os(OSX)
+        @IBOutlet weak var mMetalView: MTKView!
+        #else
+        @IBOutlet weak var mMetalView: MTKView!
+        #endif
 
         open override func setup() {
                 setup(coreView: mMetalView)
-                mDevice = MTLCreateSystemDefaultDevice()
-                if let dev = mDevice {
+                if let dev = MTLCreateSystemDefaultDevice() {
                         mMetalView.device = dev
                 } else {
                         NSLog("[Error] Failed to allocate device")
                 }
         }
 
-        open override var backgroundColor: MIColor? {
-                get {
-                        return super.backgroundColor
+        public var device: MTLDevice { get {
+                if let dev = mMetalView.device {
+                        return dev
+                } else {
+                        fatalError("No metal device")
                 }
-                set(colp){
-                        let r, g, b, a: Double
-                        if let col = colp {
-                                r = col.redComponent ; g = col.greenComponent ; b = col.blueComponent
-                        } else {
-                                r = 0.0 ; g = 0.0 ; b = 0.0
-                        }
-                        a = 1.0
-                        mMetalView.clearColor = MTLClearColorMake(r, g, b, a)
-                        super.backgroundColor = colp
-                }
-        }
+        }}
+
+        public var currentDrawable : CAMetalDrawable? { get {
+                return mMetalView.currentDrawable
+        }}
+
+        public var colorPixelFormat: MTLPixelFormat { get {
+                return mMetalView.colorPixelFormat
+        }}
 
         public func setDelegate(delegate dlg: MTKViewDelegate) {
                 mMetalView.delegate = dlg

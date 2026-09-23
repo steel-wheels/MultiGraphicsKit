@@ -1,11 +1,12 @@
 /*
- * @file MIGraphicsView.swift
- * @description Define MIGraphicsView class
+ * @file MIMetalView.swift
+ * @description Define MIMetalView class
  * @par Copyright
  *   Copyright (C) 2024 Steel Wheels Project
  */
 
 import  MultiUIKit
+import  MultiDataKit
 import  MetalKit
 #if os(OSX)
 import  AppKit
@@ -13,22 +14,18 @@ import  AppKit
 import  UIKit
 #endif  // os(OSX)
 
-open class MIGraphicsView: MIInterfaceView, MTKViewDelegate
+open class MIMetalView: MIInterfaceView, MTKViewDelegate
 {
-        private var mShaderLibrary: MIMetalShader?      = nil
+        private var mDevice:            MIMetalDevice?          = nil
 
         open override func setup(frame frm: CGRect) {
-                super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIGraphicsView.self)
+                super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIMetalView.self)
 
                 let coreview = metalCoreView()
                 coreview.setDelegate(delegate: self)
 
-                let device = coreview.device
-                guard let lib = device.makeDefaultLibrary() else {
-                        NSLog("[Error] Failed to allocate library")
-                        return
-                }
-                mShaderLibrary = MIMetalShader(library: lib)
+                let dev = MIMetalDevice(device: coreview.device)
+                mDevice = dev
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -39,20 +36,27 @@ open class MIGraphicsView: MIInterfaceView, MTKViewDelegate
                 }
         }
 
+        public var device: MIMetalDevice { get {
+                if let dev = mDevice {
+                        return dev
+                } else {
+                        fatalError("[Error] No device")
+                }
+        }}
+
         public func setNeedsDisplay(_ needs: Bool) {
                 let coreview = metalCoreView()
                 coreview.setNeedsDisplay(needs)
         }
 
         /* Delegate function */
-        open func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        public func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
                 NSLog("\(#file) drawableSizeWillChange")
         }
 
         /* Delegate function */
-        public func draw(in view: MTKView) {
-                let device   = metalCoreView().device
-                let commandq = device.makeCommandQueue()
+        open func draw(in view: MTKView) {
+                NSLog("\(#file) draw")
         }
 }
 
