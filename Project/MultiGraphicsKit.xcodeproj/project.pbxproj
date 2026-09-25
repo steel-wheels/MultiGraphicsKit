@@ -47,6 +47,13 @@
 			remoteGlobalIDString = 053DBB53305588BB00795D65;
 			remoteInfo = Install;
 		};
+		05E043A830655F4500184745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0513328C3055848B00C902D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053DBB53305588BB00795D65;
+			remoteInfo = Install;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +70,7 @@
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
 		05E0433B3061365400184745 /* MIVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVertex.swift; sourceTree = "<group>"; };
+		05E0439A30655F3900184745 /* DrawParticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawParticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +87,11 @@
 		0576E171305585BA00D12FAE /* MultiGraphicsKit_iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MultiGraphicsKit_iOS;
+			sourceTree = "<group>";
+		};
+		05E0439B30655F3900184745 /* DrawParticle */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DrawParticle;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -109,6 +122,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05E0439730655F3900184745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +151,7 @@
 				051332953055848B00C902D2 /* MultiGraphicsKit.framework */,
 				0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */,
 				053DBB6030560B5900795D65 /* DrawTriangle.app */,
+				05E0439A30655F3900184745 /* DrawParticle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +159,7 @@
 		053DBB5B30560AF800795D65 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				05E0439B30655F3900184745 /* DrawParticle */,
 				053DBB6130560B5900795D65 /* DrawTriangle */,
 			);
 			name = Test;
@@ -337,6 +359,29 @@
 			productReference = 0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		05E0439930655F3900184745 /* DrawParticle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E043A730655F3B00184745 /* Build configuration list for PBXNativeTarget "DrawParticle" */;
+			buildPhases = (
+				05E0439630655F3900184745 /* Sources */,
+				05E0439730655F3900184745 /* Frameworks */,
+				05E0439830655F3900184745 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05E043A930655F4500184745 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				05E0439B30655F3900184745 /* DrawParticle */,
+			);
+			name = DrawParticle;
+			packageProductDependencies = (
+			);
+			productName = DrawParticle;
+			productReference = 05E0439A30655F3900184745 /* DrawParticle.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -344,7 +389,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2660;
+				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					051332943055848B00C902D2 = {
@@ -358,6 +403,9 @@
 					};
 					0576E16F305585BA00D12FAE = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					05E0439930655F3900184745 = {
+						CreatedOnToolsVersion = 27.0;
 					};
 				};
 			};
@@ -379,6 +427,7 @@
 				0576E16F305585BA00D12FAE /* MultiGraphicsKit_iOS */,
 				053DBB53305588BB00795D65 /* Install */,
 				053DBB5F30560B5900795D65 /* DrawTriangle */,
+				05E0439930655F3900184745 /* DrawParticle */,
 			);
 		};
 /* End PBXProject section */
@@ -404,6 +453,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CEE3873056130500E42808 /* MIMetalCoreView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E0439830655F3900184745 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +497,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05E0439630655F3900184745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -458,6 +521,11 @@
 			isa = PBXTargetDependency;
 			target = 053DBB53305588BB00795D65 /* Install */;
 			targetProxy = 053DBB6E30560B6F00795D65 /* PBXContainerItemProxy */;
+		};
+		05E043A930655F4500184745 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053DBB53305588BB00795D65 /* Install */;
+			targetProxy = 05E043A830655F4500184745 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -860,6 +928,76 @@
 			};
 			name = Release;
 		};
+		05E043A530655F3B00184745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawParticle.DrawParticle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		05E043A630655F3B00184745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.DrawParticle.DrawParticle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -904,6 +1042,15 @@
 			buildConfigurations = (
 				0576E177305585BA00D12FAE /* Debug */,
 				0576E178305585BA00D12FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E043A730655F3B00184745 /* Build configuration list for PBXNativeTarget "DrawParticle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E043A530655F3B00184745 /* Debug */,
+				05E043A630655F3B00184745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

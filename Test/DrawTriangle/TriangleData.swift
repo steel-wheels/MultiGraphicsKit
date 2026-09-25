@@ -18,6 +18,28 @@ A type and a function implementation that configures the color and position data
  for the three vertices of a triangle.
 */
 
+/// Defines the binding index values for passing buffer arguments to GPU function parameters.
+///
+/// The binding values define an agreement between:
+/// - The app's main code in Objective-C that submits the data to the GPU
+/// - The shader code that defines the GPU functions, which receive the data through their parameters
+///
+/// The value needs to match between the two sides of exchange for the data to get
+/// to the correct place.
+public enum InputBufferIndex: Int
+{
+    /// The buffer binding index value that stores the triangle's vertex data.
+    ///
+    /// The data at this binding index stores an array of three ``VertexData`` instances.
+    case InputBufferIndexForVertexData          = 0
+
+    /// The buffer binding index value that stores the app's viewport's size.
+    ///
+    /// The vertex shader calculates the pixel coordinates of the triangle's vertices
+    /// based on the size of the app's viewport.
+    case InputBufferIndexForViewportSize        = 1
+}
+
 /// A type that stores the vertex data for one triangle.
 public struct TriangleData {
         public var vertex0:     MIVertex

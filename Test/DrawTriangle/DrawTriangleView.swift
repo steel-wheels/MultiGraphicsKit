@@ -96,30 +96,18 @@ public class DrawTriangleView: MIMetalView
                                            with argumentTable: MTL4ArgumentTable,
                                            vertexBuffer vbuffer: MTLBuffer,
                                            viewPortSize psize: MTLBuffer) {
+                let vertexBuffer: MTLBuffer = triangleVertexBuffers[frameIndex];
                 let triangle = configureVertexDataForBuffer(rotationInDegrees: framenum)
 
+                // Add the buffer with the triangle data to the argument table.
+                argumentTable.setAddress(vbuffer.gpuAddress,
+                                         index: InputBufferIndex.InputBufferIndexForVertexData.rawValue)
+
+                // Add the buffer with the viewport's size to the argument table.
+                argumentTable.setAddress(psize.gpuAddress,
+                                         index: InputBufferIndex.InputBufferIndexForViewportSize.rawValue)
+
+                // Assign the argument table to the encoder.
+                encoder.setArgumentTable(argumentTable, stages: .vertex)
         }
-
-        /*
-        - (void) setRenderPassArguments:(id<MTL4RenderCommandEncoder>) renderPassEncoder
-                               forFrame:(NSUInteger) frameNumber
-                                   with:(id<MTL4ArgumentTable>) argumentTable
-                           vertexBuffer:(id<MTLBuffer>) vertexBuffer
-                           viewPortSize:(id<MTLBuffer>) viewportSizeBuffer
-        {
-            configureVertexDataForBuffer(frameNumber, vertexBuffer.contents);
-
-            // Add the buffer with the triangle data to the argument table.
-            [argumentTable setAddress:vertexBuffer.gpuAddress
-                              atIndex:InputBufferIndexForVertexData];
-
-            // Add the buffer with the viewport's size to the argument table.
-            [argumentTable setAddress:viewportSizeBuffer.gpuAddress
-                              atIndex:InputBufferIndexForViewportSize];
-
-            // Assign the argument table to the encoder.
-            [renderPassEncoder setArgumentTable:argumentTable
-                                       atStages:MTLRenderStageVertex];
-        }*/
-
 }
