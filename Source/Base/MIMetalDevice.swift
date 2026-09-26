@@ -33,8 +33,8 @@ public class MIMetalDevice
                 }
         }
 
-        public func makeBuffer(length len: Int, options opts: MTLResourceOptions, placementSparsePageSize psize: MTLSparsePageSize) -> MTLBuffer {
-                if let buf = mDevice.makeBuffer(length: len, options: opts, placementSparsePageSize: psize) {
+        public func makeBuffer(length len: Int, options opts: MTLResourceOptions) -> MTLBuffer {
+                if let buf = mDevice.makeBuffer(length: len, options: opts) {
                         return buf
                 } else {
                         fatalError("[Error] Failed to allocate buffer")
