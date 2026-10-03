@@ -11,7 +11,7 @@
 # include <simd/simd.h>
 
 typedef struct {
-        simd_float2     position ;
-} GPoint2f ;
+        simd_float4     elements ;
+} Vector4f ;
 
 #endif /* MIGraphicsType_h */

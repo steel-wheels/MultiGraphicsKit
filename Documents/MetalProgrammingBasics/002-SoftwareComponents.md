@@ -1,5 +1,3 @@
-# How to import SwiftTerm framework
-
 # Software Components
 
 ## Device

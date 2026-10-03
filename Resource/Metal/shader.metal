@@ -6,25 +6,21 @@
 //
 
 #include <metal_stdlib>
+#include "MultiGraphicsKit/MIGraphicsType.h"
+
 using namespace metal;
 
-struct ColoredVertex
-{
-    float4 position [[position]];
-    float4 color;
-};
+typedef struct {
+    float4 elements [[position]];
+} Vector4fOut ;
 
-vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
-                                 constant float4 *color [[buffer(1)]],
-                                 uint vid [[vertex_id]])
+vertex Vector4fOut
+add_vector4f(constant float4 *vector0 [[buffer(0)]],
+             constant float4 *vector1 [[buffer(1)]],
+             uint vid [[vertex_id]])
 {
-    ColoredVertex vert;
-    vert.position = position[vid];
-    vert.color = color[vid];
-    return vert;
+        Vector4fOut result ;
+        result.elements = vector0[vid] + vector1[vid] ;
+        return result;
 }
 
-fragment float4 fragment_main(ColoredVertex vert [[stage_in]])
-{
-    return vert.color;
-}

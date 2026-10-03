@@ -7,5 +7,5 @@ This software is distributed under [GNU LESSER GENERAL PUBLIC LICENSE Version 2.
 and the document is distributed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.en.html).
 
 ## Reference
-* [Reference for Metal Programming](Documents/MetalProgramming.md)
+* [Metal Programming Basics](Documents/MetalProgrammingBasics/MetalProgrammingBasics.md)
 

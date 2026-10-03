@@ -26,8 +26,6 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
 
                 let dev = MIMetalDevice(device: coreview.device)
                 mDevice = dev
-
-                makePipeline()
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -45,22 +43,6 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                         fatalError("[Error] No device")
                 }
         }}
-
-        private func makePipeline() {
-                let device  = self.metalDevice
-                let library = device.loadLibrary()
-                let buffers = allocateBuffers(device: device)
-        }
-
-        open func allocateBuffers(device: MIMetalDevice) -> Array<MTLBuffer> {
-                NSLog("[Error] \(#function) Must be override")
-                return []
-        }
-
-        open func allocateFunctions(library lib: MTLLibrary) -> Array<MTLFunction> {
-                NSLog("[Error] \(#function) Must be override")
-                return []
-        }
 
         public func setNeedsDisplay(_ needs: Bool) {
                 let coreview = metalCoreView()

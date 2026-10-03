@@ -8,18 +8,33 @@
 import MetalKit
 import Foundation
 
-public extension GPoint2f
+public extension Vector4f
 {
-        static func make(point pt: CGPoint) -> GPoint2f {
-                return GPoint2f(position: SIMD2<Float>(Float(pt.x), Float(pt.y)))
+        static func make(point pt: CGPoint) -> Vector4f {
+                return Vector4f(elements: SIMD4<Float>(Float(pt.x), Float(pt.y), 0.0, 0.0))
         }
 
         static func size() -> Int {
-                return MemoryLayout<GPoint2f>.size
+                return MemoryLayout<Vector4f>.size
+        }
+
+        static func stride() -> Int {
+                return MemoryLayout<Vector4f>.stride
+        }
+
+        static func makeBuffer(device dev: MIMetalDevice, vectors vecs: Array<Vector4f>) -> MTLBuffer {
+                let len = Vector4f.stride() * vecs.count
+                return dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared)
+        }
+
+        static func makeUninitializedBuffer(device dev: MIMetalDevice, count cnt: Int) -> MTLBuffer {
+                let len = Vector4f.stride() * cnt
+                return dev.makeUninitializedBuffer(length: len, options: .storageModeShared)
         }
 
         func toPoint() -> CGPoint {
-                return CGPoint(x: CGFloat(self.position[0]), y: CGFloat(self.position[1]))
+                return CGPoint(x: CGFloat(self.elements[0]), y: CGFloat(self.elements[1]))
         }
 }
+
 

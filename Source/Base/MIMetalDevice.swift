@@ -13,27 +13,29 @@ public class MIMetalDevice
 {
         private var mDevice:            MTLDevice
         private var mCommandQueue:      MTL4CommandQueue
-        private var mCommandBuffer:     MTL4CommandBuffer
 
         public static func doesSupportMetal4(device dev: MTLDevice) -> Bool {
                 return dev.supportsFamily(.apple8)
         }
 
         public init(device dev: MTLDevice){
-                mDevice = dev
-                if let cmdq = mDevice.makeMTL4CommandQueue() {
+                mDevice       = dev
+                if let cmdq = dev.makeMTL4CommandQueue() {
                         mCommandQueue = cmdq
                 } else {
-                        fatalError("[Error] Failed to allocate command queue")
-                }
-                if let cmdbuf = mDevice.makeCommandBuffer() {
-                        mCommandBuffer = cmdbuf
-                } else {
-                        fatalError("[Error] Failed to allocate command buffer")
+                        fatalError("[Error] Fatal to allocate command queue")
                 }
         }
 
-        public func makeBuffer(length len: Int, options opts: MTLResourceOptions) -> MTLBuffer {
+        public func makeBuffer(bytes ptr: UnsafeRawPointer, length len: Int, options opts: MTLResourceOptions) -> MTLBuffer {
+                if let buf = mDevice.makeBuffer(bytes: ptr, length: len, options: opts) {
+                        return buf
+                } else {
+                        fatalError("[Error] Failed to allocate buffer")
+                }
+        }
+
+        public func makeUninitializedBuffer(length len: Int, options opts: MTLResourceOptions) -> MTLBuffer {
                 if let buf = mDevice.makeBuffer(length: len, options: opts) {
                         return buf
                 } else {
@@ -57,11 +59,27 @@ public class MIMetalDevice
                 }
         }
 
+        public func makeCommandBuffer() -> MTL4CommandBuffer {
+                if let result = mDevice.makeCommandBuffer() {
+                        return result
+                } else {
+                        fatalError("[Error] Failed to allocate command buffer")
+                }
+        }
+
         public func makeCommandAllocator() -> MTL4CommandAllocator {
                 if let result = mDevice.makeCommandAllocator() {
                         return result
                 } else {
                         fatalError("[Error] Failed to allocate command allocator")
+                }
+        }
+
+        public func makeComputePipelineState(function cfunc: MTLFunction) -> MTLComputePipelineState {
+                do {
+                        return try mDevice.makeComputePipelineState(function: cfunc)
+                } catch {
+                        fatalError("[Error] Failed to make compute pipeline state")
                 }
         }
 
@@ -76,5 +94,9 @@ public class MIMetalDevice
                         NSLog("[Error] Failed to make library")
                         return nil
                 }
+        }
+
+        public func commit(_ commandBuffers: [MTL4CommandBuffer]){
+                mCommandQueue.commit(commandBuffers)
         }
 }
