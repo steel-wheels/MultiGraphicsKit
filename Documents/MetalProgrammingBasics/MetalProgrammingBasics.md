@@ -1,24 +1,49 @@
 # Introduction
 
-# Software Components
+This document describes about basics of the Apple's Metal GPU processor programming.
+
+# Copyright
+
+This document is distributed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.en.html).# Software Components
 
 This section describes about software components for Metal programming.
 
-## Device: [MTLDevice]
+## Device:
 * Resource for Metal. Each application has it's own device controller.
+* class: [MTLDevice]
+* Each device have a command queue.
 
-## Command Queue: [MTL4CommandQueue]
+## Command Queue:
 * The queue of command buffers to be excuted on the device.
+* class: [MTL4CommandQueue]
 
-## Command buffer: [MTL4CommandBuffer]
+## Command buffer:
 * The container of multiple command encoder.
+* class: [MTL4CommandBuffer]
 
-## Command Encoder: [MTL4ComputeCommandEncoder]
+## Command Encoder: 
 * encode the pipeline state and buffer to compute it on Metal
+* class: [MTL4ComputeCommandEncoder]
 
 
 
 
+
+# Basic sequence
+
+## Overview
+
+This section describes about the basic sequence to execute the vector calculation.
+
+1. Get <i>device object</i> for the application
+2. Get <i>command queue</i> for the <i>device object</i>
+3. Allocate shader for the target function
+    1. Load <i>Library</i>
+    2. Select <i>function</i> which is defined in the library
+    3. Allocate shader for the <i>function</i>
+4. b
+
+## Sample implementation
 # References
 
 ## Metal overview
