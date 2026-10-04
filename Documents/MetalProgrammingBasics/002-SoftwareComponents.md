@@ -1,6 +1,6 @@
 # Software Components
 
-## Device
+## Device [MTLDevice]
 * Resource for Metal. Each application has it's own device controller.
 
 ## Command Queue
