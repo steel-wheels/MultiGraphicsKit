@@ -4,7 +4,9 @@ This document describes about basics of the Apple's Metal GPU processor programm
 
 # Copyright
 
-This document is distributed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.en.html).# Software Components
+This document is distributed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.en.html).
+
+# Software Components
 
 This section describes about software components for Metal programming.
 
@@ -55,7 +57,8 @@ This section describes about the basic sequence to execute the vector calculatio
 # References
 
 ## Metal overview
-* [Apple Developer: Metal](https://developer.apple.com/documentation/metal)
+* [Apple Developer Metal]: Apple Developer Metal
+* [Metal Shading Language Specification]: Metal Shading Language Specification, Version 4.1
 
 ## Software components
 * [MTL4CommandBuffer]: Records a sequence of GPU commands.
@@ -70,6 +73,9 @@ This section describes about the basic sequence to execute the vector calculatio
 * [Using Metal to draw a view’s contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view's-contents)
 * [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 * [Metal を使って10万個のパーティクルを描画しよう (Japanese)](https://qiita.com/naru-jpn/items/9f4f1624495f3e72d6f9)
+
+[Apple Developer Metal]: https://developer.apple.com/documentation/metal
+[Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
 
 [MTL4CommandBuffer]: https://developer.apple.com/documentation/metal/mtl4commandbuffer
 [MTL4ComputeCommandEncoder]: https://developer.apple.com/documentation/metal/mtl4computecommandencoder
