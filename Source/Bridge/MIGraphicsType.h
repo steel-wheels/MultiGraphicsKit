@@ -10,8 +10,4 @@
 
 # include <simd/simd.h>
 
-typedef struct {
-        simd_float4     elements ;
-} Vector4f ;
-
 #endif /* MIGraphicsType_h */

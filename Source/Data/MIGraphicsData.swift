@@ -8,33 +8,42 @@
 import MetalKit
 import Foundation
 
-public extension Vector4f
+public class Vector2f
 {
-        static func make(point pt: CGPoint) -> Vector4f {
-                return Vector4f(elements: SIMD4<Float>(Float(pt.x), Float(pt.y), 0.0, 0.0))
+        public static func make(point pt: CGPoint) -> SIMD2<Float> {
+                return  SIMD2<Float>(Float(pt.x), Float(pt.y))
         }
 
-        static func size() -> Int {
-                return MemoryLayout<Vector4f>.size
+        public static func size() -> Int {
+                return MemoryLayout<SIMD2<Float>>.size
         }
 
-        static func stride() -> Int {
-                return MemoryLayout<Vector4f>.stride
+        public static func stride() -> Int {
+                return MemoryLayout<SIMD2<Float>>.stride
         }
 
-        static func makeBuffer(device dev: MIMetalDevice, vectors vecs: Array<Vector4f>) -> MTLBuffer {
-                let len = Vector4f.stride() * vecs.count
+        public static func makeBuffer(device dev: MIMetalDevice, vectors vecs: Array<SIMD2<Float>>) -> MTLBuffer {
+                let len = Vector2f.stride() * vecs.count
                 return dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared)
         }
 
-        static func makeUninitializedBuffer(device dev: MIMetalDevice, count cnt: Int) -> MTLBuffer {
-                let len = Vector4f.stride() * cnt
+        public static func makeBuffer(device dev: MIMetalDevice, points pts: Array<CGPoint>) -> MTLBuffer {
+                var vecs: Array<SIMD2<Float>> = []
+                for pt in pts {
+                        vecs.append(make(point: pt))
+                }
+                return makeBuffer(device: dev, vectors: vecs)
+        }
+
+        public static func makeUninitializedBuffer(device dev: MIMetalDevice, count cnt: Int) -> MTLBuffer {
+                let len = Vector2f.stride() * cnt
                 return dev.makeUninitializedBuffer(length: len, options: .storageModeShared)
         }
 
-        func toPoint() -> CGPoint {
-                return CGPoint(x: CGFloat(self.elements[0]), y: CGFloat(self.elements[1]))
+        public static func toPoint(source src: SIMD2<Float>) -> CGPoint {
+                return CGPoint(x: CGFloat(src[0]), y: CGFloat(src[1]))
         }
 }
+
 
 

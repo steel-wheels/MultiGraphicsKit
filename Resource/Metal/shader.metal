@@ -10,17 +10,12 @@
 
 using namespace metal;
 
-typedef struct {
-    float4 elements [[position]];
-} Vector4fOut ;
-
-vertex Vector4fOut
-add_vector4f(constant float4 *vector0 [[buffer(0)]],
-             constant float4 *vector1 [[buffer(1)]],
-             uint vid [[vertex_id]])
+[[kernel]] void
+addVector2f(
+            device float2 *             out [[buffer(0)]],
+            const device float2 *       inA [[buffer(1)]],
+            const device float2 *       inB [[buffer(2)]],
+            uint id [[thread_position_in_grid]])
 {
-        Vector4fOut result ;
-        result.elements = vector0[vid] + vector1[vid] ;
-        return result;
+        out[id] = inA[id] + inB[id];
 }
-

@@ -21,8 +21,6 @@
 		05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
-		05D334BC3069D6DE003BB43D /* MIMetalPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D334BB3069D6DE003BB43D /* MIMetalPipeline.swift */; };
-		05D334BD3069D6DE003BB43D /* MIMetalPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D334BB3069D6DE003BB43D /* MIMetalPipeline.swift */; };
 		05E0433C3061365400184745 /* MIGraphicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIGraphicsData.swift */; };
 		05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIGraphicsData.swift */; };
 		05E043D630673AF500184745 /* MultiGraphicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E043D530673AF500184745 /* MultiGraphicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,7 +73,6 @@
 		05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
-		05D334BB3069D6DE003BB43D /* MIMetalPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalPipeline.swift; sourceTree = "<group>"; };
 		05E0433B3061365400184745 /* MIGraphicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsData.swift; sourceTree = "<group>"; };
 		05E0439A30655F3900184745 /* DrawParticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawParticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E043D530673AF500184745 /* MultiGraphicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiGraphicsKit.h; sourceTree = "<group>"; };
@@ -182,7 +179,6 @@
 				05CEE3813056112500E42808 /* iOS */,
 				05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */,
 				056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */,
-				05D334BB3069D6DE003BB43D /* MIMetalPipeline.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -496,7 +492,6 @@
 			files = (
 				056D6448305D86A400FF3C12 /* shader.metal in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
-				05D334BC3069D6DE003BB43D /* MIMetalPipeline.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
 				05E0433C3061365400184745 /* MIGraphicsData.swift in Sources */,
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
@@ -516,7 +511,6 @@
 			files = (
 				056D6449305D86A400FF3C12 /* shader.metal in Sources */,
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
-				05D334BD3069D6DE003BB43D /* MIMetalPipeline.swift in Sources */,
 				05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
 				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
