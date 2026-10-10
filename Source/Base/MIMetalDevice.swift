@@ -6,7 +6,7 @@
  */
 
 import MultiDataKit
-import MetalKit
+import Metal
 import Foundation
 
 public class MIMetalDevice
@@ -26,6 +26,10 @@ public class MIMetalDevice
                         fatalError("[Error] Fatal to allocate command queue")
                 }
         }
+
+        public var commandQueue: MTL4CommandQueue { get {
+                return mCommandQueue
+        }}
 
         public func makeBuffer(bytes ptr: UnsafeRawPointer, length len: Int, options opts: MTLResourceOptions) -> MTLBuffer {
                 if let buf = mDevice.makeBuffer(bytes: ptr, length: len, options: opts) {
@@ -94,9 +98,5 @@ public class MIMetalDevice
                         NSLog("[Error] Failed to make library")
                         return nil
                 }
-        }
-
-        public func commit(_ commandBuffers: [MTL4CommandBuffer]){
-                mCommandQueue.commit(commandBuffers)
         }
 }

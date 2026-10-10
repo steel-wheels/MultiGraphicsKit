@@ -7,6 +7,7 @@
 
 import MultiUIKit
 import MetalKit
+import Metal
 import Foundation
 
 open class MIMetalCoreView: MICoreView

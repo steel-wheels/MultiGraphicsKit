@@ -7,7 +7,7 @@
 
 import MultiGraphicsKit
 import MultiUIKit
-import MetalKit
+import Metal
 import Foundation
 
 /*

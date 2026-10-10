@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0507438D30768501006DF33C /* MIMetalLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MIMetalLibrary.swift */; };
+		0507438E30768501006DF33C /* MIMetalLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MIMetalLibrary.swift */; };
 		056D6448305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
 		056D6449305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */; };
@@ -61,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0507438C30768501006DF33C /* MIMetalLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalLibrary.swift; sourceTree = "<group>"; };
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056D6447305D86A400FF3C12 /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 				05CEE3813056112500E42808 /* iOS */,
 				05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */,
 				056D6469305ECE8A00FF3C12 /* MIMetalDevice.swift */,
+				0507438C30768501006DF33C /* MIMetalLibrary.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -495,6 +499,7 @@
 				056D646A305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
 				05E0433C3061365400184745 /* MIGraphicsData.swift in Sources */,
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
+				0507438D30768501006DF33C /* MIMetalLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +519,7 @@
 				05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIMetalDevice.swift in Sources */,
 				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
+				0507438E30768501006DF33C /* MIMetalLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

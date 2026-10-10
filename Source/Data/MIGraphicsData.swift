@@ -5,7 +5,7 @@
  *   Copyright (C) 2026 Steel Wheels Project
  */
 
-import MetalKit
+import Metal
 import Foundation
 
 public class Vector2f

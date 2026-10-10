@@ -54,6 +54,11 @@ This section describes about the basic sequence to execute the vector calculatio
 7. Get the result of calculation
 
 ## Sample implementation
+# Programming Tips
+
+## Coding by Swift
+
+
 # References
 
 ## Metal overview
@@ -73,6 +78,7 @@ This section describes about the basic sequence to execute the vector calculatio
 * [Using Metal to draw a view’s contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view's-contents)
 * [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 * [Metal を使って10万個のパーティクルを描画しよう (Japanese)](https://qiita.com/naru-jpn/items/9f4f1624495f3e72d6f9)
+* [iOS: MetalでGPUコンピューティング (1) 最小限のコードの記述と特性の把握](https://qiita.com/yuky_az/items/ece9b64befc635e89f1a)
 
 [Apple Developer Metal]: https://developer.apple.com/documentation/metal
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 

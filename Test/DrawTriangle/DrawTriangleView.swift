@@ -8,6 +8,7 @@
 import MultiGraphicsKit
 import MultiUIKit
 import MetalKit
+import Metal
 
 public class DrawTriangleView: MIMetalView
 {
