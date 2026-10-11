@@ -47,6 +47,26 @@ public class MIMetalDevice
                 }
         }
 
+        public func makeCommandAllocator(label lab: String) -> Result<MTL4CommandAllocator, NSError> {
+                do {
+                        let cdesc = MTL4CommandAllocatorDescriptor()
+                        cdesc.label = lab
+                        let allocator = try mDevice.makeCommandAllocator(descriptor: cdesc)
+                        return .success(allocator)
+                } catch {
+                        let err = MIError.processError(message: "failed to allocate command allocator")
+                        return .failure(err)
+                }
+        }
+
+        public func makeCommandBuffer() -> MTL4CommandBuffer {
+                if let result: MTL4CommandBuffer = mDevice.makeCommandBuffer() {
+                        return result
+                } else {
+                        fatalError("[Error] Failed to allocate command buffer")
+                }
+        }
+
         public func makeArgumentTable(descriptor desc: MTL4ArgumentTableDescriptor) -> MTL4ArgumentTable {
                 do {
                         return try mDevice.makeArgumentTable(descriptor: desc)
@@ -63,27 +83,28 @@ public class MIMetalDevice
                 }
         }
 
-        public func makeCommandBuffer() -> MTL4CommandBuffer {
-                if let result = mDevice.makeCommandBuffer() {
-                        return result
-                } else {
-                        fatalError("[Error] Failed to allocate command buffer")
-                }
-        }
-
-        public func makeCommandAllocator() -> MTL4CommandAllocator {
-                if let result = mDevice.makeCommandAllocator() {
-                        return result
-                } else {
-                        fatalError("[Error] Failed to allocate command allocator")
-                }
-        }
-
         public func makeComputePipelineState(function cfunc: MTLFunction) -> MTLComputePipelineState {
                 do {
                         return try mDevice.makeComputePipelineState(function: cfunc)
                 } catch {
                         fatalError("[Error] Failed to make compute pipeline state")
+                }
+        }
+
+        public func makeSharedEvent(signaledValue val: UInt64) -> Result<MTLSharedEvent, NSError> {
+                if let evt = mDevice.makeSharedEvent() {
+                        evt.signaledValue = val
+                        return .success(evt)
+                } else {
+                        return .failure(MIError.processError(message: "[Error] Failed to allocate shared event"))
+                }
+        }
+
+        public func makeSharedEvent(handle hdl: MTLSharedEventHandle) -> Result<MTLSharedEvent, NSError> {
+                if let evt = mDevice.makeSharedEvent(handle: hdl) {
+                        return .success(evt)
+                } else {
+                        return .failure(MIError.processError(message: "[Error] Failed to allocate shared event"))
                 }
         }
 

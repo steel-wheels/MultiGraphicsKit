@@ -8,13 +8,23 @@
 import MultiGraphicsKit
 import MultiUIKit
 import Metal
+import MetalKit
 
 public class ParticleDrawerView: MIMetalView
 {
-        static let NumberOfPoints       = 1
+        private var mDidCalculated: Bool = false
 
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
+        }
+
+        open override func draw(in view: MTKView) {
+                if !mDidCalculated {
+                        NSLog("Do calculate")
+                        let result = graphicsDriver(device: self.metalDevice)
+                        NSLog("result = \(result)")
+                        mDidCalculated = true
+                }
         }
 }
 

@@ -41,7 +41,19 @@ public class Vector2f
         }
 
         public static func toPoint(source src: SIMD2<Float>) -> CGPoint {
-                return CGPoint(x: CGFloat(src[0]), y: CGFloat(src[1]))
+                return CGPoint(x: CGFloat(src.x), y: CGFloat(src.y))
+        }
+
+        public static func toPoints(buffer buf: MTLBuffer) -> Array<CGPoint> {
+                let len = buf.length / Vector2f.stride()
+                let ptr = buf.contents().bindMemory(to: SIMD2<Float>.self, capacity: len)
+                var result: Array<CGPoint> = []
+                for i in 0..<len {
+                        let x = CGFloat(ptr[i].x)
+                        let y = CGFloat(ptr[i].y)
+                        result.append(CGPoint(x: x, y: y))
+                }
+                return result
         }
 }
 
