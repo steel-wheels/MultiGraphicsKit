@@ -37,7 +37,7 @@ public func graphicsDriver(device dev: MIMetalDevice) -> NSError?
         let inbuf1  = Vector2f.makeBuffer(device: dev, points: src1)
         let outbuf  = Vector2f.makeUninitializedBuffer(device: dev, count: POINT_NUM)
 
-        switch dev.makeCommandAllocator(label: "Add ") {
+        switch dev.makeCommandAllocator(label: "AddVectors") {
         case .success(let alloc):
                 let cmdbuf: MTL4CommandBuffer = dev.makeCommandBuffer()
                 cmdbuf.beginCommandBuffer(allocator: alloc)
@@ -58,6 +58,10 @@ public func graphicsDriver(device dev: MIMetalDevice) -> NSError?
                 argtable.setAddress(inbuf0.gpuAddress, index: 1)
                 argtable.setAddress(inbuf1.gpuAddress, index: 2)
                 cmdenc.setArgumentTable(argtable)
+
+                let threadsPerGrid        = MTLSize(width: POINT_NUM, height: 1, depth: 1)
+                let threadsPerThreadgroup = MTLSize(width: 1, height: 1, depth: 1)
+                cmdenc.dispatchThreads(threadsPerGrid: threadsPerGrid, threadsPerThreadgroup: threadsPerThreadgroup)
                 cmdenc.endEncoding()
                 cmdbuf.endCommandBuffer()
 
