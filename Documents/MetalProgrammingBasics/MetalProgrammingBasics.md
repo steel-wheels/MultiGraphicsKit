@@ -10,22 +10,17 @@ This document is distributed under [GNU Free Documentation License](https://www.
 
 This section describes about software components for Metal programming.
 
-## Device:
-* Resource for Metal. Each application has it's own device controller.
-* class: [MTLDevice]
-* Each device have a command queue.
+## Device: [MTLDevice]
+Resource for Metal. Each application has it's own device controller.
 
-## Command Queue:
-* The queue of command buffers to be excuted on the device.
-* class: [MTLCommandQueue]
+## Command Queue: [MTLCommandQueue]
+The queue of command buffers to be excuted on the device.
 
-## Command buffer:
-* The container of multiple command encoder.
-* class: [MTLCommandBuffer]
+## Command buffer: [MTLCommandBuffer]
+The container of multiple command encoder.
 
-## Command Encoder: 
-* encode the pipeline state and buffer to compute it on Metal
-* class: [MTLComputeCommandEncoder]
+## Command Encoder: [MTLComputeCommandEncoder]
+encode the pipeline state and buffer to compute it on Metal
 
 
 
@@ -152,7 +147,8 @@ import MetalKit         // User interface by Metal
 
 ## Software components
 * [MTLCommandBuffer]: Records a sequence of GPU commands.
-* [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
+* [MTLCommandEncoder]: Encoder a
+  * [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
 * [MTLCommandQueue]: An abstraction representing a command queue that you use commit and synchronize command buffers and to perform other GPU operations.
 * [MTLComputePipelineState]: An interface that represents a GPU pipeline configuration for running kernels in a compute pass.
 * [MTLDevice]: The main Metal interface to a GPU that apps use to draw graphics and run computations in parallel.
@@ -169,6 +165,8 @@ import MetalKit         // User interface by Metal
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
 
 [MTLComputeCommandBuffer]: https://developer.apple.com/documentation/metal/mtlcomputecommandencoder
+[MTLCommandBuffer]: https://developer.apple.com/documentation/metal/mtlcommandbuffer
+[MTLComputeCommandEncoder]: https://developer.apple.com/documentation/metal/mtlcomputecommandencoder
 [MTLCommandEncoder]: https://developer.apple.com/documentation/metal/mtlcommandencoder
 [MTLComputePipelineState]: https://developer.apple.com/documentation/metal/mtlcomputepipelinestate
 [MTLCommandQueue]: https://developer.apple.com/jp/documentation/metal/mtlcommandqueue

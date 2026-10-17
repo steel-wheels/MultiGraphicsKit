@@ -6,7 +6,8 @@
 
 ## Software components
 * [MTLCommandBuffer]: Records a sequence of GPU commands.
-* [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
+* [MTLCommandEncoder]: Encoder a
+  * [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
 * [MTLCommandQueue]: An abstraction representing a command queue that you use commit and synchronize command buffers and to perform other GPU operations.
 * [MTLComputePipelineState]: An interface that represents a GPU pipeline configuration for running kernels in a compute pass.
 * [MTLDevice]: The main Metal interface to a GPU that apps use to draw graphics and run computations in parallel.
@@ -23,6 +24,8 @@
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
 
 [MTLComputeCommandBuffer]: https://developer.apple.com/documentation/metal/mtlcomputecommandencoder
+[MTLCommandBuffer]: https://developer.apple.com/documentation/metal/mtlcommandbuffer
+[MTLComputeCommandEncoder]: https://developer.apple.com/documentation/metal/mtlcomputecommandencoder
 [MTLCommandEncoder]: https://developer.apple.com/documentation/metal/mtlcommandencoder
 [MTLComputePipelineState]: https://developer.apple.com/documentation/metal/mtlcomputepipelinestate
 [MTLCommandQueue]: https://developer.apple.com/jp/documentation/metal/mtlcommandqueue
