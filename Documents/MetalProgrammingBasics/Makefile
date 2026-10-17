@@ -2,7 +2,9 @@
 # Makefile
 #
 
-include ./Makefile.md4
+md4_dir = ../md4
+
+include $(md4_dir)/Makefile.md4
 
 DOCUMENT = MetalProgrammingBasics.md
 
@@ -15,6 +17,8 @@ SECTIONS = \
 
 all: $(DOCUMENT)
 
+clean:
+	rm -f 003-BasicSequence.md
 
 $(DOCUMENT): $(SECTIONS)
 	cat $(SECTIONS) > $(DOCUMENT)

@@ -10,7 +10,7 @@ import MultiDataKit
 import Metal
 import Foundation
 
-public func graphicsDriver(device dev: MTLDevice) -> Bool
+public func vectorAddSample(device dev: MTLDevice) -> Bool
 {
         // make source data
         let POINT_NUM            = 8

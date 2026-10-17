@@ -21,7 +21,7 @@ public class ParticleDrawerView: MIMetalView
         open override func draw(in view: MTKView) {
                 if !mDidCalculated {
                         NSLog("Do calculate")
-                        let result = graphicsDriver(device: self.device)
+                        let result = vectorAddSample(device: self.device)
                         NSLog("result = \(result)")
                         mDidCalculated = true
                 }

@@ -1,0 +1,13 @@
+#
+# Makefile.md4
+#
+
+md4_dir  ?= .
+m4_opt   =  -P  
+m4_inc   =  -I. -I../../Test/DrawParticle
+
+%.md : %.md4
+	m4 $(m4_opt) $(m4_inc) $(md4_dir)/defines.m4 $< \
+	| sed -e 's/@code_begin@/```/g' -e 's/@code_end@/```/g' \
+	> $@
+
