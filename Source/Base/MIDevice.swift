@@ -6,8 +6,14 @@
  */
 
 import MultiDataKit
+import MultiUIKit
 import Metal
 import Foundation
+#if os(OSX)
+import AppKit
+#else
+import UIKit
+#endif
 
 public extension MTLDevice
 {
@@ -25,6 +31,19 @@ public extension MTLDevice
                         return cmdq
                 } else {
                         throw MIError.processError(message: "[Error] Failed to allocate command queue")
+                }
+        }
+
+        func makingTexture(image img: MIImage) throws -> MTLTexture {
+                guard let cgimg = img.cgImage else {
+                        throw MIError.processError(message: "[Error] Failed to convert image")
+                }
+                let desc  = MTLTextureDescriptor.textureImageDescriptor(image: cgimg)
+                if let texture = self.makeTexture(descriptor: desc) {
+                        texture.copy(image: cgimg)
+                        return texture
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate texture")
                 }
         }
 }

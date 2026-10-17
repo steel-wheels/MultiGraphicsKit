@@ -1,6 +1,6 @@
 /*
- * @file GraphicsDriver.h
- * @description Define graphics driver function
+ * @file VectorAddSample.swift
+ * @description Sample program for vector add operation
  * @par Copyright
  *   Copyright (C) 2026 Steel Wheels Project
  */

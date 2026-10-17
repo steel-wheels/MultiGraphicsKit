@@ -3,10 +3,10 @@
 
 ```
 //
-//  shader.metal
+//  vectorFunctions.metal
 //  MultiGraphicsKit
 //
-//  Created by Tomoo Hamada on 2026/09/18.
+//  Created by Steel Wheels Project on 2026/09/18.
 //
 
 #include <metal_stdlib>

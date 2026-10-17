@@ -12,7 +12,13 @@ import MetalKit
 
 public class ParticleDrawerView: MIMetalView
 {
-        private var mDidCalculated: Bool = false
+        public enum TargetType {
+                case vectorAdd
+                case imageTexture
+        }
+
+        private var mTarget:            TargetType      = .imageTexture
+        private var mDidCalculated:     Bool            = false
 
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
@@ -21,7 +27,11 @@ public class ParticleDrawerView: MIMetalView
         open override func draw(in view: MTKView) {
                 if !mDidCalculated {
                         NSLog("Do calculate")
-                        let result = vectorAddSample(device: self.device)
+                        let result: Bool
+                        switch mTarget {
+                        case .vectorAdd:        result = vectorAddSample(device: self.device)
+                        case .imageTexture:     result = imageTextureSample(device: self.device)
+                        }
                         NSLog("result = \(result)")
                         mDidCalculated = true
                 }

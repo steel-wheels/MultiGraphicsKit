@@ -47,8 +47,8 @@ This section describes about the basic sequence to execute the vector calculatio
 ## Sample implementation
 ```
 /*
- * @file GraphicsDriver.h
- * @description Define graphics driver function
+ * @file VectorAddSample.swift
+ * @description Sample program for vector add operation
  * @par Copyright
  *   Copyright (C) 2026 Steel Wheels Project
  */
@@ -130,10 +130,10 @@ private func putBuffer(name nm: String, buffer buf: MTLBuffer) {
 
 ```
 //
-//  shader.metal
+//  vectorFunctions.metal
 //  MultiGraphicsKit
 //
-//  Created by Tomoo Hamada on 2026/09/18.
+//  Created by Steel Wheels Project on 2026/09/18.
 //
 
 #include <metal_stdlib>
@@ -188,6 +188,7 @@ import MetalKit         // User interface by Metal
 * [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 * [Metal を使って10万個のパーティクルを描画しよう (Japanese)](https://qiita.com/naru-jpn/items/9f4f1624495f3e72d6f9)
 * [iOS: MetalでGPUコンピューティング (1) 最小限のコードの記述と特性の把握](https://qiita.com/yuky_az/items/ece9b64befc635e89f1a)
+* [[Metal] テクスチャ（MTLTexture）を使う](https://qiita.com/edo_m18/items/6e44308d1b865e614f7c)
 
 [Apple Developer Metal]: https://developer.apple.com/documentation/metal
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
