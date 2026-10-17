@@ -5,6 +5,7 @@
  *   Copyright (C) 2026 Steel Wheels Project
  */
 
+import MultiDataKit
 import Metal
 import Foundation
 
@@ -22,22 +23,30 @@ public class Vector2f
                 return MemoryLayout<SIMD2<Float>>.stride
         }
 
-        public static func makeBuffer(device dev: MIMetalDevice, vectors vecs: Array<SIMD2<Float>>) -> MTLBuffer {
+        public static func makeBuffer(device dev: MTLDevice, vectors vecs: Array<SIMD2<Float>>) throws -> MTLBuffer {
                 let len = Vector2f.stride() * vecs.count
-                return dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared)
+                if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                }
         }
 
-        public static func makeBuffer(device dev: MIMetalDevice, points pts: Array<CGPoint>) -> MTLBuffer {
+        public static func makeBuffer(device dev: MTLDevice, points pts: Array<CGPoint>) throws -> MTLBuffer {
                 var vecs: Array<SIMD2<Float>> = []
                 for pt in pts {
                         vecs.append(make(point: pt))
                 }
-                return makeBuffer(device: dev, vectors: vecs)
+                return try makeBuffer(device: dev, vectors: vecs)
         }
 
-        public static func makeUninitializedBuffer(device dev: MIMetalDevice, count cnt: Int) -> MTLBuffer {
+        public static func makeUninitializedBuffer(device dev: MTLDevice, count cnt: Int) throws -> MTLBuffer {
                 let len = Vector2f.stride() * cnt
-                return dev.makeUninitializedBuffer(length: len, options: .storageModeShared)
+                if let buf = dev.makeBuffer(length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                }
         }
 
         public static func toPoint(source src: SIMD2<Float>) -> CGPoint {

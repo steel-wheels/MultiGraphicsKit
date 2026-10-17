@@ -16,16 +16,14 @@ import  UIKit
 
 open class MIMetalView: MIInterfaceView, MTKViewDelegate
 {
-        private var mDevice:            MIMetalDevice?          = nil
+        private var mDevice:            MTLDevice?          = nil
 
         open override func setup(frame frm: CGRect) {
                 super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIMetalView.self)
 
                 let coreview = metalCoreView()
                 coreview.setDelegate(delegate: self)
-
-                let dev = MIMetalDevice(device: coreview.device)
-                mDevice = dev
+                mDevice = coreview.device
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -36,11 +34,11 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                 }
         }
 
-        public var metalDevice: MIMetalDevice { get {
+        public var device: MTLDevice { get {
                 if let dev = mDevice {
                         return dev
                 } else {
-                        fatalError("[Error] No device")
+                        fatalError("Failed to get device")
                 }
         }}
 

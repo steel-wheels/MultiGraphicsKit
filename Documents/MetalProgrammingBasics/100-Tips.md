@@ -1,5 +1,11 @@
 # Programming Tips
 
+## macOS/iOS
+
+### Metal4 support
+* macOS 26.0 or newer.
+* iOS 26.0 or newer.
+
 ## Coding by Swift
 
 ### <code>import</code>

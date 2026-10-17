@@ -2,6 +2,8 @@
 # Makefile
 #
 
+include ./Makefile.md4
+
 DOCUMENT = MetalProgrammingBasics.md
 
 SECTIONS = \

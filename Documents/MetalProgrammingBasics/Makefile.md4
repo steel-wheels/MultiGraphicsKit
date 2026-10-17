@@ -1,0 +1,10 @@
+#
+# Makefile.md4
+#
+
+m4_opt  = -P -I. \
+	  -I../../Test/DrawParticle
+
+%.md : %.md4
+	m4 $(m4_opt) $< > $@
+

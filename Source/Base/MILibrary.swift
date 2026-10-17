@@ -1,5 +1,5 @@
 /*
- * @file MIMetalLibrary.swift
+ * @file MILibrary.swift
  * @description Extend MTLLibrary class
  * @par Copyright
  *   Copyright (C) 2026 Steel Wheels Project
@@ -15,11 +15,11 @@ public enum MIMetalFunctionName: String {
 
 public extension MTLLibrary
 {
-        func makeFunction(builtIn funcname: MIMetalFunctionName) -> MTLFunction {
+        func makeFunction(builtIn funcname: MIMetalFunctionName) throws -> MTLFunction {
                 if let result = self.makeFunction(name: funcname.rawValue) {
                         return result
                 } else {
-                        fatalError("[Error] \(#file) No function definition")
+                        throw MIError.processError(message: "[Error] Failed to allocate function")
                 }
         }
 }

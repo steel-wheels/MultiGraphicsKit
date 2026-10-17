@@ -38,6 +38,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
+      enableGPUShaderValidationMode = "2"
       allowLocationSimulation = "YES"
       queueDebuggingEnabled = "No">
       <BuildableProductRunnable
@@ -49,6 +50,9 @@
             ReferencedContainer = "container:MultiGraphicsKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MetalShaderValidationSettings
+         isEnabled = "Yes">
+      </MetalShaderValidationSettings>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
