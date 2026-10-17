@@ -17,15 +17,15 @@ This section describes about software components for Metal programming.
 
 ## Command Queue:
 * The queue of command buffers to be excuted on the device.
-* class: [MTL4CommandQueue]
+* class: [MTLCommandQueue]
 
 ## Command buffer:
 * The container of multiple command encoder.
-* class: [MTL4CommandBuffer]
+* class: [MTLCommandBuffer]
 
 ## Command Encoder: 
 * encode the pipeline state and buffer to compute it on Metal
-* class: [MTL4ComputeCommandEncoder]
+* class: [MTLComputeCommandEncoder]
 
 
 
@@ -134,14 +134,10 @@ private func putBuffer(name nm: String, buffer buf: MTLBuffer) {
 
 ## macOS/iOS
 
-### Metal4 support
-* macOS 26.0 or newer.
-* iOS 26.0 or newer.
-
 ## Coding by Swift
 
 ### <code>import</code>
-To use <code>MTL4*</code> class, import following frameworks.
+To use <code>MTL*</code> class, import following frameworks.
 
 <pre>
 import Metal            // Data processing by Metal
@@ -155,9 +151,9 @@ import MetalKit         // User interface by Metal
 * [Metal Shading Language Specification]: Metal Shading Language Specification, Version 4.1
 
 ## Software components
-* [MTL4CommandBuffer]: Records a sequence of GPU commands.
-* [MTL4ComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
-* [MTL4CommandQueue]: An abstraction representing a command queue that you use commit and synchronize command buffers and to perform other GPU operations.
+* [MTLCommandBuffer]: Records a sequence of GPU commands.
+* [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
+* [MTLCommandQueue]: An abstraction representing a command queue that you use commit and synchronize command buffers and to perform other GPU operations.
 * [MTLComputePipelineState]: An interface that represents a GPU pipeline configuration for running kernels in a compute pass.
 * [MTLDevice]: The main Metal interface to a GPU that apps use to draw graphics and run computations in parallel.
 * [MTLFunction]: A interface that represents a public shader function in a Metal library.
@@ -172,10 +168,10 @@ import MetalKit         // User interface by Metal
 [Apple Developer Metal]: https://developer.apple.com/documentation/metal
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
 
-[MTL4CommandBuffer]: https://developer.apple.com/documentation/metal/mtl4commandbuffer
-[MTL4ComputeCommandEncoder]: https://developer.apple.com/documentation/metal/mtl4computecommandencoder
+[MTLComputeCommandBuffer]: https://developer.apple.com/documentation/metal/mtlcomputecommandencoder
+[MTLCommandEncoder]: https://developer.apple.com/documentation/metal/mtlcommandencoder
 [MTLComputePipelineState]: https://developer.apple.com/documentation/metal/mtlcomputepipelinestate
-[MTL4CommandQueue]: https://developer.apple.com/documentation/metal/mtl4commandqueue
+[MTLCommandQueue]: https://developer.apple.com/jp/documentation/metal/mtlcommandqueue
 [MTLDevice]: https://developer.apple.com/documentation/metal/mtldevice
 [MTLFunction]: https://developer.apple.com/documentation/metal/mtlfunction
 [MTLLibrary]: https://developer.apple.com/documentation/metal/mtllibrary

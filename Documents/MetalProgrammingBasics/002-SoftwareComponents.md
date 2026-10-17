@@ -9,15 +9,15 @@ This section describes about software components for Metal programming.
 
 ## Command Queue:
 * The queue of command buffers to be excuted on the device.
-* class: [MTL4CommandQueue]
+* class: [MTLCommandQueue]
 
 ## Command buffer:
 * The container of multiple command encoder.
-* class: [MTL4CommandBuffer]
+* class: [MTLCommandBuffer]
 
 ## Command Encoder: 
 * encode the pipeline state and buffer to compute it on Metal
-* class: [MTL4ComputeCommandEncoder]
+* class: [MTLComputeCommandEncoder]
 
 
 
