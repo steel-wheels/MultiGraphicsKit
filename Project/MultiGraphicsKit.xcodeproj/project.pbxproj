@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0507438D30768501006DF33C /* MILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MILibrary.swift */; };
 		0507438E30768501006DF33C /* MILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MILibrary.swift */; };
-		056D6448305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
-		056D6449305D86A400FF3C12 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* shader.metal */; };
+		056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
+		056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
 		056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
 		05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */; };
@@ -70,7 +70,7 @@
 		0507438C30768501006DF33C /* MILibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MILibrary.swift; sourceTree = "<group>"; };
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		056D6447305D86A400FF3C12 /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
+		056D6447305D86A400FF3C12 /* vectorFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vectorFunctions.metal; sourceTree = "<group>"; };
 		056D6469305ECE8A00FF3C12 /* MIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDevice.swift; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICommandQueue.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		056D6446305D868600FF3C12 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
-				056D6447305D86A400FF3C12 /* shader.metal */,
+				056D6447305D86A400FF3C12 /* vectorFunctions.metal */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056D6448305D86A400FF3C12 /* shader.metal in Sources */,
+				056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */,
 				05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
@@ -524,7 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056D6449305D86A400FF3C12 /* shader.metal in Sources */,
+				056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */,
 				05AD1D8530826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
 				05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */,
