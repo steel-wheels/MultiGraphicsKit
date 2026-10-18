@@ -12,7 +12,8 @@ SECTIONS = \
 	001-Introduction.md \
 	002-SoftwareComponents.md \
 	003-BasicSequence.md  \
-	004-MetalLibrary.md \
+	004-TextureSequence.md  \
+	005-MetalLibrary.md \
 	100-Tips.md \
 	101-References.md
 

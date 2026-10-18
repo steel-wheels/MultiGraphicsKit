@@ -42,7 +42,8 @@ public func imageTextureSample(device dev: MTLDevice) -> Bool
                 samplerdesc.tAddressMode = .repeat
                 let sampler = try dev.makingSamplerState(descriptor: samplerdesc)
 
-                let cmd = cmdbuf.makeRenderCommandEncoder(descriptor: renderdesc)
+                let cmdenc = cmdbuf.makeRenderCommandEncoder(descriptor: renderdesc)
+
         } catch {
                 NSLog("Failed to execute")
                 return false
