@@ -18,6 +18,35 @@ public func imageTextureSample(device dev: MTLDevice) -> Bool
         guard let img = loadImage() else {
                 return false
         }
+        do {
+                let lib     = try dev.loadLibrary()
+
+                let cmdq   = try dev.makingCommandQueue()
+                let cmdbuf = try cmdq.makingCommandBuffer()
+
+                let texture = try dev.makingTexture(image: img)
+
+                let renderdesc   = MTLRenderPassDescriptor()
+                guard let attach = renderdesc.colorAttachments[0] else {
+                        NSLog("[Error] No attachement")
+                        return false
+                }
+                attach.texture          = texture
+                attach.clearColor       = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
+                attach.storeAction      = .store
+
+                let samplerdesc = MTLSamplerDescriptor()
+                samplerdesc.minFilter    = .nearest
+                samplerdesc.magFilter    = .linear
+                samplerdesc.sAddressMode = .repeat
+                samplerdesc.tAddressMode = .repeat
+                let sampler = try dev.makingSamplerState(descriptor: samplerdesc)
+
+                let cmd = cmdbuf.makeRenderCommandEncoder(descriptor: renderdesc)
+        } catch {
+                NSLog("Failed to execute")
+                return false
+        }
 
         return true
 }

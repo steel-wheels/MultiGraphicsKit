@@ -46,6 +46,14 @@ public extension MTLDevice
                         throw MIError.processError(message: "[Error] Failed to allocate texture")
                 }
         }
+
+        func makingSamplerState(descriptor: MTLSamplerDescriptor) throws -> MTLSamplerState {
+                if let state = self.makeSamplerState(descriptor: descriptor) {
+                        return state
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate sampler")
+                }
+        }
 }
 
 
