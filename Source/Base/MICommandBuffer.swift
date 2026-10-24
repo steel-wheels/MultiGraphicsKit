@@ -12,10 +12,18 @@ import Foundation
 public extension MTLCommandBuffer
 {
         func makingComputeCommandEncoder() throws -> MTLComputeCommandEncoder {
-                if let cmdbuf = self.makeComputeCommandEncoder() {
-                        return cmdbuf
+                if let cmdenc = self.makeComputeCommandEncoder() {
+                        return cmdenc
                 } else {
                         throw MIError.processError(message: "[Error] Failed to allocate command encoder")
+                }
+        }
+
+        func makingRenderCommandEncoder(descriptor desc: MTLRenderPassDescriptor) throws -> MTLRenderCommandEncoder {
+                if let cmdenc = self.makeRenderCommandEncoder(descriptor: desc) {
+                        return cmdenc
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate render encoder")
                 }
         }
 }

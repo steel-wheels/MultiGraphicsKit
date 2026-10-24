@@ -22,10 +22,15 @@ open class MIMetalCoreView: MICoreView
                 setup(coreView: mMetalView)
                 if let dev = MTLCreateSystemDefaultDevice() {
                         mMetalView.device = dev
+                        mMetalView.colorPixelFormat = .bgra8Unorm
                 } else {
                         NSLog("[Error] Failed to allocate device")
                 }
         }
+
+        public var metalView: MTKView { get {
+                return mMetalView
+        }}
 
         public var device: MTLDevice { get {
                 if let dev = mMetalView.device {

@@ -6,7 +6,7 @@
 //
 
 #include <metal_stdlib>
-#include "MultiGraphicsKit/MIGraphicsType.h"
+//#include "MultiGraphicsKit/MIGraphicsType.h"
 
 using namespace metal;
 

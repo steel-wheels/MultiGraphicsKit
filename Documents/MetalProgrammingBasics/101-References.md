@@ -14,12 +14,17 @@
 * [MTLFunction]: A interface that represents a public shader function in a Metal library.
 * [MTLLibrary]: A collection of Metal shader functions.
 
+## Sample code from Apple
+* [Metal sample code library](https://developer.apple.com/documentation/metal/metal-sample-code-library): List of following sample applications
+* [Creating and sampling textures](https://developer.apple.com/documentation/metal/creating-and-sampling-textures): Load image data into a texture and apply it to a quadrangle.
+
 ## Sample code
 * [Using Metal to draw a view’s contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view's-contents)
 * [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 * [Metal を使って10万個のパーティクルを描画しよう (Japanese)](https://qiita.com/naru-jpn/items/9f4f1624495f3e72d6f9)
 * [iOS: MetalでGPUコンピューティング (1) 最小限のコードの記述と特性の把握](https://qiita.com/yuky_az/items/ece9b64befc635e89f1a)
-* [[Metal] テクスチャ（MTLTexture）を使う](https://qiita.com/edo_m18/items/6e44308d1b865e614f7c)
+* [[Metal] テクスチャ（MTLTexture）を使う](https://qiita.com/edo_m18/items/6e44308d1b865e614f7c) (Japanese)
+* [Metalで画面を塗るだけのコードが分からなかった話](https://zenn.dev/sakiyamak/articles/metal-01-clear-screen) (Japanese)
 
 [Apple Developer Metal]: https://developer.apple.com/documentation/metal
 [Metal Shading Language Specification]: https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf 
@@ -33,3 +38,4 @@
 [MTLDevice]: https://developer.apple.com/documentation/metal/mtldevice
 [MTLFunction]: https://developer.apple.com/documentation/metal/mtlfunction
 [MTLLibrary]: https://developer.apple.com/documentation/metal/mtllibrary
+[MTKTextureLoader]: https://developer.apple.com/documentation/metalkit/mtktextureloader

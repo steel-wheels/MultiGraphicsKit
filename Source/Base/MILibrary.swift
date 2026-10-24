@@ -11,6 +11,8 @@ import Foundation
 
 public enum MIMetalFunctionName: String {
         case addVector2f        = "addVector2f"
+        case vertex_main        = "vertex_main"
+        case fragment_main      = "fragment_main"
 }
 
 public extension MTLLibrary

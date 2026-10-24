@@ -14,7 +14,7 @@ The container of multiple command encoder.
 ## Command Encoder: [MTLComputeCommandEncoder]
 encode the pipeline state and buffer to compute it on Metal
 
-
-
+## Texture [MTLTexture]
+* Use the [MTKTextureLoader] class to create a Metal texture from existing image data.
 
 

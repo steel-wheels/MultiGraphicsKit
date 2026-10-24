@@ -23,7 +23,8 @@ public extension MTLTextureDescriptor
                     height:             img.height,
                     mipmapped:          false
                 )
-                descriptor.usage = [.shaderRead, .shaderWrite]
+                //descriptor.usage = [.shaderRead, .shaderWrite]
+                descriptor.usage = [.shaderRead, .renderTarget]
                 return descriptor
         }
 }

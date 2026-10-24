@@ -34,12 +34,20 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                 }
         }
 
+        public var metalView: MTKView { get {
+                return metalCoreView().metalView
+        }}
+
         public var device: MTLDevice { get {
                 if let dev = mDevice {
                         return dev
                 } else {
                         fatalError("Failed to get device")
                 }
+        }}
+
+        public var colorPixelFormat: MTLPixelFormat { get {
+                return metalView.colorPixelFormat
         }}
 
         public func setNeedsDisplay(_ needs: Bool) {
