@@ -9,8 +9,7 @@ import MultiDataKit
 import Metal
 import Foundation
 
-public class Vector2f
-{
+public class Vector2f {
         public static func make(point pt: CGPoint) -> SIMD2<Float> {
                 return  SIMD2<Float>(Float(pt.x), Float(pt.y))
         }
@@ -65,6 +64,66 @@ public class Vector2f
                 return result
         }
 }
+
+public class Vector2u32 {
+        public static func make(values vals: Array<UInt32>) -> SIMD2<UInt32> {
+                return  SIMD2<UInt32>(vals[0], vals[1])
+        }
+
+        public static func size() -> Int {
+                return MemoryLayout<SIMD2<UInt32>>.size
+        }
+
+        public static func stride() -> Int {
+                return MemoryLayout<SIMD2<UInt32>>.stride
+        }
+
+        public static func makeBuffer(device dev: MTLDevice, vectors vecs: Array<SIMD2<UInt32>>) throws -> MTLBuffer {
+                let len = Vector2u32.stride() * vecs.count
+                if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                }
+        }
+
+        public static func makeUninitializedBuffer(device dev: MTLDevice, count cnt: Int) throws -> MTLBuffer {
+                let len = Vector2u32.stride() * cnt
+                if let buf = dev.makeBuffer(length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                }
+        }
+}
+
+public extension Vertex2f
+{
+        func make(position pos: CGPoint, coodinate cood: CGPoint) -> Vertex2f {
+                let vpos:  vector_float2 = SIMD2(Float(pos.x ), Float(pos.y ))
+                let vcood: vector_float2 = SIMD2(Float(cood.x), Float(cood.y))
+                return Vertex2f(position: vpos, textureCoordinate: vcood)
+        }
+
+        static func size() -> Int {
+                return MemoryLayout<Vertex2f>.size
+        }
+
+        static func stride() -> Int {
+                return MemoryLayout<Vertex2f>.stride
+        }
+
+        static func makeBuffer(device dev: MTLDevice, vertexes vecs: Array<Vertex2f>) throws -> MTLBuffer {
+            let len = Vertex2f.stride() * vecs.count
+            if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
+                return buf
+            } else {
+                throw MIError.processError(message: "[Error] Failed to allocate buffer")
+            }
+        }
+}
+
+
 
 
 

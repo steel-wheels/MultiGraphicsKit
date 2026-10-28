@@ -24,6 +24,9 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                 let coreview = metalCoreView()
                 coreview.setDelegate(delegate: self)
                 mDevice = coreview.device
+
+                /* notify the initial size*/
+                mtkView(coreview.metalView, drawableSizeWillChange: coreview.frame.size)
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -56,8 +59,8 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
         }
 
         /* Delegate function */
-        public func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-                NSLog("\(#file) drawableSizeWillChange")
+        open func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+                NSLog("\(#file) drawableSizeWillChange(\(size.width), \(size.height))")
         }
 
         /* Delegate function */

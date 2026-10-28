@@ -18,6 +18,7 @@ public class ParticleDrawerView: MIMetalView
         }
 
         private var mTarget:                    TargetType              = .imageTexture
+        //private var mTarget:                  TargetType              = .vectorAdd
         private var mDidCalculated:             Bool                    = false
         private var mImageTextureDrawer:        ImageTextureDrawer?     = nil
 
@@ -29,27 +30,35 @@ public class ParticleDrawerView: MIMetalView
                 case .imageTexture:
                         let drawer = ImageTextureDrawer(view: self.metalView, device: self.device)
                         drawer.setup()
+                        drawer.setViewportSize(size: self.metalView.frame.size)
                         mImageTextureDrawer = drawer
                 }
         }
 
-        open override func draw(in view: MTKView) {
-                if !mDidCalculated {
-                        NSLog("Do calculate")
-                        let result: Bool
-                        switch mTarget {
-                        case .vectorAdd:
-                                result = vectorAddSample(device: self.device)
-                        case .imageTexture:
-                                if let drawer = mImageTextureDrawer {
-                                        drawer.draw()
-                                        result = true
-                                } else {
-                                        result = false
-                                }
+        open override func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+                switch mTarget {
+                case .vectorAdd:
+                        break
+                case .imageTexture:
+                        if let drawer = mImageTextureDrawer {
+                                drawer.setViewportSize(size: size)
                         }
-                        NSLog("result = \(result)")
-                        mDidCalculated = true
+                }
+        }
+
+        open override func draw(in view: MTKView) {
+                switch mTarget {
+                case .vectorAdd:
+                        if !mDidCalculated {
+                                NSLog("Do calculate")
+                                let  result = vectorAddSample(device: self.device)
+                                NSLog("result = \(result)")
+                                mDidCalculated = true
+                        }
+                case .imageTexture:
+                        if let drawer = mImageTextureDrawer {
+                                drawer.draw()
+                        }
                 }
         }
 }

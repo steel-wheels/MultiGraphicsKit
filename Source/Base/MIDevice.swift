@@ -34,19 +34,6 @@ public extension MTLDevice
                 }
         }
 
-        func makingTexture(image img: MIImage) throws -> MTLTexture {
-                guard let cgimg = img.cgImage else {
-                        throw MIError.processError(message: "[Error] Failed to convert image")
-                }
-                let desc  = MTLTextureDescriptor.textureImageDescriptor(image: cgimg)
-                if let texture = self.makeTexture(descriptor: desc) {
-                        texture.copy(image: cgimg)
-                        return texture
-                } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate texture")
-                }
-        }
-
         func makingSamplerState(descriptor: MTLSamplerDescriptor) throws -> MTLSamplerState {
                 if let state = self.makeSamplerState(descriptor: descriptor) {
                         return state
