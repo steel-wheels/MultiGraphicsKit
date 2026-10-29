@@ -84,11 +84,11 @@ public class ImageTextureDrawer
                 let quadVertices: Array<Vertex2f> = [
                         // Pixel positions, Texture coordinates
                         Vertex2f(position: SIMD2(+250, -250), textureCoordinate: SIMD2(1.0, 1.0)),
-                        Vertex2f(position: SIMD2(-250, -250), textureCoordinate: SIMD2(0.0, 0.0)),
+                        Vertex2f(position: SIMD2(-250, -250), textureCoordinate: SIMD2(0.0, 1.0)),
                         Vertex2f(position: SIMD2(-250, +250), textureCoordinate: SIMD2(0.0, 0.0)),
                         Vertex2f(position: SIMD2(+250, -250), textureCoordinate: SIMD2(1.0, 1.0)),
                         Vertex2f(position: SIMD2(-250, +250), textureCoordinate: SIMD2(0.0, 0.0)),
-                        Vertex2f(position: SIMD2(+250, +250), textureCoordinate: SIMD2(1.0, 1.0)),
+                        Vertex2f(position: SIMD2(+250, +250), textureCoordinate: SIMD2(1.0, 0.0)),
                 ]
                 mVertexNum = quadVertices.count
                 return try Vertex2f.makeBuffer(device: mDevice, vertexes: quadVertices)
