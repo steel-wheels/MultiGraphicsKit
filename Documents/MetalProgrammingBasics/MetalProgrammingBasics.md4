@@ -1,0 +1,7 @@
+# Metal programming basics
+
+m4_include(`Introduction/Introduction.md')
+m4_include(`Fundamentals/Fundamentals.md')
+m4_include(`Tips/Tips.md')
+m4_include(`References/References.md')
+

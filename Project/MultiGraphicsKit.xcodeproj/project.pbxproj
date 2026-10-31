@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0507438D30768501006DF33C /* MILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MILibrary.swift */; };
 		0507438E30768501006DF33C /* MILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MILibrary.swift */; };
+		050F5A8C30956F76002E4DBF /* MIVertexData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F5A8B30956F76002E4DBF /* MIVertexData.swift */; };
+		050F5A8D30956F76002E4DBF /* MIVertexData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F5A8B30956F76002E4DBF /* MIVertexData.swift */; };
 		056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
@@ -33,8 +35,8 @@
 		05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
-		05E0433C3061365400184745 /* MIGraphicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIGraphicsData.swift */; };
-		05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIGraphicsData.swift */; };
+		05E0433C3061365400184745 /* MIVectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVectorData.swift */; };
+		05E0433D3061365400184745 /* MIVectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVectorData.swift */; };
 		05E043D630673AF500184745 /* MultiGraphicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E043D530673AF500184745 /* MultiGraphicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E043D730673AF500184745 /* MultiGraphicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E043D530673AF500184745 /* MultiGraphicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E043D93067409E00184745 /* MIGraphicsType.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E043D83067409E00184745 /* MIGraphicsType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		0507438C30768501006DF33C /* MILibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MILibrary.swift; sourceTree = "<group>"; };
+		050F5A8B30956F76002E4DBF /* MIVertexData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVertexData.swift; sourceTree = "<group>"; };
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053DBB6030560B5900795D65 /* DrawTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056D6447305D86A400FF3C12 /* vectorFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vectorFunctions.metal; sourceTree = "<group>"; };
@@ -103,7 +106,7 @@
 		05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
-		05E0433B3061365400184745 /* MIGraphicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsData.swift; sourceTree = "<group>"; };
+		05E0433B3061365400184745 /* MIVectorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVectorData.swift; sourceTree = "<group>"; };
 		05E0439A30655F3900184745 /* DrawParticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawParticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E043D530673AF500184745 /* MultiGraphicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiGraphicsKit.h; sourceTree = "<group>"; };
 		05E043D83067409E00184745 /* MIGraphicsType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIGraphicsType.h; sourceTree = "<group>"; };
@@ -311,7 +314,8 @@
 		05E0433A3061363A00184745 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				05E0433B3061365400184745 /* MIGraphicsData.swift */,
+				05E0433B3061365400184745 /* MIVectorData.swift */,
+				050F5A8B30956F76002E4DBF /* MIVertexData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -555,7 +559,8 @@
 				05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
-				05E0433C3061365400184745 /* MIGraphicsData.swift in Sources */,
+				05E0433C3061365400184745 /* MIVectorData.swift in Sources */,
+				050F5A8D30956F76002E4DBF /* MIVertexData.swift in Sources */,
 				05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 				05AD1D8830827103007ACAEC /* MICommandBuffer.swift in Sources */,
 				05AD1D8B308338E6007ACAEC /* MITextureDescriptor.swift in Sources */,
@@ -579,8 +584,9 @@
 				056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */,
 				05AD1D8530826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
-				05E0433D3061365400184745 /* MIGraphicsData.swift in Sources */,
+				05E0433D3061365400184745 /* MIVectorData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
+				050F5A8C30956F76002E4DBF /* MIVertexData.swift in Sources */,
 				05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */,
 				0507438E30768501006DF33C /* MILibrary.swift in Sources */,
 				05AD1D8730827103007ACAEC /* MICommandBuffer.swift in Sources */,

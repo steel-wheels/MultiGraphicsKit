@@ -1,10 +1,10 @@
-# References
+## Reference
 
-## Metal overview
+### Metal overview
 * [Apple Developer Metal]: Apple Developer Metal
 * [Metal Shading Language Specification]: Metal Shading Language Specification, Version 4.1
 
-## Software components
+### Software components
 * [MTLCommandBuffer]: Records a sequence of GPU commands.
 * [MTLCommandEncoder]: Encoder a
   * [MTLComputeCommandEncoder]: Encodes computation dispatches, resource copying commands, and acceleration structure building commands for a single pass into a command buffer. 
@@ -14,11 +14,11 @@
 * [MTLFunction]: A interface that represents a public shader function in a Metal library.
 * [MTLLibrary]: A collection of Metal shader functions.
 
-## Sample code from Apple
+### Sample code from Apple
 * [Metal sample code library](https://developer.apple.com/documentation/metal/metal-sample-code-library): List of following sample applications
 * [Creating and sampling textures](https://developer.apple.com/documentation/metal/creating-and-sampling-textures): Load image data into a texture and apply it to a quadrangle.
 
-## Sample code
+### Sample code
 * [Using Metal to draw a view’s contents](https://developer.apple.com/documentation/metal/using-metal-to-draw-a-view's-contents)
 * [Drawing a triangle with Metal 4](https://developer.apple.com/documentation/metal/drawing-a-triangle-with-metal-4)
 * [Metal を使って10万個のパーティクルを描画しよう (Japanese)](https://qiita.com/naru-jpn/items/9f4f1624495f3e72d6f9)

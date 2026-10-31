@@ -7,8 +7,8 @@
 ### <code>import</code>
 To use <code>MTL*</code> class, import following frameworks.
 
-<pre>
+@code_begin@
 import Metal            // Data processing by Metal
 import MetalKit         // User interface by Metal
-</pre>
+@code_end@
 

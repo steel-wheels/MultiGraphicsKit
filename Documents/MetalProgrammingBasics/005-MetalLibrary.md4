@@ -1,6 +1,0 @@
-# Metal library
-
-@code_begin@
-m4_include(`vectorFunctions.metal')
-@code_end@
-

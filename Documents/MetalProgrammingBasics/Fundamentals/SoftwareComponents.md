@@ -1,20 +1,19 @@
-# Software Components
+##### Software Components
 
 This section describes about software components for Metal programming.
 
-## Device: [MTLDevice]
+##### Device: [MTLDevice]
 Resource for Metal. Each application has it's own device controller.
 
-## Command Queue: [MTLCommandQueue]
+##### Command Queue: [MTLCommandQueue]
 The queue of command buffers to be excuted on the device.
 
-## Command buffer: [MTLCommandBuffer]
+##### Command buffer: [MTLCommandBuffer]
 The container of multiple command encoder.
 
-## Command Encoder: [MTLComputeCommandEncoder]
+##### Command Encoder: [MTLComputeCommandEncoder]
 encode the pipeline state and buffer to compute it on Metal
 
-## Texture [MTLTexture]
+##### Texture [MTLTexture]
 * Use the [MTKTextureLoader] class to create a Metal texture from existing image data.
-
 
