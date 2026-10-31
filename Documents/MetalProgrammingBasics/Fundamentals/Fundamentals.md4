@@ -1,5 +1,7 @@
 ## Fundamentals
 
+m4_include(`DataStructure.md')
+
 ### Software components
 m4_include(`SoftwareComponents.md')
 

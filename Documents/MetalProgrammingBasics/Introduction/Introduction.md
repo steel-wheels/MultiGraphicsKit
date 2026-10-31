@@ -5,3 +5,7 @@ This document describes about basics of the Apple's Metal GPU processor programm
 
 This document is distributed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.en.html).
 
+## Note
+Parts of this document were described with the assistance from the Copilot 
+application for macOS.
+

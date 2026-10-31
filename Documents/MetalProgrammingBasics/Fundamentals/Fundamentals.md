@@ -1,5 +1,11 @@
 ## Fundamentals
 
+### Data structure
+
+#### Vertex
+
+
+
 ### Software components
 ##### Software Components
 
