@@ -14,9 +14,10 @@ clean:
 	rm -f $(DOCUMENT) BasicSequence.md \
 		DataStructure.md
 
-$(DOCUMENT): DataStructure.md \
-	     SoftwareComponents.md \
-	     BasicSequence.md
+Fundamentals.md4: \
+	DataStructure.md \
+	SoftwareComponents.md \
+	BasicSequence.md
 
 DataStructure.md4: Vertex.md
 

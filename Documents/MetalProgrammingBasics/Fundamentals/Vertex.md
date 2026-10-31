@@ -27,7 +27,7 @@ Following data is presented by vertices
 
 #### Vertices for image texture
 This is the sample code:
-@begin_code@
+@code_begin@
         {
             // Pixel positions, Texture coordinates
             { {  250,  -250 },  { 1.f, 1.f } },
@@ -38,4 +38,5 @@ This is the sample code:
             { { -250,   250 },  { 0.f, 0.f } },
             { {  250,   250 },  { 1.f, 0.f } },
         };
-@end_code@
+@code_end@
+
