@@ -1,0 +1,16 @@
+#### Viewport
+
+In 3D graphics, a viewport is the rectangular area of the screen (or render target) where the final image is drawn.
+
+sample implementation:
+<pre>
+MTLViewport viewport =
+{
+    .originX = 0,
+    .originY = 0,
+    .width   = drawableSize.width,
+    .height  = drawableSize.height,
+    .znear   = 0.0,
+    .zfar    = 1.0
+};
+</pre>

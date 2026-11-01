@@ -19,7 +19,8 @@ Fundamentals.md: \
 	SoftwareComponents.md \
 	BasicSequence.md
 
-DataStructure.md: Vertex.md
+DataStructure.md: Vertex.md \
+	Viewport.md
 
 dummy:
 

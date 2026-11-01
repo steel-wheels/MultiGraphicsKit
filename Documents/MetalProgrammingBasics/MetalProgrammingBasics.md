@@ -36,6 +36,7 @@ The texture coodinate is typically a float2 value:
 * u : horizontal texture coordinate
 * v : vertical texture coordinate
 
+In 3D graphics, U and V are coordinates used to locate a point on a texture image, just as X, Y, Z locate a point in 3D space.
 Both values are usually in the range 0.0 to 1.0, representing normalized positions inside the texture.
 
 Following data is presented by vertices
@@ -71,6 +72,23 @@ This pattern is very common in Metal, OpenGL, and Direct3D rendering.
 * X coord: red
 * Y corrd: green
 * Z corrd: blue
+
+#### Viewport
+
+In 3D graphics, a viewport is the rectangular area of the screen (or render target) where the final image is drawn.
+
+sample implementation:
+<pre>
+MTLViewport viewport =
+{
+    .originX = 0,
+    .originY = 0,
+    .width   = drawableSize.width,
+    .height  = drawableSize.height,
+    .znear   = 0.0,
+    .zfar    = 1.0
+};
+</pre>
 
 
 

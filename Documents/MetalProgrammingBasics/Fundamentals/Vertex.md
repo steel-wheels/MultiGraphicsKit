@@ -18,6 +18,7 @@ The texture coodinate is typically a float2 value:
 * u : horizontal texture coordinate
 * v : vertical texture coordinate
 
+In 3D graphics, U and V are coordinates used to locate a point on a texture image, just as X, Y, Z locate a point in 3D space.
 Both values are usually in the range 0.0 to 1.0, representing normalized positions inside the texture.
 
 Following data is presented by vertices
