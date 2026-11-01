@@ -19,7 +19,7 @@ clean:
 	(cd Tips && make clean)
 	rm -f MetalProgrammingBasics.md
 	
-MetalProgrammingBasics.md4: \
+MetalProgrammingBasics.md: \
 	./Introduction/Introduction.md \
 	./Fundamentals/Fundamentals.md \
 	./Tips/Tips.md \
