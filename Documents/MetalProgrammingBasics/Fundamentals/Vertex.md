@@ -44,5 +44,5 @@ This pattern is very common in Metal, OpenGL, and Direct3D rendering.
         };
 @code_end@
 
-![Quad Vertex](Images/QuadVertex_0.png)
+![Quad Vertex](Images/QuadVertex.png)
 
