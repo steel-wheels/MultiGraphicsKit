@@ -25,18 +25,24 @@ Following data is presented by vertices
 * A quad is defined by six vertices (two triangles).
 * A 3D model may contain thousands or millions of vertices.
 
-#### Vertices for image texture
-This is the sample code:
+#### Quad Vertex
+
+Following code defines a constant array of vertices that
+represents a rectangular quad made from two triangles. 
+This pattern is very common in Metal, OpenGL, and Direct3D rendering.
+
 @code_begin@
         {
             // Pixel positions, Texture coordinates
-            { {  250,  -250 },  { 1.f, 1.f } },
-            { { -250,  -250 },  { 0.f, 1.f } },
-            { { -250,   250 },  { 0.f, 0.f } },
+            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-1
+            { { -250,  -250 },  { 0.f, 1.f } },         // triangle-1
+            { { -250,   250 },  { 0.f, 0.f } },         // triangle-1
 
-            { {  250,  -250 },  { 1.f, 1.f } },
-            { { -250,   250 },  { 0.f, 0.f } },
-            { {  250,   250 },  { 1.f, 0.f } },
+            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-2
+            { { -250,   250 },  { 0.f, 0.f } },         // triangle-2
+            { {  250,   250 },  { 1.f, 0.f } },         // triangle-2
         };
 @code_end@
+
+![Quad Vertex](Images/QuadVertex_0.png)
 

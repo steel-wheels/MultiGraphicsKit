@@ -14,12 +14,12 @@ clean:
 	rm -f $(DOCUMENT) BasicSequence.md \
 		DataStructure.md
 
-Fundamentals.md4: \
+Fundamentals.md: \
 	DataStructure.md \
 	SoftwareComponents.md \
 	BasicSequence.md
 
-DataStructure.md4: Vertex.md
+DataStructure.md: Vertex.md
 
 dummy:
 
