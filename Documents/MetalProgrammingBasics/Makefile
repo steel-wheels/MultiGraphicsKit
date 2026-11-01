@@ -8,7 +8,7 @@ include $(md4_dir)/Makefile.md4
 
 DOCUMENT = MetalProgrammingBasics.md
 
-all: $(DOCUMENT)
+all: $(DOCUMENT) images
 	mv $(DOCUMENT) $(DOCUMENT).tmp
 	sed -e 's/@code_begin@/```/g' -e 's/@code_end@/```/g' \
 		$(DOCUMENT).tmp > $(DOCUMENT)
@@ -28,6 +28,9 @@ MetalProgrammingBasics.md: \
 ./Fundamentals/Fundamentals.md: dummy
 	(cd Fundamentals && make)
 	(cd Tips && make)
+
+images: dummy
+	cp Fundamentals/Images/* Images
 
 dummy:
 
