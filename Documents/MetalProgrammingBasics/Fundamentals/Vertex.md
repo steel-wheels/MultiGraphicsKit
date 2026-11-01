@@ -34,15 +34,22 @@ This pattern is very common in Metal, OpenGL, and Direct3D rendering.
 @code_begin@
         {
             // Pixel positions, Texture coordinates
-            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-1
-            { { -250,  -250 },  { 0.f, 1.f } },         // triangle-1
-            { { -250,   250 },  { 0.f, 0.f } },         // triangle-1
+            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-1 (v0)
+            { { -250,  -250 },  { 0.f, 1.f } },         // triangle-1 (v1)
+            { { -250,   250 },  { 0.f, 0.f } },         // triangle-1 (v2)
 
-            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-2
-            { { -250,   250 },  { 0.f, 0.f } },         // triangle-2
-            { {  250,   250 },  { 1.f, 0.f } },         // triangle-2
+            { {  250,  -250 },  { 1.f, 1.f } },         // triangle-2 (v0)
+            { { -250,   250 },  { 0.f, 0.f } },         // triangle-2 (v2)
+            { {  250,   250 },  { 1.f, 0.f } },         // triangle-2 (v3)
         };
 @code_end@
 
 ![Quad Vertex](Images/QuadVertex.png)
 
+* The size of the rectangle is 500×500 pixels.
+* blue line: Triangle 1 (v0 → v1 → v2)
+* green line: Triangle 2 (v0 → v2 → v3)
+* red: vertex
+* X coord: red
+* Y corrd: green
+* Z corrd: blue
