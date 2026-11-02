@@ -77,6 +77,36 @@ MTLViewport viewport =
 </pre>
 
 
+### Pipeline
+
+#### Processing pipelines
+* [Render pipeline (2D)](#render-pipeline-2d)
+* [Render pipeline (3D)](#render-pileline-3d)
+* Compute pipeline
+* Machine learning pipeline
+* Blit pipeline
+* Indirect command pipeline
+* Ray tracing acceleration structure pipeline
+
+#### Render pipeline 2D
+* Allocate texture
+* Render Pass
+* Vertex Shader
+* Fragment Shader
+* Texture Sampling
+* Drawable(CAMetalLayer)
+* Display
+
+#### Render pipeline 3D
+Here is an overview of the common stages in a standard graphics pipeline:
+* **Input and Assembly**: This stage takes raw 3D data, such as vertices and textures, and organizes it into geometric primitives like triangles or lines.
+* **Vertex Shading**: The vertex shader processes each vertex to apply transformations, such as moving, rotating, or scaling the object, and calculates lighting.
+* **Rasterization**: This stage converts the 3D geometric primitives into 2D fragments, which are the individual pixels that will be drawn on the screen.
+* **Fragment Shading**: The fragment shader processes each fragment to determine its final color, taking into account textures, materials, and lighting.
+* **Output and Blending**: The final stage combines the processed fragments with the existing pixels on the screen, applying effects like transparency or depth testing to produce the finished image.
+
+
+
 
 ### Software components
 ##### Software Components
@@ -97,31 +127,6 @@ encode the pipeline state and buffer to compute it on Metal
 
 ##### Texture [MTLTexture]
 * Use the [MTKTextureLoader] class to create a Metal texture from existing image data.
-
-
-
-### Basic Sequence
-# Basic sequence
-
-## Overview
-
-This section describes about the basic sequence to execute the vector calculation.
-
-1. Get <i>device object</i> for the application
-1. Allocate <i>pipeline state</i> to execute the <i>kernel function</i> on the device. 
-1. Get <i>command queue</i> for the <i>device object</i>
-1. Allocate <i>command buffer</i> from <i>command queue</i>
-1. Allocate <i>command encoder</i> from <i>command buffer</i>.
-1. Allocate input and output data buffer on the device.
-1. Register input and output buffers to <i>command encoder</i>.
-1. Register the <i>pipeline state</i> to <i>command encoder</i>
-1. Set thread grouping information to <i>command encoder</i>.
-1. Execute the thread by commiting the <i>command buffer</i>.
-
-## Sample implementation
-@code_begin@
-
-@code_end@
 
 
 

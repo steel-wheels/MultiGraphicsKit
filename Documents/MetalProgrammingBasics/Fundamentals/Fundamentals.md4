@@ -1,10 +1,8 @@
 ## Fundamentals
 
 m4_include(`DataStructure.md')
+m4_include(`Pipeline.md')
 
 ### Software components
 m4_include(`SoftwareComponents.md')
-
-### Basic Sequence
-m4_include(`BasicSequence.md')
 

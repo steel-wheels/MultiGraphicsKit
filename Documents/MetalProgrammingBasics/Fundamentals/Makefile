@@ -16,8 +16,8 @@ clean:
 
 Fundamentals.md: \
 	DataStructure.md \
-	SoftwareComponents.md \
-	BasicSequence.md
+	Pipeline.md \
+	SoftwareComponents.md
 
 DataStructure.md: Vertex.md \
 	Viewport.md
