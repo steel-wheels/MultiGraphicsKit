@@ -2,35 +2,25 @@
 # Makefile
 #
 
-md4_dir = ../md4
-
-include $(md4_dir)/Makefile.md4
-
 DOCUMENT = MetalProgrammingBasics.md
 
-all: subdir $(DOCUMENT) images
+all: $(DOCUMENT)
 
 clean:
-	(cd Fundamentals && make clean)
-	(cd Tips && make clean)
-	rm -f MetalProgrammingBasics.md
+	rm -f $(DOCUMENT)
 
-subdir: dummy
-	(cd Fundamentals && make)
-	(cd Tips && make)
+$(DOCUMENT): MetalProgrammingBasics.md4
+	md4 --output $@ $<
 
-images: dummy
-	cp Fundamentals/Images/* Images
-
-$(DOCUMENT): MetalProgrammingBasics_.md
-	sed -e 's/@code_begin@/```/g' -e 's/@code_end@/```/g' $< > $@
-
-MetalProgrammingBasics_.md: \
-	./MetalProgrammingBasics_.md4 \
-	./Introduction/Introduction.md \
-	./Fundamentals/Fundamentals.md \
-	./Tips/Tips.md \
-	./References/References.md
-
-dummy:
+MetalProgrammingBasics.md: \
+	Introduction/Introduction.md4 \
+	Fundamentals/Fundamentals.md4 \
+		Fundamentals/DataStructure.md4 \
+			Fundamentals/Vertex.md4 \
+			Fundamentals/Viewport.md4 \
+		Fundamentals/Pipeline.md4 \
+		Fundamentals/SoftwareComponents.md4 \
+	Tips/Tips.md4 \
+		Tips/ProgrammingTips.md4 \
+	References/References.md4
 

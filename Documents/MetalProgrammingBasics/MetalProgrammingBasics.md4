@@ -1,0 +1,7 @@
+# Metal programming basics
+
+@include(Introduction/Introduction.md4)
+@include(Fundamentals/Fundamentals.md4)
+@include(Tips/Tips.md4)
+@include(References/References.md4)
+

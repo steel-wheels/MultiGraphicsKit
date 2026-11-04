@@ -1,5 +1,5 @@
 ## Tips
 
 ### Programming Tips
-m4_include(`ProgrammingTips.md')
+@include(ProgrammingTips.md4)
 

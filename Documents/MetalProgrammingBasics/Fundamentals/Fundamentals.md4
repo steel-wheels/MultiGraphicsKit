@@ -1,8 +1,8 @@
 ## Fundamentals
 
-m4_include(`DataStructure.md')
-m4_include(`Pipeline.md')
+@include(DataStructure.md4)
+@include(Pipeline.md4)
 
 ### Software components
-m4_include(`SoftwareComponents.md')
+@include(SoftwareComponents.md4)
 

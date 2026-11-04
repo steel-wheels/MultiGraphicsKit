@@ -1,5 +1,5 @@
 ### Data structure
 
-m4_include(`Vertex.md')
-m4_include(`Viewport.md')
+@include(Vertex.md4)
+@include(Viewport.md4)
 

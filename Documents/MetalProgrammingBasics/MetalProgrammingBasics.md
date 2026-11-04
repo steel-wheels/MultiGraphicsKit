@@ -22,7 +22,7 @@ A vertex is a data structure that represents a single point in a geometric shape
 
 This is the minimum definition of vertex.
 
-```
+```swift
 struct Vertex {
         // the position member represents the location of that vertex in space
         float2 position;
@@ -50,7 +50,7 @@ Following code defines a constant array of vertices that
 represents a rectangular quad made from two triangles. 
 This pattern is very common in Metal, OpenGL, and Direct3D rendering.
 
-```
+```swift
         {
             // Pixel positions, Texture coordinates
             { {  250,  -250 },  { 1.f, 1.f } },         // triangle-1 (v0)
@@ -63,7 +63,7 @@ This pattern is very common in Metal, OpenGL, and Direct3D rendering.
         };
 ```
 
-![Quad Vertex](Images/QuadVertex.png)
+![Quad Vertex](./Fundamentals/Images/QuadVertex.png)
 
 * The size of the rectangle is 500×500 pixels.
 * blue line: Triangle 1 (v0 → v1 → v2)
@@ -157,7 +157,7 @@ encode the pipeline state and buffer to compute it on Metal
 ### <code>import</code>
 To use <code>MTL*</code> class, import following frameworks.
 
-```
+```swift
 import Metal            // Data processing by Metal
 import MetalKit         // User interface by Metal
 ```
