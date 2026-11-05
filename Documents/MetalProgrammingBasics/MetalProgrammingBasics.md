@@ -16,6 +16,9 @@ application for macOS.
 
 ### Data structure
 
+#### Vector
+
+
 #### Vertex
 
 A vertex is a data structure that represents a single point in a geometric shape used by the GPU during rendering. In graphics programming (Metal, OpenGL, DirectX, Vulkan), all shapes—triangles, quads, meshes—are built from multiple vertices. Each vertex carries the information the GPU needs to transform, shade, and rasterize that point.
@@ -78,7 +81,8 @@ This pattern is very common in Metal, OpenGL, and Direct3D rendering.
 In 3D graphics, a viewport is the rectangular area of the screen (or render target) where the final image is drawn.
 
 sample implementation:
-<pre>
+
+```swift
 MTLViewport viewport =
 {
     .originX = 0,
@@ -88,14 +92,16 @@ MTLViewport viewport =
     .znear   = 0.0,
     .zfar    = 1.0
 };
-</pre>
+```
+
+
 
 
 ### Pipeline
 
 #### Processing pipelines
 * [Render pipeline (2D)](#render-pipeline-2d)
-* [Render pipeline (3D)](#render-pileline-3d)
+* [Render pipeline (3D)](#render-pipeline-3d)
 * Compute pipeline
 * Machine learning pipeline
 * Blit pipeline
@@ -103,16 +109,12 @@ MTLViewport viewport =
 * Ray tracing acceleration structure pipeline
 
 #### Render pipeline 2D
-* Allocate texture
-* Render Pass
-* Vertex Shader
-* Fragment Shader
-* Texture Sampling
-* Drawable(CAMetalLayer)
-* Display
+* **Input Assembly**: Vertex data for a quad (usually composed of two triangles) and texture coordinates (UV coordinates) are sent to the GPU.
+* **Vertex Shader**: Transforms the vertex coordinates into Normalized Device Coordinates (NDC) and passes the texture coordinates to the next stage.
+* **Rasterization**: Converts the quad into individual pixels (fragments) on the screen, interpolating the texture coordinates for each pixel.
+* **Fragment Shader** Samples the color from the texture using the interpolated texture coordinates to determine the final color of each pixel.
 
 #### Render pipeline 3D
-Here is an overview of the common stages in a standard graphics pipeline:
 * **Input and Assembly**: This stage takes raw 3D data, such as vertices and textures, and organizes it into geometric primitives like triangles or lines.
 * **Vertex Shading**: The vertex shader processes each vertex to apply transformations, such as moving, rotating, or scaling the object, and calculates lighting.
 * **Rasterization**: This stage converts the 3D geometric primitives into 2D fragments, which are the individual pixels that will be drawn on the screen.

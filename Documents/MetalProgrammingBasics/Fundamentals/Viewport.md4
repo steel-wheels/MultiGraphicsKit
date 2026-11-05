@@ -3,7 +3,8 @@
 In 3D graphics, a viewport is the rectangular area of the screen (or render target) where the final image is drawn.
 
 sample implementation:
-<pre>
+
+```swift
 MTLViewport viewport =
 {
     .originX = 0,
@@ -13,4 +14,5 @@ MTLViewport viewport =
     .znear   = 0.0,
     .zfar    = 1.0
 };
-</pre>
+```
+
