@@ -11,6 +11,18 @@
 		0507438E30768501006DF33C /* MILibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507438C30768501006DF33C /* MILibrary.swift */; };
 		050F5A8C30956F76002E4DBF /* MIVertexData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F5A8B30956F76002E4DBF /* MIVertexData.swift */; };
 		050F5A8D30956F76002E4DBF /* MIVertexData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F5A8B30956F76002E4DBF /* MIVertexData.swift */; };
+		053CCEEE309F3A5100ED4373 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
+		053CCEEF309F3A5100ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCEF0309F3A5100ED4373 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; };
+		053CCEF1309F3A5100ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCEF2309F3A5100ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
+		053CCEF3309F3A5100ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCEF5309F3A7300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; };
+		053CCEF6309F3A7300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCEF7309F3A7300ED4373 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
+		053CCEF8309F3A7300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCEF9309F3A7300ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
+		053CCEFA309F3A7300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
@@ -68,6 +80,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		053CCEF4309F3A5100ED4373 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				053CCEEF309F3A5100ED4373 /* MultiDataKit.xcframework in Embed Frameworks */,
+				053CCEF3309F3A5100ED4373 /* MultiUIKit.xcframework in Embed Frameworks */,
+				053CCEF1309F3A5100ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CCEFB309F3A7300ED4373 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				053CCEF8309F3A7300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */,
+				053CCEFA309F3A7300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */,
+				053CCEF6309F3A7300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05AD1DB43083B6E0007ACAEC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +208,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053CCEF7309F3A7300ED4373 /* MultiDataKit.xcframework in Frameworks */,
+				053CCEF9309F3A7300ED4373 /* MultiUIKit.xcframework in Frameworks */,
+				053CCEF5309F3A7300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +227,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053CCEEE309F3A5100ED4373 /* MultiDataKit.xcframework in Frameworks */,
+				053CCEF2309F3A5100ED4373 /* MultiUIKit.xcframework in Frameworks */,
+				053CCEF0309F3A5100ED4373 /* MultiGraphicsKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +445,7 @@
 				053CCED8309F272400ED4373 /* Sources */,
 				053CCED9309F272400ED4373 /* Frameworks */,
 				053CCEDA309F272400ED4373 /* Resources */,
+				053CCEFB309F3A7300ED4373 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,6 +492,7 @@
 				05E0439730655F3900184745 /* Frameworks */,
 				05E0439830655F3900184745 /* Resources */,
 				05AD1DB43083B6E0007ACAEC /* CopyFiles */,
+				053CCEF4309F3A5100ED4373 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
