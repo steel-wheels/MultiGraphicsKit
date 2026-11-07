@@ -710,7 +710,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="aep-ug-bsB" customClass="ParticleDrawerView" customModule="DrawParticle" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="aep-ug-bsB" customClass="ImageDrawerView" customModule="DrawParticle" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                             </customView>
                         </subviews>

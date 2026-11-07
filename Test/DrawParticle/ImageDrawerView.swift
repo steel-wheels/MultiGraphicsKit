@@ -1,5 +1,5 @@
 //
-//  ParticleDrawerView.swift
+//  ImageDrawerView.swift
 //  DrawParticle
 //
 //  Created by Tomoo Hamada on 2026/09/25.
@@ -10,7 +10,7 @@ import MultiUIKit
 import Metal
 import MetalKit
 
-public class ParticleDrawerView: MIMetalView
+public class ImageDrawerView: MIMetalView
 {
         public enum TargetType {
                 case vectorAdd
