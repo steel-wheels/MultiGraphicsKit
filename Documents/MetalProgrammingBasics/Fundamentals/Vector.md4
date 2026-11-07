@@ -1,2 +1,10 @@
 #### Vector
 
+A vector in Metal is a SIMD (Single Instruction, Multiple Data) data type that contains multiple scalar values of the same type and enables efficient parallel arithmetic operations on the GPU.
+
+This is the data type of 2 dimensional vector.
+```swift
+SIMD2<Float>
+```
+
+Metal Shading Language (MSL) provides built-in vector types with 2, 3, or 4 elements.

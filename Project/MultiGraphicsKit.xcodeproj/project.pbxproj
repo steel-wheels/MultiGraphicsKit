@@ -116,6 +116,8 @@
 		05AD1DB33083B6DB007ACAEC /* Exceptions for "DrawParticle" folder in "DrawParticle" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Resource/steel-wheels-2.png",
+				"Resource/steel-wheels.key",
 				"Resource/steel-wheels.png",
 			);
 			target = 05E0439930655F3900184745 /* DrawParticle */;
@@ -127,6 +129,8 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 05AD1DB43083B6E0007ACAEC /* CopyFiles */;
 			membershipExceptions = (
+				"Resource/steel-wheels-2.png",
+				"Resource/steel-wheels.key",
 				"Resource/steel-wheels.png",
 			);
 		};

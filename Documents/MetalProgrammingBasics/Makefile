@@ -19,6 +19,7 @@ MetalProgrammingBasics.md: \
 			Fundamentals/Vector.md4 \
 			Fundamentals/Vertex.md4 \
 			Fundamentals/Viewport.md4 \
+			Fundamentals/Scaling.md4 \
 		Fundamentals/Pipeline.md4 \
 		Fundamentals/SoftwareComponents.md4 \
 	Tips/Tips.md4 \

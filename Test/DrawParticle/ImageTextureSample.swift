@@ -55,7 +55,7 @@ public class ImageTextureDrawer
                 do {
                         NSLog("setup: ImageTextureDrawer")
                         mTexture        = try allocateTexture()
-                        mVertexBuffer   = try allocateBuffer()
+                        mVertexBuffer   = try allocateBuffer(size: CGSize(width: mTexture!.width, height: mTexture!.height))
                         let funcs       = try setupLibrary()
                         mPipelineState  = try allocateRenderPipelineState(functions: funcs)
                 } catch {
@@ -79,17 +79,9 @@ public class ImageTextureDrawer
                 return try loader.newTexture(cgImage: cgimg, options: opts)
         }
 
-        private func allocateBuffer() throws -> MTLBuffer {
+        private func allocateBuffer(size: CGSize) throws -> MTLBuffer {
                 // Set up a simple MTLBuffer with vertices which include texture coordinates
-                let quadVertices: Array<Vertex2f> = [
-                        // Pixel positions, Texture coordinates
-                        Vertex2f(position: SIMD2(+250, -250), textureCoordinate: SIMD2(1.0, 1.0)),
-                        Vertex2f(position: SIMD2(-250, -250), textureCoordinate: SIMD2(0.0, 1.0)),
-                        Vertex2f(position: SIMD2(-250, +250), textureCoordinate: SIMD2(0.0, 0.0)),
-                        Vertex2f(position: SIMD2(+250, -250), textureCoordinate: SIMD2(1.0, 1.0)),
-                        Vertex2f(position: SIMD2(-250, +250), textureCoordinate: SIMD2(0.0, 0.0)),
-                        Vertex2f(position: SIMD2(+250, +250), textureCoordinate: SIMD2(1.0, 0.0)),
-                ]
+                let quadVertices = QuadVertices2f.allocateFor2DImage(size: size)
                 mVertexNum = quadVertices.count
                 return try Vertex2f.makeBuffer(device: mDevice, vertexes: quadVertices)
         }
@@ -182,7 +174,7 @@ public class ImageTextureDrawer
                         NSLog("No resource directory")
                         return nil
                 }
-                let filepath = resdir.appendingPathComponent("Images/steel-wheels.png")
+                let filepath = resdir.appendingPathComponent("Images/steel-wheels-2.png")
                 if let img = MIImage(contentsOf: filepath) {
                         return img
                 } else {

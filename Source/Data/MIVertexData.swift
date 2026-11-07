@@ -35,3 +35,21 @@ public extension Vertex2f
         }
 }
 
+public class QuadVertices2f
+{
+        public static func allocateFor2DImage(size: CGSize) -> Array<Vertex2f> {
+                let hwidth   = Float(size.width  / 2.0)
+                let hheight  = Float(size.height / 2.0)
+                let quadVertices: Array<Vertex2f> = [
+                        // Pixel positions, Texture coordinates
+                        Vertex2f(position: SIMD2(+hwidth, -hheight), textureCoordinate: SIMD2(1.0, 1.0)),
+                        Vertex2f(position: SIMD2(-hwidth, -hheight), textureCoordinate: SIMD2(0.0, 1.0)),
+                        Vertex2f(position: SIMD2(-hwidth, +hheight), textureCoordinate: SIMD2(0.0, 0.0)),
+                        Vertex2f(position: SIMD2(+hwidth, -hheight), textureCoordinate: SIMD2(1.0, 1.0)),
+                        Vertex2f(position: SIMD2(-hwidth, +hheight), textureCoordinate: SIMD2(0.0, 0.0)),
+                        Vertex2f(position: SIMD2(+hwidth, +hheight), textureCoordinate: SIMD2(1.0, 0.0)),
+                ]
+                return quadVertices
+        }
+}
+

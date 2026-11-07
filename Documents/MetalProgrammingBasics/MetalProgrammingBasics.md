@@ -18,6 +18,14 @@ application for macOS.
 
 #### Vector
 
+A vector in Metal is a SIMD (Single Instruction, Multiple Data) data type that contains multiple scalar values of the same type and enables efficient parallel arithmetic operations on the GPU.
+
+This is the data type of 2 dimensional vector.
+```swift
+SIMD2<Float>
+```
+
+Metal Shading Language (MSL) provides built-in vector types with 2, 3, or 4 elements.
 
 #### Vertex
 
@@ -93,6 +101,21 @@ MTLViewport viewport =
     .zfar    = 1.0
 };
 ```
+
+
+#### Scaling 
+
+On macOS, MTKView.bounds.size is measured in points, while drawableSize is measured in pixels.
+For example, on a Retina display:
+```
+bounds.size        = 800 × 600 points
+drawableSize       = 1600 × 1200 pixels
+backingScaleFactor = 2.0
+```
+Creating a texture at only 800×600 pixels would result in a blurry image when displayed on a 1600×1200 drawable.
+
+When rendering an [NSImage] in Metal, it is often best to create the [MTLTexture] at the same resolution as the MTKView's drawableSize. It reduces the operation by the Metal.
+
 
 
 
@@ -207,6 +230,8 @@ import MetalKit         // User interface by Metal
 [MTLDevice]: https://developer.apple.com/documentation/metal/mtldevice
 [MTLFunction]: https://developer.apple.com/documentation/metal/mtlfunction
 [MTLLibrary]: https://developer.apple.com/documentation/metal/mtllibrary
+[MTLTexture]: https://developer.apple.com/documentation/metal/mtltexture
 [MTKTextureLoader]: https://developer.apple.com/documentation/metalkit/mtktextureloader
+[NSImage]: https://developer.apple.com/documentation/appkit/nsimage
 
 

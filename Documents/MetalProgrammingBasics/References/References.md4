@@ -38,4 +38,6 @@
 [MTLDevice]: https://developer.apple.com/documentation/metal/mtldevice
 [MTLFunction]: https://developer.apple.com/documentation/metal/mtlfunction
 [MTLLibrary]: https://developer.apple.com/documentation/metal/mtllibrary
+[MTLTexture]: https://developer.apple.com/documentation/metal/mtltexture
 [MTKTextureLoader]: https://developer.apple.com/documentation/metalkit/mtktextureloader
+[NSImage]: https://developer.apple.com/documentation/appkit/nsimage
