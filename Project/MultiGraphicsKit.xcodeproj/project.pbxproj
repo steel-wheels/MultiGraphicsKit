@@ -23,6 +23,12 @@
 		053CCEF8309F3A7300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		053CCEF9309F3A7300ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
 		053CCEFA309F3A7300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCF0E309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; };
+		053CCF0F309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCF10309F6CE300ED4373 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
+		053CCF11309F6CE300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		053CCF12309F6CE300ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
+		053CCF13309F6CE300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
@@ -106,6 +112,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		053CCF14309F6CE300ED4373 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				053CCF11309F6CE300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */,
+				053CCF13309F6CE300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */,
+				053CCF0F309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05AD1DB43083B6E0007ACAEC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,6 +141,7 @@
 		050F5A8B30956F76002E4DBF /* MIVertexData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVertexData.swift; sourceTree = "<group>"; };
 		051332953055848B00C902D2 /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CCEDC309F272400ED4373 /* VectorComputation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VectorComputation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		053CCF00309F6BA000ED4373 /* ImageDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056D6447305D86A400FF3C12 /* vectorFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vectorFunctions.metal; sourceTree = "<group>"; };
 		056D6469305ECE8A00FF3C12 /* MIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDevice.swift; sourceTree = "<group>"; };
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +198,11 @@
 			path = VectorComputation;
 			sourceTree = "<group>";
 		};
+		053CCF01309F6BA000ED4373 /* ImageDrawer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ImageDrawer;
+			sourceTree = "<group>";
+		};
 		0576E171305585BA00D12FAE /* MultiGraphicsKit_iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MultiGraphicsKit_iOS;
@@ -211,6 +236,16 @@
 				053CCEF7309F3A7300ED4373 /* MultiDataKit.xcframework in Frameworks */,
 				053CCEF9309F3A7300ED4373 /* MultiUIKit.xcframework in Frameworks */,
 				053CCEF5309F3A7300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CCEFD309F6BA000ED4373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053CCF10309F6CE300ED4373 /* MultiDataKit.xcframework in Frameworks */,
+				053CCF12309F6CE300ED4373 /* MultiUIKit.xcframework in Frameworks */,
+				053CCF0E309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +291,7 @@
 				0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */,
 				05E0439A30655F3900184745 /* DrawParticle.app */,
 				053CCEDC309F272400ED4373 /* VectorComputation.app */,
+				053CCF00309F6BA000ED4373 /* ImageDrawer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +299,7 @@
 		053DBB5B30560AF800795D65 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				053CCF01309F6BA000ED4373 /* ImageDrawer */,
 				053CCEDD309F272400ED4373 /* VectorComputation */,
 				05E0439B30655F3900184745 /* DrawParticle */,
 			);
@@ -461,6 +498,29 @@
 			productReference = 053CCEDC309F272400ED4373 /* VectorComputation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		053CCEFF309F6BA000ED4373 /* ImageDrawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053CCF0B309F6BA200ED4373 /* Build configuration list for PBXNativeTarget "ImageDrawer" */;
+			buildPhases = (
+				053CCEFC309F6BA000ED4373 /* Sources */,
+				053CCEFD309F6BA000ED4373 /* Frameworks */,
+				053CCEFE309F6BA000ED4373 /* Resources */,
+				053CCF14309F6CE300ED4373 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				053CCF01309F6BA000ED4373 /* ImageDrawer */,
+			);
+			name = ImageDrawer;
+			packageProductDependencies = (
+			);
+			productName = ImageDrawer;
+			productReference = 053CCF00309F6BA000ED4373 /* ImageDrawer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0576E16F305585BA00D12FAE /* MultiGraphicsKit_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0576E176305585BA00D12FAE /* Build configuration list for PBXNativeTarget "MultiGraphicsKit_iOS" */;
@@ -525,6 +585,9 @@
 					053CCEDB309F272400ED4373 = {
 						CreatedOnToolsVersion = 27.2;
 					};
+					053CCEFF309F6BA000ED4373 = {
+						CreatedOnToolsVersion = 27.2;
+					};
 					053DBB53305588BB00795D65 = {
 						CreatedOnToolsVersion = 26.6;
 					};
@@ -555,6 +618,7 @@
 				053DBB53305588BB00795D65 /* Install */,
 				05E0439930655F3900184745 /* DrawParticle */,
 				053CCEDB309F272400ED4373 /* VectorComputation */,
+				053CCEFF309F6BA000ED4373 /* ImageDrawer */,
 			);
 		};
 /* End PBXProject section */
@@ -569,6 +633,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		053CCEDA309F272400ED4373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CCEFE309F6BA000ED4373 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,6 +684,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		053CCED8309F272400ED4373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CCEFC309F6BA000ED4373 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -954,6 +1032,76 @@
 			};
 			name = Release;
 		};
+		053CCF0C309F6BA200ED4373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.ImageDrawer.ImageDrawer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		053CCF0D309F6BA200ED4373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.steel-wheels.MultiGraphicsKit.Test.ImageDrawer.ImageDrawer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		053DBB55305588BB00795D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1176,6 +1324,15 @@
 			buildConfigurations = (
 				053CCEE8309F272600ED4373 /* Debug */,
 				053CCEE9309F272600ED4373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		053CCF0B309F6BA200ED4373 /* Build configuration list for PBXNativeTarget "ImageDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053CCF0C309F6BA200ED4373 /* Debug */,
+				053CCF0D309F6BA200ED4373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
