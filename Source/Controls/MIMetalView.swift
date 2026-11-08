@@ -16,7 +16,9 @@ import  UIKit
 
 open class MIMetalView: MIInterfaceView, MTKViewDelegate
 {
-        private var mDevice:            MTLDevice?          = nil
+        private var mDevice:            MTLDevice?      = nil
+        private var mDrawablePointSize: CGSize          = CGSize.zero
+        private var mDrawablePixelSize: CGSize          = CGSize.zero
 
         open override func setup(frame frm: CGRect) {
                 super.setup(nibName: "MIMetalCoreView", frameSize: frm.size, forClass: MIMetalView.self)
@@ -60,12 +62,23 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
 
         /* Delegate function */
         open func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-                NSLog("\(#file) drawableSizeWillChange(\(size.width), \(size.height))")
+                NSLog("\(#file) drawablePointSize(\(size.width), \(size.height))")
+                mDrawablePointSize = size
         }
 
         /* Delegate function */
         open func draw(in view: MTKView) {
-                NSLog("\(#file) draw")
+                #if os(OSX)
+                if let win = view.window {
+                        let ptrect  = CGRect(origin: CGPoint.zero, size: mDrawablePointSize)
+                        let pixrect = win.convertToBacking(ptrect)
+                        if pixrect.width != mDrawablePixelSize.width || pixrect.height != mDrawablePixelSize.height {
+                                mDrawablePixelSize = pixrect.size
+                                NSLog("drawablePixelSize: \(mDrawablePixelSize.width) x \(mDrawablePixelSize.height)")
+                        }
+                }
+                #endif
+                //NSLog("\(#file) draw")
         }
 }
 

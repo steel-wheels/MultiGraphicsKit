@@ -23,12 +23,6 @@
 		053CCEF8309F3A7300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		053CCEF9309F3A7300ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
 		053CCEFA309F3A7300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		053CCF0E309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; };
-		053CCF0F309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		053CCF10309F6CE300ED4373 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
-		053CCF11309F6CE300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		053CCF12309F6CE300ED4373 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
-		053CCF13309F6CE300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 056D6447305D86A400FF3C12 /* vectorFunctions.metal */; };
 		056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
@@ -62,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		053CCF3D30A07AE500ED4373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0513328C3055848B00C902D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053DBB53305588BB00795D65;
+			remoteInfo = Install;
+		};
 		053DBB57305588C500795D65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0513328C3055848B00C902D2 /* Project object */;
@@ -112,17 +113,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		053CCF14309F6CE300ED4373 /* Embed Frameworks */ = {
+		053CCF1C309F701E00ED4373 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 7;
 			files = (
-				053CCF11309F6CE300ED4373 /* MultiDataKit.xcframework in Embed Frameworks */,
-				053CCF13309F6CE300ED4373 /* MultiUIKit.xcframework in Embed Frameworks */,
-				053CCF0F309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Embed Frameworks */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		05AD1DB43083B6E0007ACAEC /* CopyFiles */ = {
@@ -164,6 +161,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		053CCF1F309F70BB00ED4373 /* Exceptions for "ImageDrawer" folder in "ImageDrawer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resource/steel-wheels-2.png",
+			);
+			target = 053CCEFF309F6BA000ED4373 /* ImageDrawer */;
+		};
 		05AD1DB33083B6DB007ACAEC /* Exceptions for "DrawParticle" folder in "DrawParticle" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -176,6 +180,13 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		053CCF1E309F702B00ED4373 /* Exceptions for "ImageDrawer" folder in "Copy Files" phase from "ImageDrawer" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 053CCF1C309F701E00ED4373 /* CopyFiles */;
+			membershipExceptions = (
+				"Resource/steel-wheels-2.png",
+			);
+		};
 		05AD1DB63083B6F1007ACAEC /* Exceptions for "DrawParticle" folder in "Copy Files" phase from "DrawParticle" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 05AD1DB43083B6E0007ACAEC /* CopyFiles */;
@@ -200,6 +211,10 @@
 		};
 		053CCF01309F6BA000ED4373 /* ImageDrawer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				053CCF1F309F70BB00ED4373 /* Exceptions for "ImageDrawer" folder in "ImageDrawer" target */,
+				053CCF1E309F702B00ED4373 /* Exceptions for "ImageDrawer" folder in "Copy Files" phase from "ImageDrawer" target */,
+			);
 			path = ImageDrawer;
 			sourceTree = "<group>";
 		};
@@ -243,9 +258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053CCF10309F6CE300ED4373 /* MultiDataKit.xcframework in Frameworks */,
-				053CCF12309F6CE300ED4373 /* MultiUIKit.xcframework in Frameworks */,
-				053CCF0E309F6CE300ED4373 /* MultiGraphicsKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,11 +517,12 @@
 				053CCEFC309F6BA000ED4373 /* Sources */,
 				053CCEFD309F6BA000ED4373 /* Frameworks */,
 				053CCEFE309F6BA000ED4373 /* Resources */,
-				053CCF14309F6CE300ED4373 /* Embed Frameworks */,
+				053CCF1C309F701E00ED4373 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				053CCF3E30A07AE500ED4373 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				053CCF01309F6BA000ED4373 /* ImageDrawer */,
@@ -726,6 +739,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		053CCF3E30A07AE500ED4373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053DBB53305588BB00795D65 /* Install */;
+			targetProxy = 053CCF3D30A07AE500ED4373 /* PBXContainerItemProxy */;
+		};
 		053DBB58305588C500795D65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0576E16F305585BA00D12FAE /* MultiGraphicsKit_iOS */;
