@@ -27,7 +27,7 @@ public class Vector2f {
                 if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
                         return buf
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
                 }
         }
 
@@ -44,7 +44,7 @@ public class Vector2f {
                 if let buf = dev.makeBuffer(length: len, options: .storageModeShared) {
                         return buf
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
                 }
         }
 
@@ -83,7 +83,7 @@ public class Vector2u32 {
                 if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
                         return buf
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
                 }
         }
 
@@ -92,7 +92,7 @@ public class Vector2u32 {
                 if let buf = dev.makeBuffer(length: len, options: .storageModeShared) {
                         return buf
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
                 }
         }
 }

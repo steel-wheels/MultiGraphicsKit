@@ -15,7 +15,7 @@ public extension MTLCommandQueue
                 if let buf = self.makeCommandBuffer() {
                         return buf
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate command buffer")
+                        throw MIGraphicsError.objectAllocationFailure("MTLCommandBuffer")
                 }
         }
 }

@@ -21,7 +21,7 @@ public extension MTLLibrary
                 if let result = self.makeFunction(name: funcname.rawValue) {
                         return result
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate function")
+                        throw MIGraphicsError.objectAllocationFailure("MTLFunction")
                 }
         }
 }

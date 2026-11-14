@@ -66,14 +66,14 @@ public class ImageTextureDrawer
         private func allocateTexture() throws -> MTLTexture {
                 guard let img = ImageTextureDrawer.loadImage() else {
                         NSLog("[Error] Failed to load image")
-                        throw MIError.processError(message: "[Error] Failed to allocate image")
+                        throw MIGraphicsError.noImageFile("no image")
                 }
                 return try newTexture(image: img, options: nil)
         }
 
         private func newTexture(image img: MIImage, options opts: [MTKTextureLoader.Option : Any]?) throws -> MTLTexture {
                 guard let cgimg = img.cgImage else {
-                        throw MIError.processError(message: "[Error] Failed to convert image")
+                        throw MIGraphicsError.convertFailed
                 }
                 let loader = MTKTextureLoader(device: mDevice)
                 return try loader.newTexture(cgImage: cgimg, options: opts)

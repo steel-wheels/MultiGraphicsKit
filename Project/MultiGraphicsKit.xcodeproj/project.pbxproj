@@ -43,6 +43,8 @@
 		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
 		05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */; };
 		05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */; };
+		05D098EF30A82C3500F5C008 /* MIGraphicsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */; };
+		05D098F030A82C3500F5C008 /* MIGraphicsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */; };
 		05E0433C3061365400184745 /* MIVectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVectorData.swift */; };
 		05E0433D3061365400184745 /* MIVectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVectorData.swift */; };
 		05E043D630673AF500184745 /* MultiGraphicsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E043D530673AF500184745 /* MultiGraphicsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,6 +140,7 @@
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
 		05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalRenderView.swift; sourceTree = "<group>"; };
+		05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsError.swift; sourceTree = "<group>"; };
 		05E0433B3061365400184745 /* MIVectorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVectorData.swift; sourceTree = "<group>"; };
 		05E0439A30655F3900184745 /* DrawParticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawParticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E043D530673AF500184745 /* MultiGraphicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiGraphicsKit.h; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 				05AD1D89308338E6007ACAEC /* MITextureDescriptor.swift */,
 				05AD1DA930836CDC007ACAEC /* MITexture.swift */,
 				0507438C30768501006DF33C /* MILibrary.swift */,
+				05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -656,6 +660,7 @@
 			files = (
 				056D6448305D86A400FF3C12 /* vectorFunctions.metal in Sources */,
 				05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */,
+				05D098F030A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
 				05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
@@ -691,6 +696,7 @@
 				056D6449305D86A400FF3C12 /* vectorFunctions.metal in Sources */,
 				05AD1D8530826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
+				05D098EF30A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
 				05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
 				05E0433D3061365400184745 /* MIVectorData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */,

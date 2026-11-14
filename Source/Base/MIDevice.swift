@@ -22,7 +22,7 @@ public extension MTLDevice
                         let libfile = resdir.appendingPathComponent("default.metallib")
                         return try self.makeLibrary(URL: libfile)
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate library")
+                        throw MIGraphicsError.objectAllocationFailure("MTLLibrary")
                 }
         }
 
@@ -30,7 +30,7 @@ public extension MTLDevice
                 if let cmdq = self.makeCommandQueue() {
                         return cmdq
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate command queue")
+                        throw MIGraphicsError.objectAllocationFailure("MTLCommandQueue")
                 }
         }
 
@@ -38,7 +38,7 @@ public extension MTLDevice
                 if let state = self.makeSamplerState(descriptor: descriptor) {
                         return state
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate sampler")
+                        throw MIGraphicsError.objectAllocationFailure("MTLSamplerState")
                 }
         }
 }

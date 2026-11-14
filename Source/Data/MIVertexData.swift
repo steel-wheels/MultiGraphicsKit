@@ -28,9 +28,9 @@ public extension Vertex2f
         static func makeBuffer(device dev: MTLDevice, vertexes vecs: Array<Vertex2f>) throws -> MTLBuffer {
             let len = Vertex2f.stride() * vecs.count
             if let buf = dev.makeBuffer(bytes: vecs, length: len, options: .storageModeShared) {
-                return buf
+                    return buf
             } else {
-                throw MIError.processError(message: "[Error] Failed to allocate buffer")
+                    throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
             }
         }
 }

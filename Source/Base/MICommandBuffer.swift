@@ -15,7 +15,7 @@ public extension MTLCommandBuffer
                 if let cmdenc = self.makeComputeCommandEncoder() {
                         return cmdenc
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate command encoder")
+                        throw MIGraphicsError.objectAllocationFailure("MTLComputeCommandEncoder")
                 }
         }
 
@@ -23,7 +23,8 @@ public extension MTLCommandBuffer
                 if let cmdenc = self.makeRenderCommandEncoder(descriptor: desc) {
                         return cmdenc
                 } else {
-                        throw MIError.processError(message: "[Error] Failed to allocate render encoder")
+                        throw MIGraphicsError.objectAllocationFailure("MTLRenderCommandEncoder")
+
                 }
         }
 }
