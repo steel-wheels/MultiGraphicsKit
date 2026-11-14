@@ -26,9 +26,6 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                 let coreview = metalCoreView()
                 coreview.setDelegate(delegate: self)
                 mDevice = coreview.device
-
-                /* notify the initial size*/
-                mtkView(coreview.metalView, drawableSizeWillChange: coreview.frame.size)
         }
 
         private func metalCoreView() -> MIMetalCoreView {
@@ -60,14 +57,41 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                 coreview.setNeedsDisplay(needs)
         }
 
+        #if os(OSX)
+        open override func viewDidMoveToWindow() {
+                NSLog("viewDidMoveToWindow")
+                /* notify the initial size*/
+                let coreview = metalCoreView()
+                mtkView(coreview.metalView, drawableSizeWillChange: coreview.frame.size)
+        }
+        #endif
+
         /* Delegate function */
         open func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
                 NSLog("\(#file) drawablePointSize(\(size.width), \(size.height))")
                 mDrawablePointSize = size
+
+                #if os(OSX)
+                if let win = view.window {
+                        let ptrect  = CGRect(origin: CGPoint.zero, size: mDrawablePointSize)
+                        let pixrect = win.convertToBacking(ptrect)
+                        if pixrect.width != mDrawablePixelSize.width || pixrect.height != mDrawablePixelSize.height {
+                                mDrawablePixelSize = pixrect.size
+                                contentSizeUpdated(pointSize: mDrawablePointSize, pixelSize: mDrawablePixelSize)
+                        }
+                }
+                #else
+                NSLog("[Error] No drawablePixelSize")
+                mDrawablePixelSize = mDrawablePointSize
+                #endif
+        }
+
+        open func contentSizeUpdated(pointSize ptsize: CGSize, pixelSize pxsize: CGSize) {
         }
 
         /* Delegate function */
         open func draw(in view: MTKView) {
+                /*
                 #if os(OSX)
                 if let win = view.window {
                         let ptrect  = CGRect(origin: CGPoint.zero, size: mDrawablePointSize)
@@ -78,6 +102,7 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                         }
                 }
                 #endif
+                 */
                 //NSLog("\(#file) draw")
         }
 }
