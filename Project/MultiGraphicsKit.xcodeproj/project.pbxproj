@@ -101,7 +101,7 @@
 		053CCF1C309F701E00ED4373 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
+			dstPath = Images;
 			dstSubfolderSpec = 7;
 			files = (
 			);
@@ -151,7 +151,7 @@
 		053CCF1F309F70BB00ED4373 /* Exceptions for "ImageDrawer" folder in "ImageDrawer" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Resource/steel-wheels-2.png",
+				"Resource/steel-wheels.png",
 			);
 			target = 053CCEFF309F6BA000ED4373 /* ImageDrawer */;
 		};
@@ -171,7 +171,7 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 053CCF1C309F701E00ED4373 /* CopyFiles */;
 			membershipExceptions = (
-				"Resource/steel-wheels-2.png",
+				"Resource/steel-wheels.png",
 			);
 		};
 		05AD1DB63083B6F1007ACAEC /* Exceptions for "DrawParticle" folder in "Copy Files" phase from "DrawParticle" target */ = {

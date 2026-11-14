@@ -8,6 +8,7 @@
 import Foundation
 
 public enum MIGraphicsError: Error {
+        case nullObject
         case objectAllocationFailure(String)    // class name
         case noImageFile(String)                // path of the file
         case convertFailed
@@ -15,6 +16,8 @@ public enum MIGraphicsError: Error {
         public var localizedDescription: String { get {
                 let result: String
                 switch self {
+                case .nullObject:
+                        result = "Null object access"
                 case .objectAllocationFailure(let clsname):
                         result = "Failed to allocate \(clsname)"
                 case .noImageFile(let path):

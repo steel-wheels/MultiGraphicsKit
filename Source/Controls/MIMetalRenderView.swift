@@ -16,20 +16,30 @@ import  UIKit
 
 open class MIMetalRenderView: MIMetalView
 {
-        private var mImage:     MIScalableImage?        = nil
+        private var mTexture:     MIScalableTexture?        = nil
 
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
                 do {
-                        let img = try loadImage(resourceFile: "Images/steel-wheels-2.png")
-                        mImage = MIScalableImage(image: img)
+                        let srcimg = try loadImage(resourceFile: "Images/steel-wheels.png")
+                        let sclimg = MIScalableImage(image: srcimg)
+                        mTexture = MIScalableTexture(device: self.device, image: sclimg)
                 } catch {
                         NSLog("[Error] \(error.localizedDescription)")
                 }
         }
 
         open override func contentSizeUpdated(pointSize ptsize: CGSize, pixelSize pxsize: CGSize) {
-                NSLog("drawablePixelSize: \(pxsize.width) x \(pxsize.height)")
+                guard let tex = mTexture else {
+                        NSLog("[Error] No texture")
+                        return
+                }
+                do {
+                        let _ = try tex.resize(to: pxsize)
+                        NSLog("drawablePixelSize: \(pxsize.width) x \(pxsize.height)")
+                } catch {
+                        NSLog("[Error] \(error.localizedDescription)")
+                }
         }
 
         private func loadImage(resourceFile rfile: String) throws -> MIImage {
