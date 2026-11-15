@@ -1,0 +1,14 @@
+### Metal library
+
+#### Computation library
+
+```metal
+@include(vectorFunctions.metal)
+```
+
+#### Texture Library
+
+```metal
+@include(vertexFunctions.metal)
+```
+

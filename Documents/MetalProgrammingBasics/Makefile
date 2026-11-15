@@ -3,6 +3,7 @@
 #
 
 DOCUMENT = MetalProgrammingBasics.md
+LIBDIR   = ../../Resource/Metal/
 
 all: $(DOCUMENT)
 
@@ -10,7 +11,7 @@ clean:
 	rm -f $(DOCUMENT)
 
 $(DOCUMENT): MetalProgrammingBasics.md4
-	md4 --output $@ $<
+	md4 --output $@ --include $(LIBDIR) $<
 
 MetalProgrammingBasics.md: \
 	Introduction/Introduction.md4 \
@@ -22,6 +23,8 @@ MetalProgrammingBasics.md: \
 			Fundamentals/Scaling.md4 \
 		Fundamentals/Pipeline.md4 \
 		Fundamentals/SoftwareComponents.md4 \
+	Implementation/Implementation.md4 \
+		Implementation/MetalLibrary.md4 \
 	Tips/Tips.md4 \
 		Tips/ProgrammingTips.md4 \
 	References/References.md4
