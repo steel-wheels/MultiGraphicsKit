@@ -22,11 +22,10 @@ open class MIMetalRenderView: MIMetalView
         private var mCommandEncoder:    MIImageCommandEncoder?          = nil
         private var mCurrentEncoder:    MTLRenderCommandEncoder?        = nil
 
-        open override func setup(frame frm: CGRect) {
-                super.setup(frame: frm)
+        public func setup(resourceFile file: String) {
                 do {
                         let mview = self.metalView
-                        let srcimg = try loadImage(resourceFile: "Images/steel-wheels.png")
+                        let srcimg = try loadImage(resourceFile: file)
                         let sclimg = MIScalableImage(image: srcimg)
                         mPipelineState  = try MIRenderPipelineState.allocateTextureRenderPipelineState(view: mview)
                         mTexture        = MIScalableTexture(device: self.device, image: sclimg)

@@ -16,6 +16,7 @@ public class ImageView: MIMetalRenderView
 {
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
+                super.setup(resourceFile: "Images/steel-wheels.png")
         }
 
         open override func draw(in view: MTKView) {
