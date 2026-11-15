@@ -51,5 +51,8 @@ public class QuadVertices2f
                 ]
                 return quadVertices
         }
+
+        public static var vertexCount: Int = 6
+
 }
 

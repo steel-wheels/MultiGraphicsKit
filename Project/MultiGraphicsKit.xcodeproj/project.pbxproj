@@ -35,6 +35,8 @@
 		05CAFE8330A9300E00B5C89D /* MIBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8130A9300E00B5C89D /* MIBuffer.swift */; };
 		05CAFE8530A93C5000B5C89D /* MIPinelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */; };
 		05CAFE8630A93C5000B5C89D /* MIPinelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */; };
+		05CAFE8830A94AD700B5C89D /* MICommandEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8730A94AD700B5C89D /* MICommandEncoder.swift */; };
+		05CAFE8930A94AD700B5C89D /* MICommandEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8730A94AD700B5C89D /* MICommandEncoder.swift */; };
 		05CEE36030560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE36130560CCC00E42808 /* MIMetalCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */; };
 		05CEE3833056120100E42808 /* MIMetalCoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05CEE3823056120100E42808 /* MIMetalCoreView.xib */; };
@@ -138,6 +140,7 @@
 		05AD1DD630850245007ACAEC /* vertexFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vertexFunctions.metal; sourceTree = "<group>"; };
 		05CAFE8130A9300E00B5C89D /* MIBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIBuffer.swift; sourceTree = "<group>"; };
 		05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPinelineState.swift; sourceTree = "<group>"; };
+		05CAFE8730A94AD700B5C89D /* MICommandEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICommandEncoder.swift; sourceTree = "<group>"; };
 		05CEE35F30560CCC00E42808 /* MIMetalCoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalCoreView.swift; sourceTree = "<group>"; };
 		05CEE3823056120100E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
 		05CEE3853056130500E42808 /* MIMetalCoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIMetalCoreView.xib; sourceTree = "<group>"; };
@@ -311,6 +314,7 @@
 				056D6469305ECE8A00FF3C12 /* MIDevice.swift */,
 				05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */,
 				05AD1D8630827103007ACAEC /* MICommandBuffer.swift */,
+				05CAFE8730A94AD700B5C89D /* MICommandEncoder.swift */,
 				05AD1D89308338E6007ACAEC /* MITextureDescriptor.swift */,
 				05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */,
 				05CAFE8130A9300E00B5C89D /* MIBuffer.swift */,
@@ -670,6 +674,7 @@
 				05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05D098F030A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
+				05CAFE8830A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
 				05CAFE8530A93C5000B5C89D /* MIPinelineState.swift in Sources */,
 				05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
@@ -707,6 +712,7 @@
 				05AD1D8530826E8E007ACAEC /* MICommandQueue.swift in Sources */,
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
 				05D098EF30A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
+				05CAFE8930A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
 				05CAFE8630A93C5000B5C89D /* MIPinelineState.swift in Sources */,
 				05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
 				05E0433D3061365400184745 /* MIVectorData.swift in Sources */,

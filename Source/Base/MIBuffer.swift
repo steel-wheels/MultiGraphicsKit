@@ -35,6 +35,10 @@ public class MIImageBuffer
                 }
         }
 
+        public var vertexCount: Int { get {
+                return QuadVertices2f.vertexCount
+        }}
+
         public func resize(to newsize: CGSize) throws -> Bool {
                 if mBuffer == nil || (mCurrentSize != newsize) {
                         mBuffer = try MIImageBuffer.allocateBuffer(device: mDevice, size: newsize)
