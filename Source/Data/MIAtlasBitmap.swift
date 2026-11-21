@@ -1,0 +1,179 @@
+/*
+ * @file MIAtlasBitmap.swift
+ * @description Define MIAtlasBitmap class
+ * @par Copyright
+ *   Copyright (C) 2026 Steel Wheels Project
+ */
+
+#if os(OSX)
+
+import MultiDataKit
+import MultiUIKit
+import AppKit
+import Foundation
+
+public class MIAtlasBitmap
+{
+        // tableRowNum  * tableColumnNum == 256
+        public static let tableRowNum                 = 16
+        public static let tableColumnNum              = 16
+
+        public struct GlyphInfo {
+                public let character:  Character
+                public let frame:      CGRect
+                public let uvMin:      CGPoint
+                public let uvMax:      CGPoint
+
+                public init(character: Character, frame: CGRect, uvMin: CGPoint, uvMax: CGPoint) {
+                        self.character = character
+                        self.frame = frame
+                        self.uvMin = uvMin
+                        self.uvMax = uvMax
+                }
+        }
+
+        public struct FontAtlas {
+                public let      image:          MIImage
+                public let      glyphs:         [Character: GlyphInfo]
+                public let      cellSize:       CGSize
+
+                public init(image: MIImage, glyphs: [Character : GlyphInfo], cellSize: CGSize) {
+                        self.image = image
+                        self.glyphs = glyphs
+                        self.cellSize = cellSize
+                }
+        }
+
+        public func allocateFontAtras(font: MIFont) -> FontAtlas {
+                let cellsize    = MIAtlasBitmap.atlasCellSize(for: font)
+                let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)
+                let tableheight = cellsize.height * CGFloat(MIAtlasBitmap.tableRowNum)
+
+                let image = MIImage(size: CGSize(width: tablewidth, height: tableheight))
+
+                var glyphmap: [Character: GlyphInfo] = [:]
+
+                image.lockFocus()
+
+                let tablerect = CGRect(origin: CGPoint.zero,
+                                       size: CGSize(width: tablewidth, height: tableheight))
+                clearRect(table: tablerect)
+
+                for code in 0..<256 {
+                        let colidx = code % MIAtlasBitmap.tableColumnNum
+                        let rowidx = code / MIAtlasBitmap.tableColumnNum
+
+                        let xpos = CGFloat(colidx) * cellsize.width
+                        let ypos = CGFloat(rowidx) * cellsize.height
+
+                        // get char from ascii code
+                        let cp: Character?
+                        if let scalar = UnicodeScalar(code) {
+                                cp = Character(scalar)
+                        } else {
+                                cp = nil
+                        }
+
+                        // draw one font
+                        if let c = cp {
+                                let glyphinfo = drawFont(xPosition: xpos, yPosition: ypos, cellSize: cellsize, font: font, character: c)
+                                glyphmap[c] = glyphinfo
+                        }
+                }
+                image.unlockFocus()
+
+                return FontAtlas(
+                    image:      image,
+                    glyphs:     glyphmap,
+                    cellSize:   cellsize
+                )
+        }
+
+        // locked by image
+        private func drawFont(xPosition xpos: CGFloat, yPosition ypos: CGFloat, cellSize cellsize: CGSize, font: MIFont, character char: Character) -> GlyphInfo {
+                let attrs: [NSAttributedString.Key: Any] = [
+                    .font: font,
+                    .foregroundColor: MIColor.white
+                ]
+
+                let str  = String(char)
+                let size = (str as NSString).size(withAttributes: attrs)
+
+                let lineHeight = font.ascender - font.descender
+                let drawPoint = CGPoint(
+                    x: xpos + (cellsize.width - size.width) * 0.5,
+                    y: ypos +
+                       (cellsize.height - lineHeight) * 0.5 -
+                       font.descender
+                )
+
+                (str as NSString).draw(
+                    at: drawPoint,
+                    withAttributes: attrs
+                )
+
+                let frame = CGRect(
+                    x:          xpos,
+                    y:          ypos,
+                    width:      cellsize.width,
+                    height:     cellsize.height
+                )
+
+                let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)
+                let tableheight = cellsize.height * CGFloat(MIAtlasBitmap.tableRowNum)
+
+                return GlyphInfo(
+                    character: char,
+                    frame: frame,
+                    uvMin: CGPoint(
+                        x: frame.minX / CGFloat(tablewidth),
+                        y: frame.minY / CGFloat(tableheight)
+                    ),
+                    uvMax: CGPoint(
+                        x: frame.maxX / CGFloat(tablewidth),
+                        y: frame.maxY / CGFloat(tableheight)
+                    )
+                )
+        }
+
+        /* A Swift implementation for macOS to find the maximum glyph size
+         * among all ASCII characters supported by an NSFont
+         */
+        private static func atlasCellSize(for font: MIFont) -> CGSize {
+                var maxbounds: CGRect = CGRect.zero
+                let ctfont = font as CTFont
+
+                for code in 0..<256 {
+                        guard let scalar = UnicodeScalar(code) else {
+                                continue
+                        }
+
+                        let char = UniChar(scalar.value)
+                        var glyph: CGGlyph = 0
+
+                        if CTFontGetGlyphsForCharacters(ctfont, [char], &glyph, 1) {
+                                let rect = CTFontGetBoundingRectsForGlyphs(
+                                        ctfont, .default, [glyph], nil, 1)
+                                maxbounds = maxbounds.union(rect)
+                        }
+                }
+                let width  = ceil(maxbounds.width)
+                let height = ceil(font.ascender - font.descender + font.leading)
+                return CGSize(width: width, height: height)
+        }
+
+        private func clearRect(table rect: CGRect) {
+                #if os(OSX)
+                        let rrect: NSRect = rect
+                        MIColor.clear.setFill()
+                        rrect.fill()
+                #else
+                        UIColor.clear.setFill()
+                        UIRectFill(
+                                CGRect(x: 0, y: 0, width: rect.width, height: rect.height
+                        )
+                )
+                #endif
+        }
+}
+#endif // os(OSX)

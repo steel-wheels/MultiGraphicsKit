@@ -3,7 +3,8 @@
 #
 
 DOCUMENT = MetalProgrammingBasics.md
-LIBDIR   = ../../Resource/Metal/
+LIBDIR0  = ../../Resource/Metal/
+LIBDIR1	 = ../../Source/Bridge
 
 all: $(DOCUMENT)
 
@@ -11,7 +12,7 @@ clean:
 	rm -f $(DOCUMENT)
 
 $(DOCUMENT): MetalProgrammingBasics.md4
-	md4 --output $@ --include $(LIBDIR) $<
+	md4 --output $@ --include $(LIBDIR0) --include $(LIBDIR1) $<
 
 MetalProgrammingBasics.md: \
 	Introduction/Introduction.md4 \

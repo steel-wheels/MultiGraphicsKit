@@ -1,5 +1,10 @@
 ### Metal library
 
+#### Common Header
+```metal
+@include(vectorFunctions.metal)
+```
+
 #### Computation library
 
 ```metal
@@ -7,6 +12,10 @@
 ```
 
 #### Texture Library
+
+The data structure `RasterizerData` is used to pass the data from the *vertex shader* to *fragment shader*.
+
+The `[[position]]` type presents the variable `position` has the position in the screen.
 
 ```metal
 @include(vertexFunctions.metal)
