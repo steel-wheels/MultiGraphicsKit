@@ -44,6 +44,10 @@ public class MIAtlasBitmap
                 }
         }
 
+        public init() {
+                
+        }
+
         public func allocateFontAtras(font: MIFont) -> FontAtlas {
                 let cellsize    = MIAtlasBitmap.atlasCellSize(for: font)
                 let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)

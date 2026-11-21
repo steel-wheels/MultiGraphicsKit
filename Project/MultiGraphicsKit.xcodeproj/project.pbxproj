@@ -83,6 +83,13 @@
 			remoteGlobalIDString = 051332943055848B00C902D2;
 			remoteInfo = MultiGraphicsKit_macOS;
 		};
+		059FC15530B1797B009B90E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0513328C3055848B00C902D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053DBB53305588BB00795D65;
+			remoteInfo = Install;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -228,13 +235,6 @@
 			files = (
 				05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */,
 				05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		059FC13D30B171D8009B90E3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,12 +526,12 @@
 			buildConfigurationList = 059FC14B30B171DA009B90E3 /* Build configuration list for PBXNativeTarget "FontAtlas" */;
 			buildPhases = (
 				059FC13C30B171D8009B90E3 /* Sources */,
-				059FC13D30B171D8009B90E3 /* Frameworks */,
 				059FC13E30B171D8009B90E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				059FC15630B1797B009B90E3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				059FC14130B171D8009B90E3 /* FontAtlas */,
@@ -726,6 +726,11 @@
 			isa = PBXTargetDependency;
 			target = 051332943055848B00C902D2 /* MultiGraphicsKit_macOS */;
 			targetProxy = 053DBB59305588C500795D65 /* PBXContainerItemProxy */;
+		};
+		059FC15630B1797B009B90E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053DBB53305588BB00795D65 /* Install */;
+			targetProxy = 059FC15530B1797B009B90E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
