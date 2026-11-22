@@ -24,6 +24,7 @@ open class MIMetalTextView: MIMetalView
         private var mFontAtlas          : FontAtlas? = nil
         private var mText               = MIMetalText()
         private var mAtlasTable         = MIAtlasTable()
+        private var mAtlasTexture       : MIScalableTexture? = nil
 
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
@@ -41,6 +42,10 @@ open class MIMetalTextView: MIMetalView
                 let width  = Int(ptsize.width  / cellSize.width)
                 let height = Int(ptsize.height / cellSize.height)
                 NSLog("metal: width=\(width), height=\(height)")
+                mText.resize(width: width, height: height)
+
+                let sclimg = MIScalableImage(image: atlas.image)
+                mAtlasTexture = MIScalableTexture(device: self.device, image: sclimg)
         }
 }
 

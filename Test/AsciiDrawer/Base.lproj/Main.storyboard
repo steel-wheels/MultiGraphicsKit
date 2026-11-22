@@ -706,10 +706,24 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AsciiDrawer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="TextView" customModule="AsciiDrawer" customModuleProvider="target">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="G28-cz-5NO" customClass="TextView" customModule="AsciiDrawer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="G28-cz-5NO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6pp-pS-EQh"/>
+                            <constraint firstAttribute="trailing" secondItem="G28-cz-5NO" secondAttribute="trailing" id="Axh-TB-jiM"/>
+                            <constraint firstItem="G28-cz-5NO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="MO1-UA-fMG"/>
+                            <constraint firstAttribute="bottom" secondItem="G28-cz-5NO" secondAttribute="bottom" id="Q9T-Yr-sTw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mTextView" destination="G28-cz-5NO" id="V9L-oH-YjH"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

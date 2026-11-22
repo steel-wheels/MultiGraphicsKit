@@ -10,8 +10,11 @@ import Metal
 import Foundation
 import simd
 
+#if os(OSX)
 public extension MIMetalText
 {
+        typealias FontAtlas = MIAtlasTable.FontAtlas
+
         static func makeUniforms(x: Float, y: Float, width: Float, height: Float, rotation: Float) -> Uniforms {
                 let c = cos(rotation)
                 let s = sin(rotation)
@@ -44,4 +47,29 @@ public extension MIMetalText
                     mvpMatrix: modelMatrix
                 )
         }
+
+        func allocateUniforms(fontAtlas atlas: FontAtlas) -> Array<Uniforms> {
+                var result: Array<Uniforms> = []
+                let width  = Float(atlas.cellSize.width)
+                let height = Float(atlas.cellSize.height)
+                var xpos: Float = 0.0
+                for v in 0..<self.text.count {
+                        var ypos: Float = 0.0
+                        let line = self.text[v]
+                        for h in 0..<line.count {
+                                let char = line[h]
+                                if !char.isNull {
+                                        let uniform = MIMetalText.makeUniforms(x: xpos, y: ypos,
+                                                                               width: width, height: height,
+                                                                               rotation: 0.0)
+                                        result.append(uniform)
+                                }
+                                ypos += width
+                        }
+                        xpos += height
+                }
+                return result
+        }
 }
+#endif // os(OSX)
+

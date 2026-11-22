@@ -48,14 +48,10 @@ public class MIAtlasTable
                 
         }
 
-        public static func glyphParam(for c: Character) -> GlyphParams? {
-                guard let ascii = c.asciiValue else {
-                        return nil
-                }
-                let code = UInt32(ascii)
-                let col  = code % UInt32(MIAtlasTable.tableColumnNum)
-                let row  = code / UInt32(MIAtlasTable.tableColumnNum)
-                return GlyphParams(asciiCode: code, atlasColumns: col, atlasRows: row, reserved: 0)
+        public static func glyphParam(for asciicode: UInt32) -> GlyphParams? {
+                let col  = asciicode % UInt32(MIAtlasTable.tableColumnNum)
+                let row  = asciicode / UInt32(MIAtlasTable.tableColumnNum)
+                return GlyphParams(asciiCode: asciicode, atlasColumns: col, atlasRows: row, reserved: 0)
         }
 
         public func allocateFontAtras(font: MIFont) -> FontAtlas {

@@ -18,6 +18,10 @@ public class MIMetalText
                 public init(asciiCode: Int) {
                         self.asciiCode = asciiCode
                 }
+
+                public var isNull: Bool { get {
+                        return asciiCode == MIAsciiCode.nullCode
+                }}
         }
 
         private var     mText:          Array<Array<MICharacter>>
@@ -29,6 +33,10 @@ public class MIMetalText
                 mWidth          = 0
                 mHeight         = 0
         }
+
+        public var text: Array<Array<MICharacter>> { get {
+                return mText
+        }}
 
         public func character(x: Int, y: Int) -> MICharacter? {
                 if x < mWidth && y < mHeight {
@@ -51,7 +59,7 @@ public class MIMetalText
                 resize(width: w)
         }
 
-        public func resize(height h: Int) {
+        private func resize(height h: Int) {
                 if h > mHeight {
                         /* append lines */
                         let newline = allocateNewline(width: mWidth)
@@ -64,7 +72,7 @@ public class MIMetalText
                 }
         }
 
-        public func resize(width w: Int) {
+        private func resize(width w: Int) {
                 for i in 0..<mHeight {
                         var line = mText[i]
                         if w > mWidth {
