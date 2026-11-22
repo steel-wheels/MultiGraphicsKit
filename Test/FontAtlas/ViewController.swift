@@ -19,7 +19,7 @@ class ViewController: NSViewController
 
                 // Do any additional setup after loading the view.
                 let font   = MIFont.monospacedSystemFont(ofSize: 24.0, weight: .regular)
-                let bitmap = MIAtlasBitmap()
+                let bitmap = MIAtlasTable()
                 let atras  = bitmap.allocateFontAtras(font: font)
                 let image  = atras.image
                 NSLog("image \(image.size.width) * \(image.size.height)")

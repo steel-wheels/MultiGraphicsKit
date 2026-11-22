@@ -1,6 +1,6 @@
 /*
- * @file MIAtlasBitmap.swift
- * @description Define MIAtlasBitmap class
+ * @file MIAtlasTable.swift
+ * @description Define MIAtlasTable class
  * @par Copyright
  *   Copyright (C) 2026 Steel Wheels Project
  */
@@ -12,7 +12,7 @@ import MultiUIKit
 import AppKit
 import Foundation
 
-public class MIAtlasBitmap
+public class MIAtlasTable
 {
         public static let MaxAsciiCode                  = 128
         public static let tableRowNum                   = 16
@@ -53,15 +53,15 @@ public class MIAtlasBitmap
                         return nil
                 }
                 let code = UInt32(ascii)
-                let col  = code % UInt32(MIAtlasBitmap.tableColumnNum)
-                let row  = code / UInt32(MIAtlasBitmap.tableColumnNum)
+                let col  = code % UInt32(MIAtlasTable.tableColumnNum)
+                let row  = code / UInt32(MIAtlasTable.tableColumnNum)
                 return GlyphParams(asciiCode: code, atlasColumns: col, atlasRows: row, reserved: 0)
         }
 
         public func allocateFontAtras(font: MIFont) -> FontAtlas {
-                let cellsize    = MIAtlasBitmap.atlasCellSize(for: font)
-                let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)
-                let tableheight = cellsize.height * CGFloat(MIAtlasBitmap.tableRowNum)
+                let cellsize    = MIAtlasTable.atlasCellSize(for: font)
+                let tablewidth  = cellsize.width  * CGFloat(MIAtlasTable.tableColumnNum)
+                let tableheight = cellsize.height * CGFloat(MIAtlasTable.tableRowNum)
 
                 let image = MIImage(size: CGSize(width: tablewidth, height: tableheight))
 
@@ -73,9 +73,9 @@ public class MIAtlasBitmap
                                        size: CGSize(width: tablewidth, height: tableheight))
                 clearRect(table: tablerect)
 
-                for code in 0..<MIAtlasBitmap.MaxAsciiCode {
-                        let colidx = code % MIAtlasBitmap.tableColumnNum
-                        let rowidx = code / MIAtlasBitmap.tableColumnNum
+                for code in 0..<MIAtlasTable.MaxAsciiCode {
+                        let colidx = code % MIAtlasTable.tableColumnNum
+                        let rowidx = code / MIAtlasTable.tableColumnNum
 
                         let xpos = CGFloat(colidx) * cellsize.width
                         let ypos = CGFloat(rowidx) * cellsize.height
@@ -134,8 +134,8 @@ public class MIAtlasBitmap
                     height:     cellsize.height
                 )
 
-                let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)
-                let tableheight = cellsize.height * CGFloat(MIAtlasBitmap.tableRowNum)
+                let tablewidth  = cellsize.width  * CGFloat(MIAtlasTable.tableColumnNum)
+                let tableheight = cellsize.height * CGFloat(MIAtlasTable.tableRowNum)
 
                 return GlyphInfo(
                     character: char,

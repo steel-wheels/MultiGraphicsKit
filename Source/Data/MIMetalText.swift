@@ -31,6 +31,22 @@ public class MIMetalText
                 mHeight         = 0
         }
 
+        public func character(x: Int, y: Int) -> MICharacter? {
+                if x < mWidth && y < mHeight {
+                        return mText[y][x]
+                } else {
+                        return nil
+                }
+        }
+
+        public func setCharacter(x: Int, y: Int, _ c: MICharacter) {
+                if x < mWidth && y < mHeight {
+                        mText[y][x] = c
+                } else {
+                        NSLog("[Error] failed to set character \(x) x \(y)")
+                }
+        }
+
         public func resize(width w: Int, height h: Int) {
                 resize(height: h)
                 resize(width: w)
