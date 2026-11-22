@@ -23,6 +23,14 @@
 		056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D6469305ECE8A00FF3C12 /* MIDevice.swift */; };
 		059FC11D30AC80CA009B90E3 /* MIAtlasBitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC11C30AC80CA009B90E3 /* MIAtlasBitmap.swift */; };
 		059FC11E30AC80CA009B90E3 /* MIAtlasBitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC11C30AC80CA009B90E3 /* MIAtlasBitmap.swift */; };
+		059FC15830B1AADD009B90E3 /* atlasFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15730B1AADD009B90E3 /* atlasFunctions.metal */; };
+		059FC15930B1AADD009B90E3 /* atlasFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15730B1AADD009B90E3 /* atlasFunctions.metal */; };
+		059FC15B30B1E712009B90E3 /* MIMetalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15A30B1E712009B90E3 /* MIMetalTextView.swift */; };
+		059FC15C30B1E712009B90E3 /* MIMetalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15A30B1E712009B90E3 /* MIMetalTextView.swift */; };
+		059FC15E30B1E897009B90E3 /* MIMetalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15D30B1E897009B90E3 /* MIMetalText.swift */; };
+		059FC15F30B1E897009B90E3 /* MIMetalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC15D30B1E897009B90E3 /* MIMetalText.swift */; };
+		059FC16130B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC16030B1ED5C009B90E3 /* MIMetalTextUtil.swift */; };
+		059FC16230B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059FC16030B1ED5C009B90E3 /* MIMetalTextUtil.swift */; };
 		05AD1D8430826E8E007ACAEC /* MICommandQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */; };
 		05AD1D8530826E8E007ACAEC /* MICommandQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */; };
 		05AD1D8730827103007ACAEC /* MICommandBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1D8630827103007ACAEC /* MICommandBuffer.swift */; };
@@ -128,6 +136,10 @@
 		0576E170305585BA00D12FAE /* MultiGraphicsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MultiGraphicsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		059FC11C30AC80CA009B90E3 /* MIAtlasBitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAtlasBitmap.swift; sourceTree = "<group>"; };
 		059FC14030B171D8009B90E3 /* FontAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		059FC15730B1AADD009B90E3 /* atlasFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = atlasFunctions.metal; sourceTree = "<group>"; };
+		059FC15A30B1E712009B90E3 /* MIMetalTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalTextView.swift; sourceTree = "<group>"; };
+		059FC15D30B1E897009B90E3 /* MIMetalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalText.swift; sourceTree = "<group>"; };
+		059FC16030B1ED5C009B90E3 /* MIMetalTextUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalTextUtil.swift; sourceTree = "<group>"; };
 		05AD1D8330826E8E007ACAEC /* MICommandQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICommandQueue.swift; sourceTree = "<group>"; };
 		05AD1D8630827103007ACAEC /* MICommandBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICommandBuffer.swift; sourceTree = "<group>"; };
 		05AD1D89308338E6007ACAEC /* MITextureDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MITextureDescriptor.swift; sourceTree = "<group>"; };
@@ -311,6 +323,7 @@
 			children = (
 				05AD1DD630850245007ACAEC /* vertexFunctions.metal */,
 				056D6447305D86A400FF3C12 /* vectorFunctions.metal */,
+				059FC15730B1AADD009B90E3 /* atlasFunctions.metal */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -342,6 +355,7 @@
 			children = (
 				05CEE3883056156300E42808 /* MIMetalView.swift */,
 				05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */,
+				059FC15A30B1E712009B90E3 /* MIMetalTextView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -370,6 +384,8 @@
 				05E0433B3061365400184745 /* MIVectorData.swift */,
 				050F5A8B30956F76002E4DBF /* MIVertexData.swift */,
 				059FC11C30AC80CA009B90E3 /* MIAtlasBitmap.swift */,
+				059FC15D30B1E897009B90E3 /* MIMetalText.swift */,
+				059FC16030B1ED5C009B90E3 /* MIMetalTextUtil.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -647,8 +663,10 @@
 				05D098F030A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
 				05CEE38A3056156300E42808 /* MIMetalView.swift in Sources */,
 				05CAFE8830A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
+				059FC15E30B1E897009B90E3 /* MIMetalText.swift in Sources */,
 				05CAFE8530A93C5000B5C89D /* MIPinelineState.swift in Sources */,
 				05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
+				059FC15B30B1E712009B90E3 /* MIMetalTextView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
 				05E0433C3061365400184745 /* MIVectorData.swift in Sources */,
 				050F5A8D30956F76002E4DBF /* MIVertexData.swift in Sources */,
@@ -660,6 +678,8 @@
 				05AD1DD730850258007ACAEC /* vertexFunctions.metal in Sources */,
 				05AD1DAA30836CDC007ACAEC /* MITexture.swift in Sources */,
 				0507438D30768501006DF33C /* MILibrary.swift in Sources */,
+				059FC16230B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */,
+				059FC15930B1AADD009B90E3 /* atlasFunctions.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,8 +706,10 @@
 				05CEE3893056156300E42808 /* MIMetalView.swift in Sources */,
 				05D098EF30A82C3500F5C008 /* MIGraphicsError.swift in Sources */,
 				05CAFE8930A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
+				059FC15F30B1E897009B90E3 /* MIMetalText.swift in Sources */,
 				05CAFE8630A93C5000B5C89D /* MIPinelineState.swift in Sources */,
 				05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
+				059FC15C30B1E712009B90E3 /* MIMetalTextView.swift in Sources */,
 				05E0433D3061365400184745 /* MIVectorData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
 				050F5A8C30956F76002E4DBF /* MIVertexData.swift in Sources */,
@@ -699,6 +721,8 @@
 				05AD1D8A308338E6007ACAEC /* MITextureDescriptor.swift in Sources */,
 				05AD1DD830850258007ACAEC /* vertexFunctions.metal in Sources */,
 				05AD1DAB30836CDC007ACAEC /* MITexture.swift in Sources */,
+				059FC16130B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */,
+				059FC15830B1AADD009B90E3 /* atlasFunctions.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

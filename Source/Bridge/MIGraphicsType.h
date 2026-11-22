@@ -41,4 +41,15 @@ typedef struct
     vector_float2 textureCoordinate;
 } Vertex2f ;
 
+typedef struct {
+    matrix_float4x4 mvpMatrix;
+} Uniforms;
+
+typedef struct {
+    uint32_t asciiCode;
+    uint32_t atlasColumns;
+    uint32_t atlasRows;
+    uint32_t reserved;
+} GlyphParams;
+
 #endif /* MIGraphicsType_h */

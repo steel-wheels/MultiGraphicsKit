@@ -14,9 +14,9 @@ import Foundation
 
 public class MIAtlasBitmap
 {
-        // tableRowNum  * tableColumnNum == 256
-        public static let tableRowNum                 = 16
-        public static let tableColumnNum              = 16
+        public static let MaxAsciiCode                  = 128
+        public static let tableRowNum                   = 16
+        public static let tableColumnNum                = MaxAsciiCode / tableRowNum
 
         public struct GlyphInfo {
                 public let character:  Character
@@ -48,6 +48,16 @@ public class MIAtlasBitmap
                 
         }
 
+        public static func glyphParam(for c: Character) -> GlyphParams? {
+                guard let ascii = c.asciiValue else {
+                        return nil
+                }
+                let code = UInt32(ascii)
+                let col  = code % UInt32(MIAtlasBitmap.tableColumnNum)
+                let row  = code / UInt32(MIAtlasBitmap.tableColumnNum)
+                return GlyphParams(asciiCode: code, atlasColumns: col, atlasRows: row, reserved: 0)
+        }
+
         public func allocateFontAtras(font: MIFont) -> FontAtlas {
                 let cellsize    = MIAtlasBitmap.atlasCellSize(for: font)
                 let tablewidth  = cellsize.width  * CGFloat(MIAtlasBitmap.tableColumnNum)
@@ -63,7 +73,7 @@ public class MIAtlasBitmap
                                        size: CGSize(width: tablewidth, height: tableheight))
                 clearRect(table: tablerect)
 
-                for code in 0..<256 {
+                for code in 0..<MIAtlasBitmap.MaxAsciiCode {
                         let colidx = code % MIAtlasBitmap.tableColumnNum
                         let rowidx = code / MIAtlasBitmap.tableColumnNum
 
@@ -80,6 +90,7 @@ public class MIAtlasBitmap
 
                         // draw one font
                         if let c = cp {
+                                //NSLog(" code=\(code) c=\(c)")
                                 let glyphinfo = drawFont(xPosition: xpos, yPosition: ypos, cellSize: cellsize, font: font, character: c)
                                 glyphmap[c] = glyphinfo
                         }
