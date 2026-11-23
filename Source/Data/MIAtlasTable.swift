@@ -33,13 +33,15 @@ public class MIAtlasTable
         }
 
         public struct FontAtlas {
-                public let      image:          MIImage
+                public let      nsImage:        MIImage
+                public let      cgImage:        CGImage
                 public let      glyphs:         [Character: GlyphInfo]
                 public let      cellSize:       CGSize
 
-                public init(image: MIImage, glyphs: [Character : GlyphInfo], cellSize: CGSize) {
-                        self.image = image
-                        self.glyphs = glyphs
+                public init(nsImage: MIImage, cgImage: CGImage, glyphs: [Character : GlyphInfo], cellSize: CGSize) {
+                        self.nsImage  = nsImage
+                        self.cgImage  = cgImage
+                        self.glyphs   = glyphs
                         self.cellSize = cellSize
                 }
         }
@@ -48,10 +50,11 @@ public class MIAtlasTable
                 
         }
 
-        public static func glyphParam(for asciicode: UInt32) -> GlyphParams? {
-                let col  = asciicode % UInt32(MIAtlasTable.tableColumnNum)
-                let row  = asciicode / UInt32(MIAtlasTable.tableColumnNum)
-                return GlyphParams(asciiCode: asciicode, atlasColumns: col, atlasRows: row, reserved: 0)
+        public static func glyphParam(for asciicode: Int) -> GlyphParams {
+                let col  = asciicode % MIAtlasTable.tableColumnNum
+                let row  = asciicode / MIAtlasTable.tableColumnNum
+                return GlyphParams(asciiCode: UInt32(asciicode), atlasColumns: UInt32(col),
+                                   atlasRows: UInt32(row), reserved: 0)
         }
 
         public func allocateFontAtras(font: MIFont) -> FontAtlas {
@@ -59,14 +62,38 @@ public class MIAtlasTable
                 let tablewidth  = cellsize.width  * CGFloat(MIAtlasTable.tableColumnNum)
                 let tableheight = cellsize.height * CGFloat(MIAtlasTable.tableRowNum)
 
-                let image = MIImage(size: CGSize(width: tablewidth, height: tableheight))
+                let bitmapRep = NSBitmapImageRep(
+                    bitmapDataPlanes: nil,
+                    pixelsWide: Int(tablewidth),
+                    pixelsHigh: Int(tableheight),
+                    bitsPerSample: 8,
+                    samplesPerPixel: 4,
+                    hasAlpha: true,
+                    isPlanar: false,
+                    colorSpaceName: .deviceRGB,
+                    bytesPerRow: 0,
+                    bitsPerPixel: 0
+                )!
+
+                bitmapRep.size = CGSize(width: tablewidth, height: tableheight)
+
+                guard let context = NSGraphicsContext(bitmapImageRep: bitmapRep) else {
+                        fatalError("Failed to create graphics context")
+                }
 
                 var glyphmap: [Character: GlyphInfo] = [:]
 
-                image.lockFocus()
+                NSGraphicsContext.saveGraphicsState()
+                NSGraphicsContext.current = context
 
-                let tablerect = CGRect(origin: CGPoint.zero,
-                                       size: CGSize(width: tablewidth, height: tableheight))
+                let tablerect = CGRect(
+                        origin: .zero,
+                        size: CGSize(
+                                width: tablewidth,
+                                height: tableheight
+                        )
+                )
+
                 clearRect(table: tablerect)
 
                 for code in 0..<MIAtlasTable.MaxAsciiCode {
@@ -76,25 +103,40 @@ public class MIAtlasTable
                         let xpos = CGFloat(colidx) * cellsize.width
                         let ypos = CGFloat(rowidx) * cellsize.height
 
-                        // get char from ascii code
-                        let cp: Character?
-                        if let scalar = UnicodeScalar(code) {
-                                cp = Character(scalar)
-                        } else {
-                                cp = nil
+                        guard let scalar = UnicodeScalar(code) else {
+                                continue
                         }
 
-                        // draw one font
-                        if let c = cp {
-                                //NSLog(" code=\(code) c=\(c)")
-                                let glyphinfo = drawFont(xPosition: xpos, yPosition: ypos, cellSize: cellsize, font: font, character: c)
-                                glyphmap[c] = glyphinfo
-                        }
+                        let character = Character(scalar)
+
+                        let glyphinfo = drawFont(
+                                xPosition: xpos,
+                                yPosition: ypos,
+                                cellSize: cellsize,
+                                font: font,
+                                character: character
+                        )
+                        glyphmap[character] = glyphinfo
                 }
-                image.unlockFocus()
+
+                NSGraphicsContext.restoreGraphicsState()
+
+                let image = NSImage(
+                    size: CGSize(
+                        width: tablewidth,
+                        height: tableheight
+                    )
+                )
+
+                image.addRepresentation(bitmapRep)
+
+                guard let cgImage = bitmapRep.cgImage else {
+                    fatalError("Failed to create CGImage")
+                }
 
                 return FontAtlas(
-                    image:      image,
+                    nsImage:    image,
+                    cgImage:    cgImage,
                     glyphs:     glyphmap,
                     cellSize:   cellsize
                 )

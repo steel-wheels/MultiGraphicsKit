@@ -105,5 +105,10 @@ open class MIMetalView: MIInterfaceView, MTKViewDelegate
                  */
                 //NSLog("\(#file) draw")
         }
+
+        public func allocateTexture(image img: CGImage, options opts: [MTKTextureLoader.Option : Any]?) throws -> MTLTexture {
+                let loader = MTKTextureLoader(device: self.device)
+                return try loader.newTexture(cgImage: img, options: opts)
+        }
 }
 

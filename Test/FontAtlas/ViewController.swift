@@ -21,7 +21,7 @@ class ViewController: NSViewController
                 let font   = MIFont.monospacedSystemFont(ofSize: 24.0, weight: .regular)
                 let bitmap = MIAtlasTable()
                 let atras  = bitmap.allocateFontAtras(font: font)
-                let image  = atras.image
+                let image  = atras.nsImage
                 NSLog("image \(image.size.width) * \(image.size.height)")
 
                 mImageView.image = image

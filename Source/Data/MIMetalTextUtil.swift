@@ -48,27 +48,31 @@ public extension MIMetalText
                 )
         }
 
-        func allocateUniforms(fontAtlas atlas: FontAtlas) -> Array<Uniforms> {
-                var result: Array<Uniforms> = []
+        func allocateUniforms(fontAtlas atlas: FontAtlas) -> (Array<Uniforms>, Array<GlyphParams>) {
+                var result0: Array<Uniforms> = []
+                var result1: Array<GlyphParams> = []
                 let width  = Float(atlas.cellSize.width)
                 let height = Float(atlas.cellSize.height)
-                var xpos: Float = 0.0
+                var ypos: Float = 0.0
                 for v in 0..<self.text.count {
-                        var ypos: Float = 0.0
+                        var xpos: Float = 0.0
                         let line = self.text[v]
                         for h in 0..<line.count {
                                 let char = line[h]
                                 if !char.isNull {
+                                        /* Uniforms */
                                         let uniform = MIMetalText.makeUniforms(x: xpos, y: ypos,
                                                                                width: width, height: height,
                                                                                rotation: 0.0)
-                                        result.append(uniform)
+                                        result0.append(uniform)
+                                        let gparams = MIAtlasTable.glyphParam(for: char.asciiCode)
+                                        result1.append(gparams)
                                 }
-                                ypos += width
+                                xpos += width
                         }
-                        xpos += height
+                        ypos += height
                 }
-                return result
+                return (result0, result1)
         }
 }
 #endif // os(OSX)
