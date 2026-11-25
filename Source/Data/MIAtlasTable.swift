@@ -57,12 +57,12 @@ public class MIAtlasTable
                                    atlasRows: UInt32(row), reserved: 0)
         }
 
-        public func allocateFontAtras(font: MIFont) -> FontAtlas {
+        public func allocateFontAtras(font: MIFont) throws -> FontAtlas {
                 let cellsize    = MIAtlasTable.atlasCellSize(for: font)
                 let tablewidth  = cellsize.width  * CGFloat(MIAtlasTable.tableColumnNum)
                 let tableheight = cellsize.height * CGFloat(MIAtlasTable.tableRowNum)
 
-                let bitmapRep = NSBitmapImageRep(
+                guard let bitmapRep = NSBitmapImageRep(
                     bitmapDataPlanes: nil,
                     pixelsWide: Int(tablewidth),
                     pixelsHigh: Int(tableheight),
@@ -73,12 +73,16 @@ public class MIAtlasTable
                     colorSpaceName: .deviceRGB,
                     bytesPerRow: 0,
                     bitsPerPixel: 0
-                )!
+                ) else {
+                        NSLog("[Error] Failed to allocate bitmap")
+                        throw MIGraphicsError.nullObject
+                }
 
                 bitmapRep.size = CGSize(width: tablewidth, height: tableheight)
 
                 guard let context = NSGraphicsContext(bitmapImageRep: bitmapRep) else {
-                        fatalError("Failed to create graphics context")
+                        NSLog("[Error] Failed to create graphics context")
+                        throw MIGraphicsError.nullObject
                 }
 
                 var glyphmap: [Character: GlyphInfo] = [:]
@@ -131,7 +135,8 @@ public class MIAtlasTable
                 image.addRepresentation(bitmapRep)
 
                 guard let cgImage = bitmapRep.cgImage else {
-                    fatalError("Failed to create CGImage")
+                        NSLog("[Error] Failed to create CGImage")
+                        throw MIGraphicsError.nullObject
                 }
 
                 return FontAtlas(

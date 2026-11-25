@@ -18,15 +18,19 @@ class ViewController: NSViewController
                 super.viewDidLoad()
 
                 // Do any additional setup after loading the view.
-                let font   = MIFont.monospacedSystemFont(ofSize: 24.0, weight: .regular)
-                let bitmap = MIAtlasTable()
-                let atras  = bitmap.allocateFontAtras(font: font)
-                let image  = atras.nsImage
-                NSLog("image \(image.size.width) * \(image.size.height)")
+                do {
+                        let font   = MIFont.monospacedSystemFont(ofSize: 24.0, weight: .regular)
+                        let bitmap = MIAtlasTable()
+                        let atras  = try bitmap.allocateFontAtras(font: font)
+                        let image  = atras.nsImage
+                        NSLog("image \(image.size.width) * \(image.size.height)")
 
-                mImageView.image = image
-                mImageView.backgroundColor = NSColor.black
-                mImageView.explicitContentsSize = image.size
+                        mImageView.image = image
+                        mImageView.backgroundColor = NSColor.black
+                        mImageView.explicitContentsSize = image.size
+                } catch {
+                        NSLog("Failed to load \(error.localizedDescription)")
+                }
         }
 
         override var representedObject: Any? {

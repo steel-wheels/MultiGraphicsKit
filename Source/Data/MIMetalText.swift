@@ -10,18 +10,12 @@ import Foundation
 
 public class MIMetalText
 {
-        private static let NullChar  = MICharacter(asciiCode: MIAsciiCode.nullCode)
-
         public struct MICharacter {
                 var     asciiCode:      Int
 
                 public init(asciiCode: Int) {
                         self.asciiCode = asciiCode
                 }
-
-                public var isNull: Bool { get {
-                        return asciiCode == MIAsciiCode.nullCode
-                }}
         }
 
         private var     mText:          Array<Array<MICharacter>>
@@ -76,7 +70,8 @@ public class MIMetalText
                 for i in 0..<mHeight {
                         var line = mText[i]
                         if w > mWidth {
-                                line.append(contentsOf: Array(repeating: MIMetalText.NullChar, count: w - mWidth))
+                                let space = MICharacter(asciiCode: MIAsciiCode.space)
+                                line.append(contentsOf: Array(repeating: space, count: w - mWidth))
                                 mText[i] = line
                         } else if w < mWidth {
                                 line.removeLast(mWidth - w)
@@ -87,6 +82,7 @@ public class MIMetalText
         }
 
         private func allocateNewline(width: Int) -> Array<MICharacter> {
-                return Array<MICharacter>(repeating: MIMetalText.NullChar, count: width)
+                let space = MICharacter(asciiCode: MIAsciiCode.space)
+                return Array<MICharacter>(repeating: space, count: width)
         }
 }

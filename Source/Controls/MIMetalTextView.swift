@@ -28,9 +28,9 @@ open class MIMetalTextView: MIMetalView
 
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)
-                let atlas = mAtlasTable.allocateFontAtras(font: mFont)
-                mFontAtlas = atlas
                 do {
+                        let atlas     = try mAtlasTable.allocateFontAtras(font: mFont)
+                        mFontAtlas    = atlas
                         mAtlasTexture = try allocateTexture(image: atlas.cgImage, options: nil)
                 } catch {
                         NSLog("[Error] Failed to allocate mAtlasTexture")
@@ -48,6 +48,40 @@ open class MIMetalTextView: MIMetalView
                 let height = Int(ptsize.height / cellSize.height)
                 NSLog("metal: width=\(width), height=\(height)")
                 mText.resize(width: width, height: height)
+        }
+
+        open override func draw(in view: MTKView) {
+                guard let atlas = mFontAtlas else {
+                        NSLog("[Error] No font atlas")
+                        return
+                }
+                do {
+                        let (uniforms, glyphs) = mText.allocateUniforms(fontAtlas: atlas)
+                        if uniforms.count > 0 && glyphs.count > 0 {
+                                let uniformBuf = try allocateUniformsBuffer(uniforms: uniforms)
+                                let glyphBuf   = try allocateGlyphParamsBuffer(glyphParams: glyphs)
+                        }
+                } catch {
+                        NSLog("[Error] Failed to allocate buffers")
+                }
+        }
+
+        private func allocateUniformsBuffer(uniforms: Array<Uniforms>) throws -> MTLBuffer {
+                let len = MemoryLayout<Uniforms>.stride * uniforms.count
+                if let buf = self.device.makeBuffer(bytes: uniforms, length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
+                }
+        }
+
+        private func allocateGlyphParamsBuffer(glyphParams: Array<GlyphParams>) throws -> MTLBuffer {
+                let len = MemoryLayout<GlyphParams>.stride * glyphParams.count
+                if let buf = self.device.makeBuffer(bytes: glyphParams, length: len, options: .storageModeShared) {
+                        return buf
+                } else {
+                        throw MIGraphicsError.objectAllocationFailure("MTLBuffer")
+                }
         }
 }
 

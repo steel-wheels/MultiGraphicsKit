@@ -59,15 +59,14 @@ public extension MIMetalText
                         let line = self.text[v]
                         for h in 0..<line.count {
                                 let char = line[h]
-                                if !char.isNull {
-                                        /* Uniforms */
-                                        let uniform = MIMetalText.makeUniforms(x: xpos, y: ypos,
-                                                                               width: width, height: height,
-                                                                               rotation: 0.0)
-                                        result0.append(uniform)
-                                        let gparams = MIAtlasTable.glyphParam(for: char.asciiCode)
-                                        result1.append(gparams)
-                                }
+                                /* Uniforms */
+                                let uniform = MIMetalText.makeUniforms(x: xpos, y: ypos,
+                                                                       width: width, height: height,
+                                                                       rotation: 0.0)
+                                result0.append(uniform)
+                                /* Glyph Param */
+                                let gparams = MIAtlasTable.glyphParam(for: char.asciiCode)
+                                result1.append(gparams)
                                 xpos += width
                         }
                         ypos += height
