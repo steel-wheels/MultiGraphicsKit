@@ -10,11 +10,11 @@ import Metal
 import Foundation
 
 public enum MIMetalFunctionName: String {
-        case addVector2f        = "addVector2f"
-        case vertexShader       = "vertexShader"
-        case samplingShader     = "samplingShader"
-        case atlasVertexMain    = "atlasVertexMain"
-        case atlasFragmentMain  = "atlasFragmentMain"
+        case addVector2f                = "addVector2f"
+        case imageVertexShader          = "imageVertexShader"
+        case imageFragmentShader        = "imageFragmentShader"
+        case atlasVertexShader          = "atlasVertexShader"
+        case atlasFragmentShader        = "atlasFragmentShader"
 }
 
 public extension MTLLibrary

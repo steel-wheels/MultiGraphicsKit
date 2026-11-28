@@ -1,5 +1,5 @@
 //
-//  vertexFunctions.metal
+//  imageFunctions.metal
 //  MultiGraphicsKit
 //
 //  Created by Steel Wheels Project on 2026/09/18.
@@ -27,7 +27,7 @@ struct RasterizerData
 
 // Vertex Function
 vertex RasterizerData
-vertexShader(uint vertexID [[ vertex_id ]],
+imageVertexShader(uint vertexID [[ vertex_id ]],
              constant Vertex2f *vertexArray [[ buffer(Vertex2fInputIndexVertices) ]],
              constant vector_uint2 *viewportSizePointer  [[ buffer(Vertex2fInputIndexViewportSize) ]])
 
@@ -59,7 +59,7 @@ vertexShader(uint vertexID [[ vertex_id ]],
 
 // Fragment function
 fragment float4
-samplingShader(RasterizerData in [[stage_in]],
+imageFragmentShader(RasterizerData in [[stage_in]],
                texture2d<half> colorTexture [[ texture(AAPLTextureIndexBaseColor) ]])
 {
     constexpr sampler textureSampler (mag_filter::linear,

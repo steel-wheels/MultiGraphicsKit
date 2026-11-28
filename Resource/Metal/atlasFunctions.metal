@@ -16,7 +16,7 @@ struct RasterizerData
     float2 texCoord;
 };
 
-vertex RasterizerData atlasVertexMain(
+vertex RasterizerData atlasVertexShader(
     uint vertexID [[vertex_id]],
     constant Vertex2f *         vertices [[buffer(0)]],
     constant Uniforms &         uniforms [[buffer(1)]],
@@ -54,7 +54,7 @@ vertex RasterizerData atlasVertexMain(
     return out;
 }
 
-fragment float4 atlasFragmentMain(
+fragment float4 atlasFragmentShader(
     RasterizerData in [[stage_in]],
     texture2d<float> atlasTexture [[texture(0)]]
 )

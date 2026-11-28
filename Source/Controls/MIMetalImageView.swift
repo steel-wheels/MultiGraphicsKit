@@ -27,7 +27,7 @@ open class MIMetalImageView: MIMetalView
                         let mview = self.metalView
                         let srcimg = try loadImage(resourceFile: file)
                         let sclimg = MIScalableImage(image: srcimg)
-                        mPipelineState  = try MIRenderPipelineState.allocateTextureRenderPipelineState(view: mview, vertexShader: .vertexShader, fragmentShader: .samplingShader)
+                        mPipelineState  = try MIRenderPipelineState.allocateTextureRenderPipelineState(view: mview, vertexShader: .imageVertexShader, fragmentShader: .imageFragmentShader)
                         mTexture        = MIScalableTexture(device: self.device, image: sclimg)
                         mImageBuffer    = MIImageBuffer(device: self.device)
                         mCommandEncoder = MIImageCommandEncoder(view: mview)

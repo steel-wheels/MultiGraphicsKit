@@ -39,8 +39,8 @@
 		05AD1D8B308338E6007ACAEC /* MITextureDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1D89308338E6007ACAEC /* MITextureDescriptor.swift */; };
 		05AD1DAA30836CDC007ACAEC /* MITexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DA930836CDC007ACAEC /* MITexture.swift */; };
 		05AD1DAB30836CDC007ACAEC /* MITexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DA930836CDC007ACAEC /* MITexture.swift */; };
-		05AD1DD730850258007ACAEC /* vertexFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DD630850245007ACAEC /* vertexFunctions.metal */; };
-		05AD1DD830850258007ACAEC /* vertexFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DD630850245007ACAEC /* vertexFunctions.metal */; };
+		05AD1DD730850258007ACAEC /* imageFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DD630850245007ACAEC /* imageFunctions.metal */; };
+		05AD1DD830850258007ACAEC /* imageFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = 05AD1DD630850245007ACAEC /* imageFunctions.metal */; };
 		05CAFE8230A9300E00B5C89D /* MIBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8130A9300E00B5C89D /* MIBuffer.swift */; };
 		05CAFE8330A9300E00B5C89D /* MIBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8130A9300E00B5C89D /* MIBuffer.swift */; };
 		05CAFE8530A93C5000B5C89D /* MIPinelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */; };
@@ -151,7 +151,7 @@
 		05AD1D8630827103007ACAEC /* MICommandBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICommandBuffer.swift; sourceTree = "<group>"; };
 		05AD1D89308338E6007ACAEC /* MITextureDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MITextureDescriptor.swift; sourceTree = "<group>"; };
 		05AD1DA930836CDC007ACAEC /* MITexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MITexture.swift; sourceTree = "<group>"; };
-		05AD1DD630850245007ACAEC /* vertexFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vertexFunctions.metal; sourceTree = "<group>"; };
+		05AD1DD630850245007ACAEC /* imageFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = imageFunctions.metal; sourceTree = "<group>"; };
 		05AE61E930B3054C001A0002 /* AsciiDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsciiDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CAFE8130A9300E00B5C89D /* MIBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIBuffer.swift; sourceTree = "<group>"; };
 		05CAFE8430A93C5000B5C89D /* MIPinelineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPinelineState.swift; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 		056D6446305D868600FF3C12 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
-				05AD1DD630850245007ACAEC /* vertexFunctions.metal */,
+				05AD1DD630850245007ACAEC /* imageFunctions.metal */,
 				056D6447305D86A400FF3C12 /* vectorFunctions.metal */,
 				059FC15730B1AADD009B90E3 /* atlasFunctions.metal */,
 			);
@@ -731,7 +731,7 @@
 				05AD1D8830827103007ACAEC /* MICommandBuffer.swift in Sources */,
 				05AD1D8B308338E6007ACAEC /* MITextureDescriptor.swift in Sources */,
 				059FC11E30AC80CA009B90E3 /* MIAtlasTable.swift in Sources */,
-				05AD1DD730850258007ACAEC /* vertexFunctions.metal in Sources */,
+				05AD1DD730850258007ACAEC /* imageFunctions.metal in Sources */,
 				05AD1DAA30836CDC007ACAEC /* MITexture.swift in Sources */,
 				0507438D30768501006DF33C /* MILibrary.swift in Sources */,
 				059FC16230B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */,
@@ -775,7 +775,7 @@
 				05AD1D8730827103007ACAEC /* MICommandBuffer.swift in Sources */,
 				059FC11D30AC80CA009B90E3 /* MIAtlasTable.swift in Sources */,
 				05AD1D8A308338E6007ACAEC /* MITextureDescriptor.swift in Sources */,
-				05AD1DD830850258007ACAEC /* vertexFunctions.metal in Sources */,
+				05AD1DD830850258007ACAEC /* imageFunctions.metal in Sources */,
 				05AD1DAB30836CDC007ACAEC /* MITexture.swift in Sources */,
 				059FC16130B1ED5C009B90E3 /* MIMetalTextUtil.swift in Sources */,
 				059FC15830B1AADD009B90E3 /* atlasFunctions.metal in Sources */,
