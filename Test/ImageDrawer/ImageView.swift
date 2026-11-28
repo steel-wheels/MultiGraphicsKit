@@ -12,7 +12,7 @@ import MultiUIKit
 import Metal
 import MetalKit
 
-public class ImageView: MIMetalRenderView
+public class ImageView: MIMetalImageView
 {
         open override func setup(frame frm: CGRect) {
                 super.setup(frame: frm)

@@ -1,6 +1,6 @@
 /*
- * @file MIMetalRenderView.swift
- * @description Define MIMetalRenderView class
+ * @file MIMetalImageView.swift
+ * @description Define MIMetalImageView class
  * @par Copyright
  *   Copyright (C) 2026 Steel Wheels Project
  */
@@ -14,7 +14,7 @@ import  AppKit
 import  UIKit
 #endif  // os(OSX)
 
-open class MIMetalRenderView: MIMetalView
+open class MIMetalImageView: MIMetalView
 {
         private var mPipelineState:     MTLRenderPipelineState?         = nil
         private var mTexture:           MIScalableTexture?              = nil
@@ -27,7 +27,7 @@ open class MIMetalRenderView: MIMetalView
                         let mview = self.metalView
                         let srcimg = try loadImage(resourceFile: file)
                         let sclimg = MIScalableImage(image: srcimg)
-                        mPipelineState  = try MIRenderPipelineState.allocateTextureRenderPipelineState(view: mview)
+                        mPipelineState  = try MIRenderPipelineState.allocateTextureRenderPipelineState(view: mview, vertexShader: .vertexShader, fragmentShader: .samplingShader)
                         mTexture        = MIScalableTexture(device: self.device, image: sclimg)
                         mImageBuffer    = MIImageBuffer(device: self.device)
                         mCommandEncoder = MIImageCommandEncoder(view: mview)

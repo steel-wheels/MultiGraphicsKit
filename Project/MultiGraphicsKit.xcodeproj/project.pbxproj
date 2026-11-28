@@ -57,8 +57,8 @@
 		05CEE3B3305631E600E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B63056320200E42808 /* MultiDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */; };
 		05CEE3B83056320200E42808 /* MultiUIKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */; };
-		05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */; };
-		05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */; };
+		05D098CF30A7E94800F5C008 /* MIMetalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalImageView.swift */; };
+		05D098D030A7E94800F5C008 /* MIMetalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098CE30A7E94800F5C008 /* MIMetalImageView.swift */; };
 		05D098EF30A82C3500F5C008 /* MIGraphicsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */; };
 		05D098F030A82C3500F5C008 /* MIGraphicsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */; };
 		05E0433C3061365400184745 /* MIVectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0433B3061365400184745 /* MIVectorData.swift */; };
@@ -163,7 +163,7 @@
 		05CEE3AF305631E600E42808 /* MultiUIKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiUIKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiUIKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3B0305631E600E42808 /* MultiDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiDataKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiDataKit.xcframework; sourceTree = "<absolute>"; };
 		05CEE3BF305633AD00E42808 /* MultiGraphicsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiGraphicsKit.xcframework; path = /Users/tomoo/Library/Frameworks/MultiGraphicsKit.xcframework; sourceTree = "<absolute>"; };
-		05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalRenderView.swift; sourceTree = "<group>"; };
+		05D098CE30A7E94800F5C008 /* MIMetalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIMetalImageView.swift; sourceTree = "<group>"; };
 		05D098EE30A82C3500F5C008 /* MIGraphicsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIGraphicsError.swift; sourceTree = "<group>"; };
 		05E0433B3061365400184745 /* MIVectorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIVectorData.swift; sourceTree = "<group>"; };
 		05E043D530673AF500184745 /* MultiGraphicsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiGraphicsKit.h; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				05CEE3883056156300E42808 /* MIMetalView.swift */,
-				05D098CE30A7E94800F5C008 /* MIMetalRenderView.swift */,
+				05D098CE30A7E94800F5C008 /* MIMetalImageView.swift */,
 				059FC15A30B1E712009B90E3 /* MIMetalTextView.swift */,
 			);
 			path = Controls;
@@ -721,7 +721,7 @@
 				05CAFE8830A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
 				059FC15E30B1E897009B90E3 /* MIMetalText.swift in Sources */,
 				05CAFE8530A93C5000B5C89D /* MIPinelineState.swift in Sources */,
-				05D098CF30A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
+				05D098CF30A7E94800F5C008 /* MIMetalImageView.swift in Sources */,
 				059FC15B30B1E712009B90E3 /* MIMetalTextView.swift in Sources */,
 				056D646A305ECE8A00FF3C12 /* MIDevice.swift in Sources */,
 				05E0433C3061365400184745 /* MIVectorData.swift in Sources */,
@@ -764,7 +764,7 @@
 				05CAFE8930A94AD700B5C89D /* MICommandEncoder.swift in Sources */,
 				059FC15F30B1E897009B90E3 /* MIMetalText.swift in Sources */,
 				05CAFE8630A93C5000B5C89D /* MIPinelineState.swift in Sources */,
-				05D098D030A7E94800F5C008 /* MIMetalRenderView.swift in Sources */,
+				05D098D030A7E94800F5C008 /* MIMetalImageView.swift in Sources */,
 				059FC15C30B1E712009B90E3 /* MIMetalTextView.swift in Sources */,
 				05E0433D3061365400184745 /* MIVectorData.swift in Sources */,
 				056D646B305ECE8A00FF3C12 /* MIDevice.swift in Sources */,

@@ -13,6 +13,8 @@ public enum MIMetalFunctionName: String {
         case addVector2f        = "addVector2f"
         case vertexShader       = "vertexShader"
         case samplingShader     = "samplingShader"
+        case atlasVertexMain    = "atlasVertexMain"
+        case atlasFragmentMain  = "atlasFragmentMain"
 }
 
 public extension MTLLibrary

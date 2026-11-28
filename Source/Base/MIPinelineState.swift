@@ -17,14 +17,14 @@ import UIKit
 
 public class MIRenderPipelineState
 {
-        public static func allocateTextureRenderPipelineState(view: MTKView) throws -> MTLRenderPipelineState {
+        public static func allocateTextureRenderPipelineState(view: MTKView, vertexShader: MIMetalFunctionName, fragmentShader: MIMetalFunctionName) throws -> MTLRenderPipelineState {
                 guard let dev = view.device else {
                         throw MIGraphicsError.nullObject
                 }
                 let lib = try dev.loadLibrary()
-                let vertexFunction = try lib.makeFunction(builtIn: .vertexShader)
-                let shaderFunction = try lib.makeFunction(builtIn: .samplingShader)
-                return try allocateRenderPipelineState(view: view, device: dev, vertexFunc: vertexFunction, fragmentFunc: shaderFunction)
+                let vertexFunction   = try lib.makeFunction(builtIn: vertexShader)
+                let fragmentFunction = try lib.makeFunction(builtIn: fragmentShader)
+                return try allocateRenderPipelineState(view: view, device: dev, vertexFunc: vertexFunction, fragmentFunc: fragmentFunction)
         }
 
         private static func allocateRenderPipelineState(view: MTKView, device dev: MTLDevice, vertexFunc verfunc: MTLFunction, fragmentFunc fragfunc: MTLFunction) throws -> MTLRenderPipelineState {
